@@ -1,0 +1,222 @@
+"","metadata","block_group","civic_association","county","human_services_region","planning_district","supervisor_district","tract","zip_code"
+"Accommodation and Food Services_entry_rate",0,0,0,0,0,0,0,0,0
+"Accommodation and Food Services_exit_rate",0,0,0,0,0,0,0,0,0
+"Accommodation and Food Services_total_employment",0,0,0,0,0,0,0,0,0
+"Accommodation and Food Services_total_job_creation",0,0,0,0,0,0,0,0,0
+"Accommodation and Food Services_total_job_destruction",0,0,0,0,0,0,0,0,0
+"acs_postsecondary_percent",1,0,0,196,0,0,0,17564,0
+"Administrative and Support and Waste Management and Remediation Services_entry_rate",0,0,0,0,0,0,0,0,0
+"Administrative and Support and Waste Management and Remediation Services_exit_rate",0,0,0,0,0,0,0,0,0
+"Administrative and Support and Waste Management and Remediation Services_total_employment",0,0,0,0,0,0,0,0,0
+"Administrative and Support and Waste Management and Remediation Services_total_job_creation",0,0,0,0,0,0,0,0,0
+"Administrative and Support and Waste Management and Remediation Services_total_job_destruction",0,0,0,0,0,0,0,0,0
+"age_20_64_percent_direct",1,29781,802,182,52,182,117,15505,877
+"age_20_64_percent_parcels",1,29781,763,182,36,126,81,15505,491
+"age_65_plus_percent_direct",1,29781,802,182,52,182,117,15505,877
+"age_65_plus_percent_parcels",1,29781,763,182,36,126,81,15505,491
+"age_under_20_percent_direct",1,29781,802,182,52,182,117,15505,877
+"age_under_20_percent_parcels",1,29781,763,182,36,126,81,15505,491
+"Agriculture, Forestry, Fishing and Hunting_entry_rate",0,0,0,0,0,0,0,0,0
+"Agriculture, Forestry, Fishing and Hunting_exit_rate",0,0,0,0,0,0,0,0,0
+"Agriculture, Forestry, Fishing and Hunting_total_employment",0,0,0,0,0,0,0,0,0
+"Agriculture, Forestry, Fishing and Hunting_total_job_creation",0,0,0,0,0,0,0,0,0
+"Agriculture, Forestry, Fishing and Hunting_total_job_destruction",0,0,0,0,0,0,0,0,0
+"Arts, Entertainment, and Recreation_entry_rate",0,0,0,0,0,0,0,0,0
+"Arts, Entertainment, and Recreation_exit_rate",0,0,0,0,0,0,0,0,0
+"Arts, Entertainment, and Recreation_total_employment",0,0,0,0,0,0,0,0,0
+"Arts, Entertainment, and Recreation_total_job_creation",0,0,0,0,0,0,0,0,0
+"Arts, Entertainment, and Recreation_total_job_destruction",0,0,0,0,0,0,0,0,0
+"at_risk_high_cnt",1,0,0,0,0,0,0,1278,0
+"at_risk_high_pct",1,0,0,0,0,0,0,1272,0
+"at_risk_low_cnt",1,0,0,0,0,0,0,1278,0
+"at_risk_low_pct",1,0,0,0,0,0,0,1272,0
+"at_risk_medium_cnt",1,0,0,0,0,0,0,1278,0
+"at_risk_medium_pct",1,0,0,0,0,0,0,1272,0
+"average_years_schooling",1,0,0,126,0,0,0,11384,0
+"avg_down_using_devices",1,10494,0,42,0,0,0,3886,0
+"avg_monthly_rate",1,0,0,63,0,0,0,0,0
+"avg_up_using_devices",1,10494,0,42,0,0,0,3886,0
+"Child_Food_Insecurity_Rate",1,0,0,84,0,0,0,0,0
+"Construction_entry_rate",0,0,0,0,0,0,0,0,0
+"Construction_exit_rate",0,0,0,0,0,0,0,0,0
+"Construction_total_employment",0,0,0,0,0,0,0,0,0
+"Construction_total_job_creation",0,0,0,0,0,0,0,0,0
+"Construction_total_job_destruction",0,0,0,0,0,0,0,0,0
+"Cost_Per_Meal",1,0,0,84,0,0,0,0,0
+"dent_e2sfca",1,3605,62,14,0,0,0,1325,0
+"devices",1,9732,0,42,0,0,0,3672,0
+"earnings_per_job",1,0,0,81,0,0,0,0,0
+"Educational Services_entry_rate",0,0,0,0,0,0,0,0,0
+"Educational Services_exit_rate",0,0,0,0,0,0,0,0,0
+"Educational Services_total_employment",0,0,0,0,0,0,0,0,0
+"Educational Services_total_job_creation",0,0,0,0,0,0,0,0,0
+"Educational Services_total_job_destruction",0,0,0,0,0,0,0,0,0
+"emp_rate",1,0,0,126,0,0,0,11375,0
+"ems_3sfca",1,3605,62,14,0,0,0,1325,0
+"ems_cnt",1,280,62,14,0,0,0,1331,0
+"ems_near_10_median",1,3605,62,14,0,0,0,1325,0
+"Finance and Insurance_entry_rate",0,0,0,0,0,0,0,0,0
+"Finance and Insurance_exit_rate",0,0,0,0,0,0,0,0,0
+"Finance and Insurance_total_employment",0,0,0,0,0,0,0,0,0
+"Finance and Insurance_total_job_creation",0,0,0,0,0,0,0,0,0
+"Finance and Insurance_total_job_destruction",0,0,0,0,0,0,0,0,0
+"food_insecure_cnt",1,0,0,0,0,0,0,1278,0
+"food_insecure_pct",1,0,0,0,0,0,0,1272,0
+"food_secure_cnt",1,0,0,0,0,0,0,1278,0
+"food_secure_pct",1,0,0,0,0,0,0,1272,0
+"gender_female_percent_direct",1,36923,926,210,60,0,135,18152,1015
+"gender_female_percent_parcels",1,36923,0,210,0,0,0,18152,0
+"gender_male_percent_direct",1,36923,926,210,60,0,135,18152,1015
+"gender_male_percent_parcels",1,36923,0,210,0,0,0,18152,0
+"gini_index_geo20",1,0,0,126,0,0,0,11801,0
+"Health Care and Social Assistance_entry_rate",0,0,0,0,0,0,0,0,0
+"Health Care and Social Assistance_exit_rate",0,0,0,0,0,0,0,0,0
+"Health Care and Social Assistance_total_employment",0,0,0,0,0,0,0,0,0
+"Health Care and Social Assistance_total_job_creation",0,0,0,0,0,0,0,0,0
+"Health Care and Social Assistance_total_job_destruction",0,0,0,0,0,0,0,0,0
+"hh_received_snap_cnt",1,37219,0,154,0,0,0,13892,0
+"hh_received_snap_pct",1,37219,0,154,0,0,0,13892,0
+"hosp_3sfca",1,27103,62,112,0,0,0,10060,0
+"hosp_cnt",1,248,5,112,0,0,0,10113,0
+"hosp_near_10_median",1,27103,62,112,0,0,0,10060,0
+"Information_entry_rate",0,0,0,0,0,0,0,0,0
+"Information_exit_rate",0,0,0,0,0,0,0,0,0
+"Information_total_employment",0,0,0,0,0,0,0,0,0
+"Information_total_job_creation",0,0,0,0,0,0,0,0,0
+"Information_total_job_destruction",0,0,0,0,0,0,0,0,0
+"language_hh_limited_english_percent_direct",1,27166,358,112,24,84,54,10151,414
+"language_hh_limited_english_percent_parcels",1,27166,0,112,24,84,54,10151,326
+"Management of Companies and Enterprises_entry_rate",0,0,0,0,0,0,0,0,0
+"Management of Companies and Enterprises_exit_rate",0,0,0,0,0,0,0,0,0
+"Management of Companies and Enterprises_total_employment",0,0,0,0,0,0,0,0,0
+"Management of Companies and Enterprises_total_job_creation",0,0,0,0,0,0,0,0,0
+"Management of Companies and Enterprises_total_job_destruction",0,0,0,0,0,0,0,0,0
+"Manufacturing_entry_rate",0,0,0,0,0,0,0,0,0
+"Manufacturing_exit_rate",0,0,0,0,0,0,0,0,0
+"Manufacturing_total_employment",0,0,0,0,0,0,0,0,0
+"Manufacturing_total_job_creation",0,0,0,0,0,0,0,0,0
+"Manufacturing_total_job_destruction",0,0,0,0,0,0,0,0,0
+"median_household_income",1,29631,0,126,0,0,0,11330,0
+"median_read_pass_rate",1,0,0,64,0,0,0,0,0
+"mental_3sfca",1,3605,62,14,0,0,0,1325,0
+"mental_cnt",1,88,62,14,0,0,0,1331,0
+"mental_near_10_median",1,3605,62,14,0,0,0,1325,0
+"Mining, Quarrying, and Oil and Gas Extraction_entry_rate",0,0,0,0,0,0,0,0,0
+"Mining, Quarrying, and Oil and Gas Extraction_exit_rate",0,0,0,0,0,0,0,0,0
+"Mining, Quarrying, and Oil and Gas Extraction_total_employment",0,0,0,0,0,0,0,0,0
+"Mining, Quarrying, and Oil and Gas Extraction_total_job_creation",0,0,0,0,0,0,0,0,0
+"Mining, Quarrying, and Oil and Gas Extraction_total_job_destruction",0,0,0,0,0,0,0,0,0
+"Minority_employment",1,35949,0,140,0,0,0,13298,0
+"monthly_rent_0br",1,0,0,14,0,0,0,1331,0
+"monthly_rent_1br",1,0,0,14,0,0,0,1331,0
+"monthly_rent_2br",1,0,0,14,0,0,0,1331,0
+"monthly_rent_3br",1,0,0,14,0,0,0,1331,0
+"monthly_rent_4br",1,0,0,14,0,0,0,1331,0
+"mrfei",1,3626,62,14,0,0,0,1331,0
+"no_hlth_ins_pct",1,30394,0,126,0,0,0,11371,0
+"Nonclassifiable Establishments_entry_rate",0,0,0,0,0,0,0,0,0
+"Nonclassifiable Establishments_exit_rate",0,0,0,0,0,0,0,0,0
+"Nonclassifiable Establishments_total_employment",0,0,0,0,0,0,0,0,0
+"Nonclassifiable Establishments_total_job_creation",0,0,0,0,0,0,0,0,0
+"Nonclassifiable Establishments_total_job_destruction",0,0,0,0,0,0,0,0,0
+"Nonminority_employment",1,35949,0,140,0,0,0,13298,0
+"Num_Child_Food_Insecure",1,0,0,84,0,0,0,0,0
+"number_food_insecure",1,0,0,84,0,0,0,1264,0
+"obgyn_e2sfca",1,3605,62,14,0,0,0,1598,0
+"Other Services (except Public Administration)_entry_rate",0,0,0,0,0,0,0,0,0
+"Other Services (except Public Administration)_exit_rate",0,0,0,0,0,0,0,0,0
+"Other Services (except Public Administration)_total_employment",0,0,0,0,0,0,0,0,0
+"Other Services (except Public Administration)_total_job_creation",0,0,0,0,0,0,0,0,0
+"Other Services (except Public Administration)_total_job_destruction",0,0,0,0,0,0,0,0,0
+"ped_e2sfca",1,3605,62,14,0,0,0,1319,0
+"per_above30",1,0,0,140,0,0,0,12668,0
+"per_mor_above30",1,0,0,140,0,0,0,12668,0
+"per_rent_above30",1,33974,0,140,0,0,0,12668,0
+"perc_hh_with_broadband",1,24239,0,98,0,0,0,8996,0
+"perc_hh_with_cable_fiber_dsl",1,24239,0,98,0,0,0,8996,0
+"perc_hh_without_compdev",1,24239,0,98,0,0,0,8996,0
+"perc_hh_without_internet",1,24239,0,98,0,0,0,8996,0
+"perc_income_avg_nat_package",1,3183,0,14,0,0,0,1213,0
+"perc_income_min_price_100",1,3163,0,14,0,0,0,1211,0
+"perc_income_min_price_25",1,3149,0,14,0,0,0,1211,0
+"perc_poor_ment_hlth_days_14_and_over",1,0,0,70,0,0,0,6091,0
+"perc_poor_phys_hlth_days_14_and_over",1,0,0,70,0,0,0,6091,0
+"perc_total_100_20_using_devices",1,9693,0,42,0,0,0,3651,0
+"perc_total_25_3_using_devices",1,9693,0,42,0,0,0,3651,0
+"perc_w_int_100_20_using_devices",1,9732,0,42,0,0,0,3651,0
+"perc_w_int_25_3_using_devices",1,9732,0,42,0,0,0,3651,0
+"percent_food_insecure",1,0,0,84,0,0,0,1264,0
+"population_density_direct",1,23477,434,98,28,98,63,8782,483
+"population_density_parcels",1,23477,434,98,28,98,63,8782,483
+"population_direct",1,23477,434,98,28,98,63,8782,483
+"population_parcels",1,23477,434,98,28,98,63,8782,483
+"prevent_hosp_rate",1,0,0,55,0,0,0,0,0
+"primcare_e2sfca",1,3605,62,14,0,0,0,1325,0
+"Professional, Scientific, and Technical Services_entry_rate",0,0,0,0,0,0,0,0,0
+"Professional, Scientific, and Technical Services_exit_rate",0,0,0,0,0,0,0,0,0
+"Professional, Scientific, and Technical Services_total_employment",0,0,0,0,0,0,0,0,0
+"Professional, Scientific, and Technical Services_total_job_creation",0,0,0,0,0,0,0,0,0
+"Professional, Scientific, and Technical Services_total_job_destruction",0,0,0,0,0,0,0,0,0
+"Public Administration_entry_rate",0,0,0,0,0,0,0,0,0
+"Public Administration_exit_rate",0,0,0,0,0,0,0,0,0
+"Public Administration_total_employment",0,0,0,0,0,0,0,0,0
+"Public Administration_total_job_creation",0,0,0,0,0,0,0,0,0
+"Public Administration_total_job_destruction",0,0,0,0,0,0,0,0,0
+"race_AAPI_percent_direct",1,36923,926,210,60,210,135,18152,1015
+"race_AAPI_percent_parcels",1,36923,0,210,0,0,0,18152,0
+"race_afr_amer_alone_percent_direct",1,36923,926,210,60,210,135,18152,1015
+"race_afr_amer_alone_percent_parcels",1,36923,0,210,0,0,0,18152,0
+"race_hispanic_or_latino_percent_direct",1,36923,926,210,60,210,135,18152,1014
+"race_hispanic_or_latino_percent_parcels",1,36923,0,210,0,0,0,18152,0
+"race_native_alone_percent_direct",1,36923,926,210,60,210,135,18152,1015
+"race_native_alone_percent_parcels",1,36923,0,210,0,0,0,18152,0
+"race_other_percent_direct",1,36923,926,210,60,210,135,18152,1015
+"race_other_percent_parcels",1,36923,0,210,0,0,0,18152,0
+"race_two_or_more_percent_direct",1,36923,926,210,60,210,135,18152,1015
+"race_two_or_more_percent_parcels",1,36923,0,210,0,0,0,18152,0
+"race_wht_alone_percent_direct",1,36923,926,210,60,210,135,18152,1015
+"race_wht_alone_percent_parcels",1,36923,0,210,0,0,0,18152,0
+"Real Estate and Rental and Leasing_entry_rate",0,0,0,0,0,0,0,0,0
+"Real Estate and Rental and Leasing_exit_rate",0,0,0,0,0,0,0,0,0
+"Real Estate and Rental and Leasing_total_employment",0,0,0,0,0,0,0,0,0
+"Real Estate and Rental and Leasing_total_job_creation",0,0,0,0,0,0,0,0,0
+"Real Estate and Rental and Leasing_total_job_destruction",0,0,0,0,0,0,0,0,0
+"Retail Trade_entry_rate",0,0,0,0,0,0,0,0,0
+"Retail Trade_exit_rate",0,0,0,0,0,0,0,0,0
+"Retail Trade_total_employment",0,0,0,0,0,0,0,0,0
+"Retail Trade_total_job_creation",0,0,0,0,0,0,0,0,0
+"Retail Trade_total_job_destruction",0,0,0,0,0,0,0,0,0
+"schools_2year_all",1,29967,0,126,0,0,0,11230,0
+"schools_2year_min_drivetime",1,29967,0,126,0,0,0,11230,0
+"schools_2year_with_biomedical_program",1,29967,0,126,0,0,0,11230,0
+"schools_2year_with_computer_program",1,29967,0,126,0,0,0,11230,0
+"schools_2year_with_engineering_program",1,29967,0,126,0,0,0,11230,0
+"schools_2year_with_physical_program",1,29967,0,126,0,0,0,11230,0
+"schools_2year_with_science_program",1,29967,0,126,0,0,0,11230,0
+"schools_under2year",1,29967,0,126,0,0,0,11230,0
+"schools_under2year_min_drivetime",1,29967,0,126,0,0,0,11230,0
+"snap_shortfall_weighted_mean",1,0,0,0,0,0,0,270,0
+"snap_weighted_mean",1,0,0,0,0,0,0,1270,0
+"subs_3sfca",1,3605,62,14,0,0,0,1325,0
+"subs_cnt",1,105,62,14,0,0,0,1331,0
+"subs_near_10_median",1,3605,62,14,0,0,0,1325,0
+"Transportation and Warehousing_entry_rate",0,0,0,0,0,0,0,0,0
+"Transportation and Warehousing_exit_rate",0,0,0,0,0,0,0,0,0
+"Transportation and Warehousing_total_employment",0,0,0,0,0,0,0,0,0
+"Transportation and Warehousing_total_job_creation",0,0,0,0,0,0,0,0,0
+"Transportation and Warehousing_total_job_destruction",0,0,0,0,0,0,0,0,0
+"urgent_3sfca",1,3626,0,14,0,0,0,1323,0
+"urgent_cnt",1,335,0,14,0,0,0,1331,0
+"urgent_near_10_median",1,3626,0,14,0,0,0,1323,0
+"Utilities_entry_rate",0,0,0,0,0,0,0,0,0
+"Utilities_exit_rate",0,0,0,0,0,0,0,0,0
+"Utilities_total_employment",0,0,0,0,0,0,0,0,0
+"Utilities_total_job_creation",0,0,0,0,0,0,0,0,0
+"Utilities_total_job_destruction",0,0,0,0,0,0,0,0,0
+"veteran_percent_direct",1,29779,802,182,52,182,117,15505,877
+"veteran_percent_parcels",1,29779,761,182,36,126,81,15505,491
+"Wholesale Trade_entry_rate",0,0,0,0,0,0,0,0,0
+"Wholesale Trade_exit_rate",0,0,0,0,0,0,0,0,0
+"Wholesale Trade_total_employment",0,0,0,0,0,0,0,0,0
+"Wholesale Trade_total_job_creation",0,0,0,0,0,0,0,0,0
+"Wholesale Trade_total_job_destruction",0,0,0,0,0,0,0,0,0

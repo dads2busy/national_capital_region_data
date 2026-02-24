@@ -1,0 +1,36 @@
+@import 'tailwindcss';
+
+:root {
+  --navbar-bg: #141e3c;
+  --navbar-color: #fff;
+  --link: #007eb3;
+  --highlight: #173a64;
+  --primary-accent: #ed79f9;
+  --font-family: 'Lato', sans-serif;
+}
+
+.dark {
+  --link: #5bb8d4;
+  --highlight: #4a7eb5;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+/* Leaflet container needs explicit height */
+.leaflet-container {
+  height: 430px;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Override Leaflet default font */
+.leaflet-container {
+  font-family: var(--font-family);
+}
+
+/* Invert and tint Voyager tiles to dark navy theme (does not affect GeoJSON overlay) */
+.leaflet-tile-pane {
+  filter: invert(1) hue-rotate(190deg) brightness(0.7) saturate(0.3) contrast(1.1);
+}
