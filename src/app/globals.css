@@ -32,5 +32,5 @@ body {
 
 /* Invert and tint Voyager tiles to dark navy theme (does not affect GeoJSON overlay) */
 .leaflet-tile-pane {
-  filter: invert(1) hue-rotate(190deg) brightness(0.7) saturate(0.3) contrast(1.1);
+  filter: invert(1) hue-rotate(190deg) brightness(0.85) saturate(0.3) contrast(1.1);
 }
