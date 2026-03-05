@@ -90,87 +90,9 @@
             ],
             "missing": 14,
             "mean": 72.13469707909474,
-            "sd": 11.027548133768686,
+            "sd": 11.027548133768688,
             "min": 47.46600741656366,
             "max": 93.3022960533277
-          },
-          {
-            "name": "age_20_64_percent_direct",
-            "type": "float",
-            "time_range": [
-              0,
-              12
-            ],
-            "missing": 28,
-            "mean": 63.46617670635322,
-            "sd": 3.8153588393323643,
-            "min": 58.90980050151296,
-            "max": 74.20529165168301
-          },
-          {
-            "name": "age_20_64_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              12
-            ],
-            "missing": 28,
-            "mean": 63.46617670635322,
-            "sd": 3.8153588393323643,
-            "min": 58.90980050151296,
-            "max": 74.20529165168301
-          },
-          {
-            "name": "age_65_plus_percent_direct",
-            "type": "float",
-            "time_range": [
-              0,
-              12
-            ],
-            "missing": 28,
-            "mean": 10.08424447670177,
-            "sd": 2.294508881385714,
-            "min": 5.130731337627889,
-            "max": 15.061279737722533
-          },
-          {
-            "name": "age_65_plus_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              12
-            ],
-            "missing": 28,
-            "mean": 10.08424447670177,
-            "sd": 2.294508881385714,
-            "min": 5.130731337627889,
-            "max": 15.061279737722533
-          },
-          {
-            "name": "age_under_20_percent_direct",
-            "type": "float",
-            "time_range": [
-              0,
-              12
-            ],
-            "missing": 28,
-            "mean": 25.999753380205245,
-            "sd": 4.141409023623806,
-            "min": 17.041834838226134,
-            "max": 32.631307487320555
-          },
-          {
-            "name": "age_under_20_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              12
-            ],
-            "missing": 28,
-            "mean": 25.999753380205245,
-            "sd": 4.141409023623806,
-            "min": 17.041834838226134,
-            "max": 32.631307487320555
           },
           {
             "name": "at_risk_high_cnt",
@@ -406,58 +328,6 @@
             "missing": 210
           },
           {
-            "name": "gender_female_percent_direct",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 0,
-            "mean": 50.85639436451735,
-            "sd": 1.103088980766097,
-            "min": 47.00827699500853,
-            "max": 52.83711144684272
-          },
-          {
-            "name": "gender_female_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 0,
-            "mean": 50.85639436451735,
-            "sd": 1.1030889807660966,
-            "min": 47.00827699500853,
-            "max": 52.83711144684272
-          },
-          {
-            "name": "gender_male_percent_direct",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 0,
-            "mean": 49.14360563548265,
-            "sd": 1.1030889807660968,
-            "min": 47.16288855315728,
-            "max": 52.99172300499147
-          },
-          {
-            "name": "gender_male_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 0,
-            "mean": 49.14360563548265,
-            "sd": 1.1030889807660966,
-            "min": 47.16288855315728,
-            "max": 52.99172300499147
-          },
-          {
             "name": "gini_index_geo20",
             "type": "float",
             "time_range": [
@@ -534,32 +404,6 @@
             "sd": 12.754740609405086,
             "min": 8.57565049865925,
             "max": 56.9310651978473
-          },
-          {
-            "name": "language_hh_limited_english_percent_direct",
-            "type": "float",
-            "time_range": [
-              7,
-              14
-            ],
-            "missing": 98,
-            "mean": 5.03698293800843,
-            "sd": 2.2195604662373554,
-            "min": 1.110803068108308,
-            "max": 9.969409365440427
-          },
-          {
-            "name": "language_hh_limited_english_percent_parcels",
-            "type": "float",
-            "time_range": [
-              7,
-              14
-            ],
-            "missing": 98,
-            "mean": 5.03698293800843,
-            "sd": 2.2195604662373554,
-            "min": 1.110803068108308,
-            "max": 9.969409365440427
           },
           {
             "name": "median_household_income",
@@ -978,58 +822,6 @@
             "max": 15.5
           },
           {
-            "name": "population_density_direct",
-            "type": "float",
-            "time_range": [
-              6,
-              12
-            ],
-            "missing": 112,
-            "mean": 4362.62373957201,
-            "sd": 3577.4328566030563,
-            "min": 333.681785673393,
-            "max": 11484.01229027691
-          },
-          {
-            "name": "population_density_parcels",
-            "type": "float",
-            "time_range": [
-              6,
-              12
-            ],
-            "missing": 112,
-            "mean": 4362.62373957201,
-            "sd": 3577.4328566030563,
-            "min": 333.681785673393,
-            "max": 11484.01229027691
-          },
-          {
-            "name": "population_direct",
-            "type": "integer",
-            "time_range": [
-              6,
-              12
-            ],
-            "missing": 112,
-            "mean": 392805.67346938775,
-            "sd": 381351.5805247569,
-            "min": 13308,
-            "max": 1149439
-          },
-          {
-            "name": "population_parcels",
-            "type": "integer",
-            "time_range": [
-              6,
-              12
-            ],
-            "missing": 112,
-            "mean": 392805.67346938775,
-            "sd": 381351.5805247569,
-            "min": 13308,
-            "max": 1149439
-          },
-          {
             "name": "prevent_hosp_rate",
             "type": "integer",
             "time_range": [
@@ -1054,188 +846,6 @@
             "sd": 0.9181643482054076,
             "min": 1.0424388275817,
             "max": 3.56840278770009
-          },
-          {
-            "name": "race_AAPI_percent_direct",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 0,
-            "mean": 9.33528933647799,
-            "sd": 5.251687148461062,
-            "min": 2.6865267047602743,
-            "max": 21.102973199526087
-          },
-          {
-            "name": "race_AAPI_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 0,
-            "mean": 9.33528933647799,
-            "sd": 5.251687148461062,
-            "min": 2.6865267047602743,
-            "max": 21.102973199526087
-          },
-          {
-            "name": "race_afr_amer_alone_percent_direct",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 0,
-            "mean": 20.471598709994804,
-            "sd": 17.51488137500606,
-            "min": 2.1265404268109407,
-            "max": 64.41380940235538
-          },
-          {
-            "name": "race_afr_amer_alone_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 0,
-            "mean": 20.471598709994804,
-            "sd": 17.51488137500606,
-            "min": 2.1265404268109407,
-            "max": 64.41380940235538
-          },
-          {
-            "name": "race_hispanic_or_latino_percent_direct",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 0,
-            "mean": 17.1298623745678,
-            "sd": 8.875067331889195,
-            "min": 3.662407886946162,
-            "max": 45.91975418070082
-          },
-          {
-            "name": "race_hispanic_or_latino_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 0,
-            "mean": 17.1298623745678,
-            "sd": 8.875067331889197,
-            "min": 3.662407886946162,
-            "max": 45.91975418070082
-          },
-          {
-            "name": "race_native_alone_percent_direct",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 0,
-            "mean": 0.38212961658960926,
-            "sd": 0.3731756626528989,
-            "min": 0,
-            "max": 3.6400165455297526
-          },
-          {
-            "name": "race_native_alone_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 0,
-            "mean": 0.38212961658960926,
-            "sd": 0.373175662652899,
-            "min": 0,
-            "max": 3.6400165455297526
-          },
-          {
-            "name": "race_other_percent_direct",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 0,
-            "mean": 5.599905377628122,
-            "sd": 3.2746531664682177,
-            "min": 0.7263466894146574,
-            "max": 17.106895940436093
-          },
-          {
-            "name": "race_other_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 0,
-            "mean": 5.599905377628122,
-            "sd": 3.2746531664682177,
-            "min": 0.7263466894146574,
-            "max": 17.106895940436093
-          },
-          {
-            "name": "race_two_or_more_percent_direct",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 0,
-            "mean": 5.183717562354375,
-            "sd": 2.9554529413182027,
-            "min": 1.4042738770170082,
-            "max": 20.687069409945167
-          },
-          {
-            "name": "race_two_or_more_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 0,
-            "mean": 5.183717562354375,
-            "sd": 2.9554529413182027,
-            "min": 1.4042738770170082,
-            "max": 20.687069409945167
-          },
-          {
-            "name": "race_wht_alone_percent_direct",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 0,
-            "mean": 59.027359396955106,
-            "sd": 15.891833725682252,
-            "min": 13.157817627754335,
-            "max": 83.38113611526195
-          },
-          {
-            "name": "race_wht_alone_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 0,
-            "mean": 59.027359396955106,
-            "sd": 15.891833725682252,
-            "min": 13.157817627754335,
-            "max": 83.38113611526195
           },
           {
             "name": "schools_2year_all",
@@ -1271,8 +881,8 @@
               12
             ],
             "missing": 84,
-            "mean": 0.003589228132678634,
-            "sd": 0.013568766305725906,
+            "mean": 0.0035892281326786266,
+            "sd": 0.013568766305725904,
             "min": 8.81277452343001e-47,
             "max": 0.0909529417775393
           },
@@ -1286,7 +896,7 @@
             "missing": 84,
             "mean": 0.22482597612592525,
             "sd": 0.24206418766676024,
-            "min": 0.00818700116874883,
+            "min": 0.0081870011687488,
             "max": 0.949834893690624
           },
           {
@@ -1299,7 +909,7 @@
             "missing": 84,
             "mean": 0.17484868449023744,
             "sd": 0.2538250218998355,
-            "min": 0.00818373483100948,
+            "min": 0.0081837348310094,
             "max": 0.949655556859773
           },
           {
@@ -1310,8 +920,8 @@
               12
             ],
             "missing": 84,
-            "mean": 0.0005535453822214023,
-            "sd": 0.003338248995496727,
+            "mean": 0.0005535453822214015,
+            "sd": 0.003338248995496726,
             "min": 2.18140123892722e-37,
             "max": 0.0224032956078783
           },
@@ -1323,9 +933,9 @@
               12
             ],
             "missing": 84,
-            "mean": 0.09319534213507547,
+            "mean": 0.09319534213507545,
             "sd": 0.15228492323855666,
-            "min": 0.000238267323529684,
+            "min": 0.0002382673235296,
             "max": 0.6355688858566
           },
           {
@@ -1451,34 +1061,411 @@
             "max": 13.938611395263
           },
           {
-            "name": "veteran_percent_direct",
+            "name": "age_20_64_count_geo20",
+            "type": "integer",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 238871.79047619048,
+            "sd": 230198.74554828426,
+            "min": 6734,
+            "max": 705875
+          },
+          {
+            "name": "age_20_64_percent_geo20",
             "type": "float",
             "time_range": [
               0,
-              12
+              14
             ],
-            "missing": 28,
-            "mean": 11.951176410696073,
-            "sd": 10.738853839376151,
-            "min": 4.121158825893203,
+            "missing": 0,
+            "mean": 63.23076721866501,
+            "sd": 3.8086090553531924,
+            "min": 57.644075926814224,
+            "max": 74.20529165168301
+          },
+          {
+            "name": "age_65_plus_count_geo20",
+            "type": "integer",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 43928.84285714286,
+            "sd": 48334.90220040717,
+            "min": 709,
+            "max": 175080
+          },
+          {
+            "name": "age_65_plus_percent_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 10.835528612565087,
+            "sd": 2.504589522210474,
+            "min": 5.403561955286094,
+            "max": 16.55468207786412
+          },
+          {
+            "name": "age_total_count_geo20",
+            "type": "integer",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 380991.3714285714,
+            "sd": 373201.955849868,
+            "min": 11233,
+            "max": 1149439
+          },
+          {
+            "name": "age_under_20_count_geo20",
+            "type": "integer",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 98190.73809523809,
+            "sd": 97191.88108833239,
+            "min": 2983,
+            "max": 298759
+          },
+          {
+            "name": "age_under_20_percent_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 25.933704168769903,
+            "sd": 4.035433525723692,
+            "min": 17.041834838226134,
+            "max": 32.631307487320555
+          },
+          {
+            "name": "gender_female_count_geo20",
+            "type": "integer",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 195033.20476190475,
+            "sd": 191577.03782460082,
+            "min": 5809,
+            "max": 579167
+          },
+          {
+            "name": "gender_female_percent_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 50.85639436451735,
+            "sd": 1.1030889807660968,
+            "min": 47.00827699500853,
+            "max": 52.83711144684272
+          },
+          {
+            "name": "gender_male_count_geo20",
+            "type": "integer",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 185958.16666666666,
+            "sd": 181731.57379942283,
+            "min": 5390,
+            "max": 573140
+          },
+          {
+            "name": "gender_male_percent_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 49.14360563548265,
+            "sd": 1.1030889807660968,
+            "min": 47.16288855315728,
+            "max": 52.99172300499147
+          },
+          {
+            "name": "gender_total_count_geo20",
+            "type": "integer",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 380991.3714285714,
+            "sd": 373201.955849868,
+            "min": 11233,
+            "max": 1149439
+          },
+          {
+            "name": "race_AAPI_count_geo20",
+            "type": "integer",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 40880.82380952381,
+            "sd": 60010.21554370798,
+            "min": 739,
+            "max": 232351
+          },
+          {
+            "name": "race_AAPI_percent_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 9.33528933647799,
+            "sd": 5.251687148461062,
+            "min": 2.6865267047602743,
+            "max": 21.102973199526087
+          },
+          {
+            "name": "race_afr_amer_alone_count_geo20",
+            "type": "integer",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 102245.42380952381,
+            "sd": 153584.695991298,
+            "min": 283,
+            "max": 589205
+          },
+          {
+            "name": "race_afr_amer_alone_percent_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 20.471598709994804,
+            "sd": 17.514881375006055,
+            "min": 2.1265404268109407,
+            "max": 64.41380940235538
+          },
+          {
+            "name": "race_hispanic_or_latino_count_geo20",
+            "type": "integer",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 60050.31428571429,
+            "sd": 65261.27326615895,
+            "min": 978,
+            "max": 218219
+          },
+          {
+            "name": "race_hispanic_or_latino_percent_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 17.1298623745678,
+            "sd": 8.875067331889197,
+            "min": 3.6624078869461623,
+            "max": 45.91975418070082
+          },
+          {
+            "name": "race_native_alone_count_geo20",
+            "type": "integer",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 1315.695238095238,
+            "sd": 1312.333814413663,
+            "min": 0,
+            "max": 5635
+          },
+          {
+            "name": "race_native_alone_percent_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 0.38212961658960926,
+            "sd": 0.373175662652899,
+            "min": 0,
+            "max": 3.6400165455297526
+          },
+          {
+            "name": "race_other_count_geo20",
+            "type": "integer",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 24362.485714285714,
+            "sd": 32260.041743430695,
+            "min": 221,
+            "max": 149499
+          },
+          {
+            "name": "race_other_percent_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 5.599905377628122,
+            "sd": 3.2746531664682177,
+            "min": 0.7263466894146574,
+            "max": 17.106895940436093
+          },
+          {
+            "name": "race_total_count_geo20",
+            "type": "integer",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 380991.3714285714,
+            "sd": 373201.955849868,
+            "min": 11233,
+            "max": 1149439
+          },
+          {
+            "name": "race_two_or_more_count_geo20",
+            "type": "integer",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 18202.704761904763,
+            "sd": 21517.53252026016,
+            "min": 161,
+            "max": 129131
+          },
+          {
+            "name": "race_two_or_more_percent_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 5.183717562354375,
+            "sd": 2.9554529413182027,
+            "min": 1.4042738770170082,
+            "max": 20.687069409945167
+          },
+          {
+            "name": "race_wht_alone_count_geo20",
+            "type": "integer",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 193984.2380952381,
+            "sd": 194432.71039932812,
+            "min": 6819,
+            "max": 713926
+          },
+          {
+            "name": "race_wht_alone_percent_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 59.027359396955106,
+            "sd": 15.891833725682252,
+            "min": 13.157817627754335,
+            "max": 83.38113611526195
+          },
+          {
+            "name": "veteran_count_geo20",
+            "type": "integer",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 30206.390476190478,
+            "sd": 45596.2388535544,
+            "min": 686,
+            "max": 363405
+          },
+          {
+            "name": "veteran_percent_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 0,
+            "mean": 11.39951897081064,
+            "sd": 10.134868941952762,
+            "min": 3.772233078732312,
             "max": 50.57586379569354
           },
           {
-            "name": "veteran_percent_parcels",
+            "name": "language_hh_limited_english_count_geo20",
+            "type": "integer",
+            "time_range": [
+              7,
+              14
+            ],
+            "missing": 98,
+            "mean": 7753.357142857143,
+            "sd": 9081.815414860172,
+            "min": 74,
+            "max": 29894
+          },
+          {
+            "name": "language_hh_limited_english_percent_geo20",
             "type": "float",
             "time_range": [
-              0,
-              12
+              7,
+              14
             ],
-            "missing": 28,
-            "mean": 11.951176410696073,
-            "sd": 10.738853839376151,
-            "min": 4.121158825893203,
-            "max": 50.57586379569354
+            "missing": 98,
+            "mean": 5.03698293800843,
+            "sd": 2.2195604662373554,
+            "min": 1.110803068108308,
+            "max": 9.969409365440429
           }
         ]
       },
-      "bytes": 192488,
+      "bytes": 160568,
       "rows": 210,
       "entities": 14
     },
@@ -1560,84 +1547,6 @@
             "sd": 17.93834692903666,
             "min": 0,
             "max": 100
-          },
-          {
-            "name": "age_20_64_percent_direct",
-            "type": "float",
-            "time_range": [
-              0,
-              12
-            ],
-            "missing": 6230,
-            "mean": 63.33358359917968,
-            "sd": 8.851992500598511,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "age_20_64_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              12
-            ],
-            "missing": 6230,
-            "mean": 63.33358359917968,
-            "sd": 8.851992500598511,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "age_65_plus_percent_direct",
-            "type": "float",
-            "time_range": [
-              0,
-              12
-            ],
-            "missing": 6230,
-            "mean": 11.327650240649339,
-            "sd": 7.25235247251998,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "age_65_plus_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              12
-            ],
-            "missing": 6230,
-            "mean": 11.327650240649339,
-            "sd": 7.25235247251998,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "age_under_20_percent_direct",
-            "type": "float",
-            "time_range": [
-              0,
-              12
-            ],
-            "missing": 6230,
-            "mean": 24.846621617458265,
-            "sd": 7.82351285562145,
-            "min": 0,
-            "max": 74.00379506641366
-          },
-          {
-            "name": "age_under_20_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              12
-            ],
-            "missing": 6230,
-            "mean": 24.846621617458265,
-            "sd": 7.82351285562145,
-            "min": 0,
-            "max": 74.00379506641366
           },
           {
             "name": "at_risk_high_cnt",
@@ -1905,58 +1814,6 @@
             "max": 100
           },
           {
-            "name": "gender_female_percent_direct",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 3583,
-            "mean": 51.3322331107131,
-            "sd": 4.83013473777379,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "gender_female_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 3583,
-            "mean": 51.332233110713105,
-            "sd": 4.830134737773789,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "gender_male_percent_direct",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 3583,
-            "mean": 48.6677668892869,
-            "sd": 4.830134737773789,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "gender_male_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 3583,
-            "mean": 48.6677668892869,
-            "sd": 4.830134737773789,
-            "min": 0,
-            "max": 100
-          },
-          {
             "name": "gini_index_geo20",
             "type": "float",
             "time_range": [
@@ -2033,32 +1890,6 @@
             "sd": 12.386764349289791,
             "min": 5.16692342546443,
             "max": 83.145423623995
-          },
-          {
-            "name": "language_hh_limited_english_percent_direct",
-            "type": "float",
-            "time_range": [
-              7,
-              14
-            ],
-            "missing": 11584,
-            "mean": 5.27606325123945,
-            "sd": 6.432135471260704,
-            "min": 0,
-            "max": 80.16877637130801
-          },
-          {
-            "name": "language_hh_limited_english_percent_parcels",
-            "type": "float",
-            "time_range": [
-              7,
-              14
-            ],
-            "missing": 11584,
-            "mean": 5.27606325123945,
-            "sd": 6.432135471260704,
-            "min": 0,
-            "max": 80.16877637130801
           },
           {
             "name": "median_household_income",
@@ -2473,58 +2304,6 @@
             "max": 47.5
           },
           {
-            "name": "population_density_direct",
-            "type": "float",
-            "time_range": [
-              6,
-              12
-            ],
-            "missing": 12953,
-            "mean": 8013.303388055846,
-            "sd": 9393.971754623915,
-            "min": 0,
-            "max": 96203.7566540631
-          },
-          {
-            "name": "population_density_parcels",
-            "type": "float",
-            "time_range": [
-              6,
-              12
-            ],
-            "missing": 12953,
-            "mean": 8013.303388055846,
-            "sd": 9393.971754623915,
-            "min": 0,
-            "max": 96203.7566540631
-          },
-          {
-            "name": "population_direct",
-            "type": "integer",
-            "time_range": [
-              6,
-              12
-            ],
-            "missing": 12953,
-            "mean": 4383.392849009338,
-            "sd": 1771.1096153877204,
-            "min": 0,
-            "max": 19438
-          },
-          {
-            "name": "population_parcels",
-            "type": "integer",
-            "time_range": [
-              6,
-              12
-            ],
-            "missing": 12953,
-            "mean": 4383.392849009338,
-            "sd": 1771.1096153877204,
-            "min": 0,
-            "max": 19438
-          },
-          {
             "name": "prevent_hosp_rate",
             "type": "unknown",
             "time_range": [
@@ -2545,188 +2324,6 @@
             "sd": 1.0862759795262906,
             "min": 0.0498625521750697,
             "max": 4.50159769648965
-          },
-          {
-            "name": "race_AAPI_percent_direct",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 3583,
-            "mean": 9.960073891486088,
-            "sd": 9.495489560293036,
-            "min": 0,
-            "max": 63.80925347715016
-          },
-          {
-            "name": "race_AAPI_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 3583,
-            "mean": 9.960073891486088,
-            "sd": 9.495489560293036,
-            "min": 0,
-            "max": 63.80925347715016
-          },
-          {
-            "name": "race_afr_amer_alone_percent_direct",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 3583,
-            "mean": 28.12284411500909,
-            "sd": 29.16671811822379,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "race_afr_amer_alone_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 3583,
-            "mean": 28.12284411500909,
-            "sd": 29.16671811822379,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "race_hispanic_or_latino_percent_direct",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 3583,
-            "mean": 14.87908141949797,
-            "sd": 13.805110223845022,
-            "min": 0,
-            "max": 98.15295815295816
-          },
-          {
-            "name": "race_hispanic_or_latino_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 3583,
-            "mean": 14.87908141949797,
-            "sd": 13.805110223845022,
-            "min": 0,
-            "max": 98.15295815295816
-          },
-          {
-            "name": "race_native_alone_percent_direct",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 3583,
-            "mean": 0.34283578913000945,
-            "sd": 0.8743997255267668,
-            "min": 0,
-            "max": 28.571428571428573
-          },
-          {
-            "name": "race_native_alone_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 3583,
-            "mean": 0.34283578913000945,
-            "sd": 0.8743997255267668,
-            "min": 0,
-            "max": 28.571428571428573
-          },
-          {
-            "name": "race_other_percent_direct",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 3583,
-            "mean": 5.989029639174463,
-            "sd": 9.248774783965043,
-            "min": 0,
-            "max": 92.85406182602443
-          },
-          {
-            "name": "race_other_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 3583,
-            "mean": 5.989029639174463,
-            "sd": 9.248774783965043,
-            "min": 0,
-            "max": 92.85406182602443
-          },
-          {
-            "name": "race_two_or_more_percent_direct",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 3583,
-            "mean": 4.678888111429469,
-            "sd": 3.8550393465724815,
-            "min": 0,
-            "max": 40.83393242271747
-          },
-          {
-            "name": "race_two_or_more_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 3583,
-            "mean": 4.678888111429469,
-            "sd": 3.8550393465724815,
-            "min": 0,
-            "max": 40.83393242271747
-          },
-          {
-            "name": "race_wht_alone_percent_direct",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 3583,
-            "mean": 50.90632845377088,
-            "sd": 27.11895249466374,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "race_wht_alone_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              14
-            ],
-            "missing": 3583,
-            "mean": 50.90632845377088,
-            "sd": 27.11895249466374,
-            "min": 0,
-            "max": 100
           },
           {
             "name": "schools_2year_all",
@@ -2762,7 +2359,7 @@
               12
             ],
             "missing": 10505,
-            "mean": 0.0065991221588079865,
+            "mean": 0.006599122158807979,
             "sd": 0.024179347128434486,
             "min": 0,
             "max": 0.415657062749169
@@ -2801,7 +2398,7 @@
               12
             ],
             "missing": 10505,
-            "mean": 0.00045997444924584824,
+            "mean": 0.00045997444924584553,
             "sd": 0.008811227613799362,
             "min": 0,
             "max": 0.415657062749169
@@ -2814,7 +2411,7 @@
               12
             ],
             "missing": 10505,
-            "mean": 0.08611738705201456,
+            "mean": 0.08611738705201455,
             "sd": 0.1557253207805525,
             "min": 0,
             "max": 1.46609999307948
@@ -2950,34 +2547,814 @@
             "max": 38.45
           },
           {
-            "name": "veteran_percent_direct",
+            "name": "age_20_64_count_geo10",
+            "type": "integer",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8803,
+            "mean": 2705.9952056913085,
+            "sd": 1101.56695775915,
+            "min": 0,
+            "max": 11223
+          },
+          {
+            "name": "age_20_64_count_geo20",
             "type": "float",
             "time_range": [
               0,
-              12
+              14
             ],
-            "missing": 6230,
-            "mean": 10.244176183867806,
-            "sd": 9.480985698427816,
+            "missing": 2299,
+            "mean": 2779.998181721774,
+            "sd": 1170.9747887897481,
+            "min": 0,
+            "max": 11223
+          },
+          {
+            "name": "age_20_64_percent_geo10",
+            "type": "float",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8874,
+            "mean": 63.52516559551749,
+            "sd": 8.611315700229959,
             "min": 0,
             "max": 100
           },
           {
-            "name": "veteran_percent_parcels",
+            "name": "age_20_64_percent_geo20",
             "type": "float",
             "time_range": [
               0,
-              12
+              14
             ],
-            "missing": 6230,
-            "mean": 10.244176183867806,
-            "sd": 9.480985698427816,
+            "missing": 2361,
+            "mean": 63.197008708536856,
+            "sd": 10.238530583882824,
             "min": 0,
             "max": 100
+          },
+          {
+            "name": "age_65_plus_count_geo10",
+            "type": "integer",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8803,
+            "mean": 467.87789978348286,
+            "sd": 305.67374462604477,
+            "min": 0,
+            "max": 3155
+          },
+          {
+            "name": "age_65_plus_count_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2299,
+            "mean": 500.60790137368394,
+            "sd": 326.03137648461524,
+            "min": 0,
+            "max": 3155
+          },
+          {
+            "name": "age_65_plus_percent_geo10",
+            "type": "float",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8874,
+            "mean": 11.471248569746827,
+            "sd": 7.424848282612838,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "age_65_plus_percent_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2361,
+            "mean": 11.931169837587118,
+            "sd": 7.77393948738065,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "age_total_count_geo10",
+            "type": "integer",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8803,
+            "mean": 4283.722780699041,
+            "sd": 1720.3953810620887,
+            "min": 0,
+            "max": 19438
+          },
+          {
+            "name": "age_total_count_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2299,
+            "mean": 4401.545797114215,
+            "sd": 1816.5297509309555,
+            "min": 0,
+            "max": 19438
+          },
+          {
+            "name": "age_under_20_count_geo10",
+            "type": "integer",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8803,
+            "mean": 1109.84967522425,
+            "sd": 647.4549906174154,
+            "min": 0,
+            "max": 9538
+          },
+          {
+            "name": "age_under_20_count_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2299,
+            "mean": 1120.9397140187577,
+            "sd": 683.3924334453717,
+            "min": 0,
+            "max": 9535.519786412464
+          },
+          {
+            "name": "age_under_20_percent_geo10",
+            "type": "float",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8874,
+            "mean": 25.003585834735684,
+            "sd": 7.734417611667529,
+            "min": 0,
+            "max": 74.00379506641366
+          },
+          {
+            "name": "age_under_20_percent_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2361,
+            "mean": 24.369563120276947,
+            "sd": 8.33542512583005,
+            "min": 0,
+            "max": 70.65282477582967
+          },
+          {
+            "name": "gender_female_count_geo10",
+            "type": "integer",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8803,
+            "mean": 2197.618388493659,
+            "sd": 882.3558402239062,
+            "min": 0,
+            "max": 9718
+          },
+          {
+            "name": "gender_female_count_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2299,
+            "mean": 2251.0276841489654,
+            "sd": 931.0421658637383,
+            "min": 0,
+            "max": 9718
+          },
+          {
+            "name": "gender_female_percent_geo10",
+            "type": "float",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8874,
+            "mean": 51.444328334158584,
+            "sd": 4.619748667553844,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "gender_female_percent_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2340,
+            "mean": 50.96406307405385,
+            "sd": 6.17892731972021,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "gender_male_count_geo10",
+            "type": "integer",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8803,
+            "mean": 2086.104392205382,
+            "sd": 871.7983496426938,
+            "min": 0,
+            "max": 9720
+          },
+          {
+            "name": "gender_male_count_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2299,
+            "mean": 2150.51811296525,
+            "sd": 920.6260251254505,
+            "min": 0,
+            "max": 9720
+          },
+          {
+            "name": "gender_male_percent_geo10",
+            "type": "float",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8874,
+            "mean": 48.555671665841416,
+            "sd": 4.619748667553845,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "gender_male_percent_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2340,
+            "mean": 48.4257716900506,
+            "sd": 6.046976863617738,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "gender_total_count_geo10",
+            "type": "integer",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8803,
+            "mean": 4283.722780699041,
+            "sd": 1720.3953810620887,
+            "min": 0,
+            "max": 19438
+          },
+          {
+            "name": "gender_total_count_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2299,
+            "mean": 4401.545797114215,
+            "sd": 1816.5297509309555,
+            "min": 0,
+            "max": 19438
+          },
+          {
+            "name": "race_AAPI_count_geo10",
+            "type": "integer",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8803,
+            "mean": 444.2534797401794,
+            "sd": 521.905333824029,
+            "min": 0,
+            "max": 6403
+          },
+          {
+            "name": "race_AAPI_count_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2299,
+            "mean": 487.60639320296673,
+            "sd": 585.9000982500839,
+            "min": 0,
+            "max": 6403
+          },
+          {
+            "name": "race_AAPI_percent_geo10",
+            "type": "float",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8874,
+            "mean": 9.55043125803122,
+            "sd": 9.056914368299202,
+            "min": 0,
+            "max": 63.24549237170597
+          },
+          {
+            "name": "race_AAPI_percent_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2340,
+            "mean": 10.163738393129163,
+            "sd": 9.668737000628244,
+            "min": 0,
+            "max": 63.80925347715016
+          },
+          {
+            "name": "race_afr_amer_alone_count_geo10",
+            "type": "integer",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8803,
+            "mean": 1165.0698267862667,
+            "sd": 1232.8421682358949,
+            "min": 0,
+            "max": 9315
+          },
+          {
+            "name": "race_afr_amer_alone_count_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2299,
+            "mean": 1150.3892450252208,
+            "sd": 1238.9495895763844,
+            "min": 0,
+            "max": 9315
+          },
+          {
+            "name": "race_afr_amer_alone_percent_geo10",
+            "type": "float",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8874,
+            "mean": 28.79863255444482,
+            "sd": 29.916101695184086,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "race_afr_amer_alone_percent_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2340,
+            "mean": 27.176830616257032,
+            "sd": 28.48867533234713,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "race_hispanic_or_latino_count_geo10",
+            "type": "integer",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8803,
+            "mean": 654.3513764305599,
+            "sd": 747.6134301655701,
+            "min": 0,
+            "max": 6387
+          },
+          {
+            "name": "race_hispanic_or_latino_count_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2299,
+            "mean": 694.2310522034404,
+            "sd": 778.3180171211313,
+            "min": 0,
+            "max": 6802
+          },
+          {
+            "name": "race_hispanic_or_latino_percent_geo10",
+            "type": "float",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8874,
+            "mean": 14.279430263087445,
+            "sd": 13.464292455765552,
+            "min": 0,
+            "max": 95.50713749060856
+          },
+          {
+            "name": "race_hispanic_or_latino_percent_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2340,
+            "mean": 14.76163220403777,
+            "sd": 13.69337673602851,
+            "min": 0,
+            "max": 98.15295815295816
+          },
+          {
+            "name": "race_native_alone_count_geo10",
+            "type": "integer",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8803,
+            "mean": 14.07067738942159,
+            "sd": 34.017414029102824,
+            "min": 0,
+            "max": 630
+          },
+          {
+            "name": "race_native_alone_count_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2299,
+            "mean": 15.405307788148638,
+            "sd": 37.319401652922686,
+            "min": 0,
+            "max": 630
+          },
+          {
+            "name": "race_native_alone_percent_geo10",
+            "type": "float",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8874,
+            "mean": 0.32508121946718693,
+            "sd": 0.826245047827033,
+            "min": 0,
+            "max": 28.571428571428573
+          },
+          {
+            "name": "race_native_alone_percent_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2340,
+            "mean": 0.3448004506784339,
+            "sd": 0.8610938533735933,
+            "min": 0,
+            "max": 28.4718763110126
+          },
+          {
+            "name": "race_other_count_geo10",
+            "type": "integer",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8803,
+            "mean": 252.85686668728735,
+            "sd": 449.4826895665026,
+            "min": 0,
+            "max": 6074
+          },
+          {
+            "name": "race_other_count_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2299,
+            "mean": 276.6240932886692,
+            "sd": 479.0341791098241,
+            "min": 0,
+            "max": 6458
+          },
+          {
+            "name": "race_other_percent_geo10",
+            "type": "float",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8874,
+            "mean": 5.498774467716812,
+            "sd": 8.66212505165784,
+            "min": 0,
+            "max": 91.26972201352366
+          },
+          {
+            "name": "race_other_percent_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2340,
+            "mean": 5.868404290750956,
+            "sd": 9.065157076647596,
+            "min": 0,
+            "max": 92.85406182602443
+          },
+          {
+            "name": "race_total_count_geo10",
+            "type": "integer",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8803,
+            "mean": 4283.722780699041,
+            "sd": 1720.3953810620887,
+            "min": 0,
+            "max": 19438
+          },
+          {
+            "name": "race_total_count_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2299,
+            "mean": 4401.545797114215,
+            "sd": 1816.5297509309555,
+            "min": 0,
+            "max": 19438
+          },
+          {
+            "name": "race_two_or_more_count_geo10",
+            "type": "integer",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8803,
+            "mean": 155.1623105474791,
+            "sd": 134.73416056577997,
+            "min": 0,
+            "max": 1506
+          },
+          {
+            "name": "race_two_or_more_count_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2299,
+            "mean": 210.6423929917996,
+            "sd": 200.6109215993007,
+            "min": 0,
+            "max": 2217
+          },
+          {
+            "name": "race_two_or_more_percent_geo10",
+            "type": "float",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8874,
+            "mean": 3.45321597451633,
+            "sd": 2.4025282996601853,
+            "min": 0,
+            "max": 19.93210475266731
+          },
+          {
+            "name": "race_two_or_more_percent_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2340,
+            "mean": 4.622496664177043,
+            "sd": 3.7796090218121785,
+            "min": 0,
+            "max": 40.83393242271747
+          },
+          {
+            "name": "race_wht_alone_count_geo10",
+            "type": "integer",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8803,
+            "mean": 2252.309619548407,
+            "sd": 1478.9557997190732,
+            "min": 0,
+            "max": 11224
+          },
+          {
+            "name": "race_wht_alone_count_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2299,
+            "mean": 2260.8783648174103,
+            "sd": 1476.1693121196029,
+            "min": 0,
+            "max": 11221.599532329305
+          },
+          {
+            "name": "race_wht_alone_percent_geo10",
+            "type": "float",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8874,
+            "mean": 52.37386452582363,
+            "sd": 27.61046908927027,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "race_wht_alone_percent_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2340,
+            "mean": 51.21356434911183,
+            "sd": 26.82423156103051,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "veteran_count_geo10",
+            "type": "integer",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8803,
+            "mean": 340.15983606557376,
+            "sd": 345.8546144970716,
+            "min": 0,
+            "max": 6537
+          },
+          {
+            "name": "veteran_count_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2299,
+            "mean": 317.3391937077174,
+            "sd": 324.6308410322116,
+            "min": 0,
+            "max": 6535.747469023536
+          },
+          {
+            "name": "veteran_percent_geo10",
+            "type": "float",
+            "time_range": [
+              0,
+              10
+            ],
+            "missing": 8874,
+            "mean": 10.817561493931358,
+            "sd": 10.021520207663597,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "veteran_percent_geo20",
+            "type": "float",
+            "time_range": [
+              0,
+              14
+            ],
+            "missing": 2340,
+            "mean": 9.694216925792718,
+            "sd": 9.097928046138712,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "language_hh_limited_english_count_geo10",
+            "type": "integer",
+            "time_range": [
+              7,
+              10
+            ],
+            "missing": 16839,
+            "mean": 84.97549019607843,
+            "sd": 104.8681995103879,
+            "min": 0,
+            "max": 1103
+          },
+          {
+            "name": "language_hh_limited_english_count_geo20",
+            "type": "float",
+            "time_range": [
+              7,
+              14
+            ],
+            "missing": 11091,
+            "mean": 88.17459572859462,
+            "sd": 108.37367803129399,
+            "min": 0,
+            "max": 1330
+          },
+          {
+            "name": "language_hh_limited_english_percent_geo10",
+            "type": "float",
+            "time_range": [
+              7,
+              10
+            ],
+            "missing": 16865,
+            "mean": 5.150249097008147,
+            "sd": 6.215194283872456,
+            "min": 0,
+            "max": 78.2993799822852
+          },
+          {
+            "name": "language_hh_limited_english_percent_geo20",
+            "type": "float",
+            "time_range": [
+              7,
+              14
+            ],
+            "missing": 11138,
+            "mean": 5.286735880437949,
+            "sd": 6.370724848082043,
+            "min": 0,
+            "max": 80.16877637130801
           }
         ]
       },
-      "bytes": 15811840,
+      "bytes": 18112286,
       "rows": 21735,
       "entities": 1449
     },
@@ -3055,84 +3432,6 @@
               -1
             ],
             "missing": 60840
-          },
-          {
-            "name": "age_20_64_percent_direct",
-            "type": "float",
-            "time_range": [
-              4,
-              12
-            ],
-            "missing": 31059,
-            "mean": 63.00548379040034,
-            "sd": 10.898817928567334,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "age_20_64_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              12
-            ],
-            "missing": 31059,
-            "mean": 63.00548379040034,
-            "sd": 10.898817928567334,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "age_65_plus_percent_direct",
-            "type": "float",
-            "time_range": [
-              4,
-              12
-            ],
-            "missing": 31059,
-            "mean": 12.338016971383011,
-            "sd": 9.554788163288094,
-            "min": 0,
-            "max": 200
-          },
-          {
-            "name": "age_65_plus_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              12
-            ],
-            "missing": 31059,
-            "mean": 12.338016971383011,
-            "sd": 9.554788163288094,
-            "min": 0,
-            "max": 200
-          },
-          {
-            "name": "age_under_20_percent_direct",
-            "type": "float",
-            "time_range": [
-              4,
-              12
-            ],
-            "missing": 31059,
-            "mean": 24.155220856691532,
-            "sd": 9.493970690293105,
-            "min": 0,
-            "max": 89.82795698924731
-          },
-          {
-            "name": "age_under_20_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              12
-            ],
-            "missing": 31059,
-            "mean": 24.155220856691532,
-            "sd": 9.493970690293105,
-            "min": 0,
-            "max": 89.82795698924731
           },
           {
             "name": "at_risk_high_cnt",
@@ -3352,58 +3651,6 @@
             "missing": 60840
           },
           {
-            "name": "gender_female_percent_direct",
-            "type": "float",
-            "time_range": [
-              4,
-              14
-            ],
-            "missing": 23917,
-            "mean": 51.210856467651034,
-            "sd": 6.660532267841439,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "gender_female_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              14
-            ],
-            "missing": 23917,
-            "mean": 51.210856467651034,
-            "sd": 6.660532267841439,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "gender_male_percent_direct",
-            "type": "float",
-            "time_range": [
-              4,
-              14
-            ],
-            "missing": 23917,
-            "mean": 48.789143532348966,
-            "sd": 6.660532267841439,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "gender_male_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              14
-            ],
-            "missing": 23917,
-            "mean": 48.789143532348966,
-            "sd": 6.660532267841439,
-            "min": 0,
-            "max": 100
-          },
-          {
             "name": "gini_index_geo20",
             "type": "unknown",
             "time_range": [
@@ -3476,32 +3723,6 @@
             "sd": 12.82868322105364,
             "min": 5,
             "max": 87.25
-          },
-          {
-            "name": "language_hh_limited_english_percent_direct",
-            "type": "float",
-            "time_range": [
-              7,
-              14
-            ],
-            "missing": 33674,
-            "mean": 5.168554895135064,
-            "sd": 7.973500311268796,
-            "min": 0,
-            "max": 91.05263157894736
-          },
-          {
-            "name": "language_hh_limited_english_percent_parcels",
-            "type": "float",
-            "time_range": [
-              7,
-              14
-            ],
-            "missing": 33674,
-            "mean": 5.168554895135064,
-            "sd": 7.973500311268796,
-            "min": 0,
-            "max": 91.05263157894736
           },
           {
             "name": "median_household_income",
@@ -3872,58 +4093,6 @@
             "missing": 60840
           },
           {
-            "name": "population_density_direct",
-            "type": "float",
-            "time_range": [
-              6,
-              12
-            ],
-            "missing": 37363,
-            "mean": 9497.766341873823,
-            "sd": 13008.137954393442,
-            "min": 0,
-            "max": 190194.98194466703
-          },
-          {
-            "name": "population_density_parcels",
-            "type": "float",
-            "time_range": [
-              6,
-              12
-            ],
-            "missing": 37363,
-            "mean": 9497.766341873823,
-            "sd": 13008.137954393442,
-            "min": 0,
-            "max": 190194.98194466703
-          },
-          {
-            "name": "population_direct",
-            "type": "integer",
-            "time_range": [
-              6,
-              12
-            ],
-            "missing": 37363,
-            "mean": 1639.6880350981812,
-            "sd": 821.6424253454344,
-            "min": 0,
-            "max": 14471
-          },
-          {
-            "name": "population_parcels",
-            "type": "integer",
-            "time_range": [
-              6,
-              12
-            ],
-            "missing": 37363,
-            "mean": 1639.6880350981812,
-            "sd": 821.6424253454344,
-            "min": 0,
-            "max": 14471
-          },
-          {
             "name": "prevent_hosp_rate",
             "type": "unknown",
             "time_range": [
@@ -3946,188 +4115,6 @@
             "max": 4.57250566137383
           },
           {
-            "name": "race_AAPI_percent_direct",
-            "type": "float",
-            "time_range": [
-              4,
-              14
-            ],
-            "missing": 23917,
-            "mean": 10.150510076132125,
-            "sd": 11.172352723949764,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "race_AAPI_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              14
-            ],
-            "missing": 23917,
-            "mean": 10.150510076132125,
-            "sd": 11.172352723949764,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "race_afr_amer_alone_percent_direct",
-            "type": "float",
-            "time_range": [
-              4,
-              14
-            ],
-            "missing": 23917,
-            "mean": 26.070677442505357,
-            "sd": 28.935871572402,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "race_afr_amer_alone_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              14
-            ],
-            "missing": 23917,
-            "mean": 26.070677442505357,
-            "sd": 28.935871572402,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "race_hispanic_or_latino_percent_direct",
-            "type": "float",
-            "time_range": [
-              4,
-              14
-            ],
-            "missing": 23917,
-            "mean": 15.305003426478185,
-            "sd": 16.337773566058733,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "race_hispanic_or_latino_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              14
-            ],
-            "missing": 23917,
-            "mean": 15.305003426478185,
-            "sd": 16.337773566058733,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "race_native_alone_percent_direct",
-            "type": "float",
-            "time_range": [
-              4,
-              14
-            ],
-            "missing": 23917,
-            "mean": 0.34556233341626635,
-            "sd": 1.3781573329768138,
-            "min": 0,
-            "max": 37.93876026885736
-          },
-          {
-            "name": "race_native_alone_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              14
-            ],
-            "missing": 23917,
-            "mean": 0.34556233341626635,
-            "sd": 1.3781573329768138,
-            "min": 0,
-            "max": 37.93876026885736
-          },
-          {
-            "name": "race_other_percent_direct",
-            "type": "float",
-            "time_range": [
-              4,
-              14
-            ],
-            "missing": 23917,
-            "mean": 6.027148803115955,
-            "sd": 11.053270084958772,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "race_other_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              14
-            ],
-            "missing": 23917,
-            "mean": 6.027148803115955,
-            "sd": 11.053270084958772,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "race_two_or_more_percent_direct",
-            "type": "float",
-            "time_range": [
-              4,
-              14
-            ],
-            "missing": 23917,
-            "mean": 5.2515725481938285,
-            "sd": 5.709797398278482,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "race_two_or_more_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              14
-            ],
-            "missing": 23917,
-            "mean": 5.2515725481938285,
-            "sd": 5.709797398278482,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "race_wht_alone_percent_direct",
-            "type": "float",
-            "time_range": [
-              4,
-              14
-            ],
-            "missing": 23917,
-            "mean": 52.15452879663647,
-            "sd": 28.350879017866166,
-            "min": 0,
-            "max": 100
-          },
-          {
-            "name": "race_wht_alone_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              14
-            ],
-            "missing": 23917,
-            "mean": 52.15452879663647,
-            "sd": 28.350879017866166,
-            "min": 0,
-            "max": 100
-          },
-          {
             "name": "schools_2year_all",
             "type": "float",
             "time_range": [
@@ -4137,7 +4124,7 @@
             "missing": 30873,
             "mean": 0.39135490455505995,
             "sd": 0.21353920512231833,
-            "min": 0.00096642501541793,
+            "min": 0.0009664250154179,
             "max": 2.66922198217577
           },
           {
@@ -4161,9 +4148,9 @@
               12
             ],
             "missing": 30873,
-            "mean": 0.006283910193853219,
+            "mean": 0.006283910193853212,
             "sd": 0.02402378225654091,
-            "min": 4.39308309791862e-67,
+            "min": 4.3930830979186205e-67,
             "max": 0.707364076643047
           },
           {
@@ -4176,7 +4163,7 @@
             "missing": 30873,
             "mean": 0.20163144786581072,
             "sd": 0.2115157303369409,
-            "min": 0.00000161396165328809,
+            "min": 0.0000016139616532,
             "max": 2.66785509271
           },
           {
@@ -4189,7 +4176,7 @@
             "missing": 30873,
             "mean": 0.14666345622691485,
             "sd": 0.21977842757036162,
-            "min": 0.00000126233604920895,
+            "min": 0.0000012623360492,
             "max": 2.66784336521422
           },
           {
@@ -4200,7 +4187,7 @@
               12
             ],
             "missing": 30873,
-            "mean": 0.0004886525270172695,
+            "mean": 0.0004886525270172669,
             "sd": 0.010017968673594614,
             "min": 4.53877938851633e-48,
             "max": 0.707364076643047
@@ -4213,7 +4200,7 @@
               12
             ],
             "missing": 30873,
-            "mean": 0.09036310082817992,
+            "mean": 0.0903631008281799,
             "sd": 0.16267219447845316,
             "min": 1.55745359032046e-11,
             "max": 1.5875898385347
@@ -4228,7 +4215,7 @@
             "missing": 30873,
             "mean": 0.6833296401503326,
             "sd": 0.3391222924311539,
-            "min": 0.0000215187099627606,
+            "min": 0.0000215187099627,
             "max": 2.55900236571283
           },
           {
@@ -4341,34 +4328,411 @@
             "max": 46.95
           },
           {
-            "name": "veteran_percent_direct",
+            "name": "age_20_64_count_geo20",
+            "type": "integer",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23621,
+            "mean": 1010.2190279158494,
+            "sd": 519.8353358943679,
+            "min": 0,
+            "max": 6535
+          },
+          {
+            "name": "age_20_64_percent_geo20",
             "type": "float",
             "time_range": [
               4,
-              12
+              14
             ],
-            "missing": 31061,
-            "mean": 8.119682635537426,
-            "sd": 5.889328862077977,
+            "missing": 23917,
+            "mean": 62.79700024579083,
+            "sd": 11.189341667649405,
             "min": 0,
             "max": 100
           },
           {
-            "name": "veteran_percent_parcels",
+            "name": "age_65_plus_count_geo20",
+            "type": "integer",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23621,
+            "mean": 195.80311131411375,
+            "sd": 154.4516591227478,
+            "min": 0,
+            "max": 2554
+          },
+          {
+            "name": "age_65_plus_percent_geo20",
             "type": "float",
             "time_range": [
               4,
-              12
+              14
             ],
-            "missing": 31061,
-            "mean": 8.119682635537426,
-            "sd": 5.889328862077977,
+            "missing": 23917,
+            "mean": 13.193429307450554,
+            "sd": 10.281886625241828,
             "min": 0,
             "max": 100
+          },
+          {
+            "name": "age_total_count_geo20",
+            "type": "integer",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23621,
+            "mean": 1619.0446546118917,
+            "sd": 809.7251910531345,
+            "min": 0,
+            "max": 14471
+          },
+          {
+            "name": "age_under_20_count_geo20",
+            "type": "integer",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23621,
+            "mean": 413.0225153819286,
+            "sd": 309.04737673966935,
+            "min": 0,
+            "max": 7726
+          },
+          {
+            "name": "age_under_20_percent_geo20",
+            "type": "float",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23917,
+            "mean": 24.009570446758616,
+            "sd": 9.66679846349832,
+            "min": 0,
+            "max": 89.82795698924731
+          },
+          {
+            "name": "gender_female_count_geo20",
+            "type": "integer",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23621,
+            "mean": 827.9315134743008,
+            "sd": 423.17168886455147,
+            "min": 0,
+            "max": 7154
+          },
+          {
+            "name": "gender_female_percent_geo20",
+            "type": "float",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23917,
+            "mean": 51.210856467651034,
+            "sd": 6.660532267841439,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "gender_male_count_geo20",
+            "type": "integer",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23621,
+            "mean": 791.113141137591,
+            "sd": 410.6558519846608,
+            "min": 0,
+            "max": 7317
+          },
+          {
+            "name": "gender_male_percent_geo20",
+            "type": "float",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23917,
+            "mean": 48.789143532348966,
+            "sd": 6.660532267841439,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "gender_total_count_geo20",
+            "type": "integer",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23621,
+            "mean": 1619.0446546118917,
+            "sd": 809.7251910531345,
+            "min": 0,
+            "max": 14471
+          },
+          {
+            "name": "race_AAPI_count_geo20",
+            "type": "integer",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23621,
+            "mean": 178.52051371611273,
+            "sd": 246.1808126825863,
+            "min": 0,
+            "max": 3611
+          },
+          {
+            "name": "race_AAPI_percent_geo20",
+            "type": "float",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23917,
+            "mean": 10.150510076132125,
+            "sd": 11.172352723949764,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "race_afr_amer_alone_count_geo20",
+            "type": "integer",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23621,
+            "mean": 432.0045138235847,
+            "sd": 561.7123924899465,
+            "min": 0,
+            "max": 6450
+          },
+          {
+            "name": "race_afr_amer_alone_percent_geo20",
+            "type": "float",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23917,
+            "mean": 26.070677442505357,
+            "sd": 28.935871572402,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "race_hispanic_or_latino_count_geo20",
+            "type": "integer",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23621,
+            "mean": 265.1147532174427,
+            "sd": 349.7499214779004,
+            "min": 0,
+            "max": 4391
+          },
+          {
+            "name": "race_hispanic_or_latino_percent_geo20",
+            "type": "float",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23917,
+            "mean": 15.305003426478185,
+            "sd": 16.337773566058733,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "race_native_alone_count_geo20",
+            "type": "integer",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23621,
+            "mean": 5.569117923641151,
+            "sd": 21.554515530256005,
+            "min": 0,
+            "max": 617
+          },
+          {
+            "name": "race_native_alone_percent_geo20",
+            "type": "float",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23917,
+            "mean": 0.34556233341626635,
+            "sd": 1.3781573329768138,
+            "min": 0,
+            "max": 37.93876026885736
+          },
+          {
+            "name": "race_other_count_geo20",
+            "type": "integer",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23621,
+            "mean": 107.22211773556516,
+            "sd": 227.5071096926599,
+            "min": 0,
+            "max": 3726
+          },
+          {
+            "name": "race_other_percent_geo20",
+            "type": "float",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23917,
+            "mean": 6.027148803115955,
+            "sd": 11.053270084958772,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "race_total_count_geo20",
+            "type": "integer",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23621,
+            "mean": 1619.0446546118917,
+            "sd": 809.7251910531345,
+            "min": 0,
+            "max": 14471
+          },
+          {
+            "name": "race_two_or_more_count_geo20",
+            "type": "integer",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23621,
+            "mean": 86.85633681721701,
+            "sd": 107.07844561325827,
+            "min": 0,
+            "max": 1714
+          },
+          {
+            "name": "race_two_or_more_percent_geo20",
+            "type": "float",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23917,
+            "mean": 5.2515725481938285,
+            "sd": 5.709797398278482,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "race_wht_alone_count_geo20",
+            "type": "integer",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23621,
+            "mean": 808.872054595771,
+            "sd": 571.9576328297561,
+            "min": 0,
+            "max": 8355
+          },
+          {
+            "name": "race_wht_alone_percent_geo20",
+            "type": "float",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23917,
+            "mean": 52.15452879663647,
+            "sd": 28.350879017866166,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "veteran_count_geo20",
+            "type": "integer",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23621,
+            "mean": 95.85561138128375,
+            "sd": 85.13302258098349,
+            "min": 0,
+            "max": 1511
+          },
+          {
+            "name": "veteran_percent_geo20",
+            "type": "float",
+            "time_range": [
+              4,
+              14
+            ],
+            "missing": 23920,
+            "mean": 7.9189255526179325,
+            "sd": 5.995185104849979,
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "language_hh_limited_english_count_geo20",
+            "type": "integer",
+            "time_range": [
+              7,
+              14
+            ],
+            "missing": 33356,
+            "mean": 31.59569203900451,
+            "sd": 51.25251442299787,
+            "min": 0,
+            "max": 692
+          },
+          {
+            "name": "language_hh_limited_english_percent_geo20",
+            "type": "float",
+            "time_range": [
+              7,
+              14
+            ],
+            "missing": 33674,
+            "mean": 5.168554895135064,
+            "sd": 7.973500311268796,
+            "min": 0,
+            "max": 91.05263157894736
           }
         ]
       },
-      "bytes": 30078999,
+      "bytes": 24388783,
       "rows": 60840,
       "entities": 4056
     },
@@ -4440,7 +4804,7 @@
             "missing": 930
           },
           {
-            "name": "age_20_64_percent_direct",
+            "name": "age_20_64_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -4450,23 +4814,10 @@
             "mean": 66.86629120343467,
             "sd": 10.482978182290049,
             "min": 49.056260824816,
-            "max": 90.70000995981599
+            "max": 90.700009959816
           },
           {
-            "name": "age_20_64_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              12
-            ],
-            "missing": 167,
-            "mean": 65.94946452802999,
-            "sd": 10.773220985287239,
-            "min": 45.55865927323312,
-            "max": 93.13178749633107
-          },
-          {
-            "name": "age_65_plus_percent_direct",
+            "name": "age_65_plus_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -4479,20 +4830,7 @@
             "max": 22.994088746514045
           },
           {
-            "name": "age_65_plus_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              12
-            ],
-            "missing": 167,
-            "mean": 10.8957326536429,
-            "sd": 4.240020127722769,
-            "min": 2.453310563675445,
-            "max": 25.686193209781884
-          },
-          {
-            "name": "age_under_20_percent_direct",
+            "name": "age_under_20_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -4503,19 +4841,6 @@
             "sd": 7.557591224852414,
             "min": 2.4056142463729775,
             "max": 36.15887624122063
-          },
-          {
-            "name": "age_under_20_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              12
-            ],
-            "missing": 167,
-            "mean": 22.558572861430974,
-            "sd": 7.618656271208038,
-            "min": 2.716688227684347,
-            "max": 36.15887624122064
           },
           {
             "name": "at_risk_high_cnt",
@@ -4616,8 +4941,8 @@
             ],
             "missing": 868,
             "mean": 0.3570238064733692,
-            "sd": 0.03222277080464563,
-            "min": 0.28168362001498326,
+            "sd": 0.03222277080464564,
+            "min": 0.2816836200149832,
             "max": 0.4280228254380124
           },
           {
@@ -4655,10 +4980,10 @@
               12
             ],
             "missing": 868,
-            "mean": 0.04611531168476225,
-            "sd": 0.003963417563922843,
-            "min": 0.04013528471672855,
-            "max": 0.05640980263920276
+            "mean": 0.046115311684762204,
+            "sd": 0.003963417563922842,
+            "min": 0.0401352847167285,
+            "max": 0.0564098026392027
           },
           {
             "name": "ems_cnt",
@@ -4723,7 +5048,7 @@
             "missing": 930
           },
           {
-            "name": "gender_female_percent_direct",
+            "name": "gender_female_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -4736,16 +5061,7 @@
             "max": 61.220997852755154
           },
           {
-            "name": "gender_female_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 930
-          },
-          {
-            "name": "gender_male_percent_direct",
+            "name": "gender_male_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -4753,18 +5069,9 @@
             ],
             "missing": 4,
             "mean": 49.13933469361069,
-            "sd": 3.0494134007603155,
+            "sd": 3.049413400760316,
             "min": 38.90880549301388,
             "max": 64.44855716362342
-          },
-          {
-            "name": "gender_male_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 930
           },
           {
             "name": "gini_index_geo20",
@@ -4801,9 +5108,9 @@
               12
             ],
             "missing": 868,
-            "mean": 0.05319795468185759,
-            "sd": 0.004023399118015199,
-            "min": 0.04281761471263178,
+            "mean": 0.05319795468185755,
+            "sd": 0.004023399118015194,
+            "min": 0.0428176147126317,
             "max": 0.0597644037038182
           },
           {
@@ -4833,7 +5140,7 @@
             "max": 11.80075962187711
           },
           {
-            "name": "language_hh_limited_english_percent_direct",
+            "name": "language_hh_limited_english_percent_geo20",
             "type": "float",
             "time_range": [
               7,
@@ -4844,15 +5151,6 @@
             "sd": 3.325429552715555,
             "min": 0.3726507040054045,
             "max": 17.44479873323933
-          },
-          {
-            "name": "language_hh_limited_english_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 930
           },
           {
             "name": "median_household_income",
@@ -4880,8 +5178,8 @@
               12
             ],
             "missing": 868,
-            "mean": 0.256629878487161,
-            "sd": 0.02216175422769934,
+            "mean": 0.25662987848716096,
+            "sd": 0.02216175422769935,
             "min": 0.2106806304748271,
             "max": 0.3039406263555652
           },
@@ -4907,7 +5205,7 @@
             ],
             "missing": 868,
             "mean": 7.195742149384197,
-            "sd": 2.360799757195709,
+            "sd": 2.3607997571957093,
             "min": 2.6657135874877813,
             "max": 11.491525995948685
           },
@@ -4995,9 +5293,9 @@
               12
             ],
             "missing": 868,
-            "mean": 1.2458353801881539,
-            "sd": 0.11746238130635489,
-            "min": 0.9683270913038947,
+            "mean": 1.245835380188154,
+            "sd": 0.1174623813063549,
+            "min": 0.9683270913038948,
             "max": 1.4056479518184124
           },
           {
@@ -5167,7 +5465,7 @@
             "missing": 930
           },
           {
-            "name": "population_density_direct",
+            "name": "population_density_geo20",
             "type": "float",
             "time_range": [
               6,
@@ -5176,24 +5474,11 @@
             "missing": 496,
             "mean": 10219.341568434544,
             "sd": 7928.596713811776,
-            "min": 986.4403054145337,
+            "min": 986.4403054145336,
             "max": 40439.93402502271
           },
           {
-            "name": "population_density_parcels",
-            "type": "float",
-            "time_range": [
-              6,
-              12
-            ],
-            "missing": 496,
-            "mean": 9560.621664467144,
-            "sd": 7071.9082523829975,
-            "min": 891.8614810647146,
-            "max": 38248.76042488286
-          },
-          {
-            "name": "population_direct",
+            "name": "population_geo20",
             "type": "float",
             "time_range": [
               6,
@@ -5201,22 +5486,9 @@
             ],
             "missing": 496,
             "mean": 3725.8894009216588,
-            "sd": 2954.352814480613,
+            "sd": 2954.3528144806123,
             "min": 369.7109536215458,
-            "max": 12605.367567850823
-          },
-          {
-            "name": "population_parcels",
-            "type": "float",
-            "time_range": [
-              6,
-              12
-            ],
-            "missing": 496,
-            "mean": 3725.8894009216588,
-            "sd": 3204.1073242568114,
-            "min": 98.71279167010283,
-            "max": 14886.269295277854
+            "max": 12605.367567850824
           },
           {
             "name": "prevent_hosp_rate",
@@ -5236,12 +5508,12 @@
             ],
             "missing": 868,
             "mean": 3.4431976023422295,
-            "sd": 0.32164637516413624,
-            "min": 2.7111150476148986,
+            "sd": 0.3216463751641363,
+            "min": 2.711115047614898,
             "max": 3.8696805641083487
           },
           {
-            "name": "race_AAPI_percent_direct",
+            "name": "race_AAPI_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -5254,16 +5526,7 @@
             "max": 14.687234934898616
           },
           {
-            "name": "race_AAPI_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 930
-          },
-          {
-            "name": "race_afr_amer_alone_percent_direct",
+            "name": "race_afr_amer_alone_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -5276,16 +5539,7 @@
             "max": 123.96132788243035
           },
           {
-            "name": "race_afr_amer_alone_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 930
-          },
-          {
-            "name": "race_hispanic_or_latino_percent_direct",
+            "name": "race_hispanic_or_latino_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -5294,42 +5548,24 @@
             "missing": 4,
             "mean": 7.924553002127663,
             "sd": 5.72927097155651,
-            "min": 0.9265856024676867,
+            "min": 0.9265856024676868,
             "max": 29.29711752450442
           },
           {
-            "name": "race_hispanic_or_latino_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 930
-          },
-          {
-            "name": "race_native_alone_percent_direct",
+            "name": "race_native_alone_percent_geo20",
             "type": "float",
             "time_range": [
               0,
               14
             ],
             "missing": 4,
-            "mean": 0.2566786186770344,
+            "mean": 0.25667861867703434,
             "sd": 0.4018168445204055,
             "min": 0,
             "max": 2.683078810762195
           },
           {
-            "name": "race_native_alone_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 930
-          },
-          {
-            "name": "race_other_percent_direct",
+            "name": "race_other_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -5338,20 +5574,11 @@
             "missing": 4,
             "mean": 2.3221919792876644,
             "sd": 2.514356250799663,
-            "min": 0.0017795892722450451,
+            "min": 0.001779589272245,
             "max": 13.59748484489734
           },
           {
-            "name": "race_other_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 930
-          },
-          {
-            "name": "race_two_or_more_percent_direct",
+            "name": "race_two_or_more_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -5360,20 +5587,11 @@
             "missing": 4,
             "mean": 3.9404864405481166,
             "sd": 2.352262751301156,
-            "min": 0.14046346446947436,
+            "min": 0.1404634644694743,
             "max": 15.558756033044464
           },
           {
-            "name": "race_two_or_more_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 930
-          },
-          {
-            "name": "race_wht_alone_percent_direct",
+            "name": "race_wht_alone_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -5383,16 +5601,7 @@
             "mean": 70.56630994168646,
             "sd": 13.184635185813175,
             "min": 29.22472411376009,
-            "max": 93.80186388800013
-          },
-          {
-            "name": "race_wht_alone_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 930
+            "max": 93.80186388800011
           },
           {
             "name": "schools_2year_all",
@@ -5501,9 +5710,9 @@
               12
             ],
             "missing": 868,
-            "mean": 0.29819804368174047,
-            "sd": 0.025914530191933557,
-            "min": 0.24340404439747068,
+            "mean": 0.2981980436817404,
+            "sd": 0.02591453019193356,
+            "min": 0.2434040443974706,
             "max": 0.3462294624241147
           },
           {
@@ -5528,7 +5737,7 @@
             ],
             "missing": 868,
             "mean": 7.4373055543342605,
-            "sd": 1.9297858671631518,
+            "sd": 1.9297858671631516,
             "min": 2.6657135874877813,
             "max": 10.516874429917909
           },
@@ -5560,7 +5769,7 @@
             "missing": 930
           },
           {
-            "name": "veteran_percent_direct",
+            "name": "veteran_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -5571,23 +5780,10 @@
             "sd": 10.790400080302888,
             "min": 2.4043406100999554,
             "max": 55.407451697932736
-          },
-          {
-            "name": "veteran_percent_parcels",
-            "type": "float",
-            "time_range": [
-              0,
-              12
-            ],
-            "missing": 169,
-            "mean": 10.078026159566457,
-            "sd": 10.286629874122355,
-            "min": 2.2884126407555394,
-            "max": 54.34864571495031
           }
         ]
       },
-      "bytes": 344174,
+      "bytes": 266275,
       "rows": 930,
       "entities": 62
     },
@@ -5659,7 +5855,7 @@
             "missing": 60
           },
           {
-            "name": "age_20_64_percent_direct",
+            "name": "age_20_64_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -5672,20 +5868,7 @@
             "max": 65.08437716405714
           },
           {
-            "name": "age_20_64_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              12
-            ],
-            "missing": 24,
-            "mean": 61.79183254142674,
-            "sd": 1.2370335005325428,
-            "min": 59.2891609973587,
-            "max": 63.78051227046913
-          },
-          {
-            "name": "age_65_plus_percent_direct",
+            "name": "age_65_plus_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -5693,25 +5876,12 @@
             ],
             "missing": 8,
             "mean": 11.044799106974875,
-            "sd": 1.6181146624224434,
+            "sd": 1.6181146624224432,
             "min": 7.401893122599996,
-            "max": 13.985695154265619
+            "max": 13.98569515426562
           },
           {
-            "name": "age_65_plus_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              12
-            ],
-            "missing": 24,
-            "mean": 11.758364261458995,
-            "sd": 1.4815499678639499,
-            "min": 8.374868777687896,
-            "max": 14.18890636908857
-          },
-          {
-            "name": "age_under_20_percent_direct",
+            "name": "age_under_20_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -5720,21 +5890,8 @@
             "missing": 8,
             "mean": 26.07795043070519,
             "sd": 1.1785030081978212,
-            "min": 23.701836709189422,
+            "min": 23.701836709189426,
             "max": 28.16080361411137
-          },
-          {
-            "name": "age_under_20_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              12
-            ],
-            "missing": 24,
-            "mean": 26.04890047743195,
-            "sd": 0.9141502639631078,
-            "min": 24.156623814671452,
-            "max": 28.02224977652799
           },
           {
             "name": "at_risk_high_cnt",
@@ -5926,7 +6083,7 @@
             "missing": 60
           },
           {
-            "name": "gender_female_percent_direct",
+            "name": "gender_female_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -5934,21 +6091,12 @@
             ],
             "missing": 0,
             "mean": 50.8217459665644,
-            "sd": 0.4003532523791147,
+            "sd": 0.4003532523791145,
             "min": 49.851312012725536,
             "max": 51.53510786343403
           },
           {
-            "name": "gender_female_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 60
-          },
-          {
-            "name": "gender_male_percent_direct",
+            "name": "gender_male_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -5956,18 +6104,9 @@
             ],
             "missing": 0,
             "mean": 49.17839439451081,
-            "sd": 0.395851303970262,
+            "sd": 0.3958513039702621,
             "min": 48.48271327979712,
             "max": 50.13566589417888
-          },
-          {
-            "name": "gender_male_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 60
           },
           {
             "name": "gini_index_geo20",
@@ -6024,7 +6163,7 @@
             "missing": 60
           },
           {
-            "name": "language_hh_limited_english_percent_direct",
+            "name": "language_hh_limited_english_percent_geo20",
             "type": "float",
             "time_range": [
               7,
@@ -6032,22 +6171,9 @@
             ],
             "missing": 36,
             "mean": 6.774594861482163,
-            "sd": 1.5949718540318434,
+            "sd": 1.5949718540318436,
             "min": 5.418744733158184,
             "max": 9.693835256557382
-          },
-          {
-            "name": "language_hh_limited_english_percent_parcels",
-            "type": "float",
-            "time_range": [
-              7,
-              12
-            ],
-            "missing": 36,
-            "mean": 6.837859659393018,
-            "sd": 2.1003521567755334,
-            "min": 5.032408191294074,
-            "max": 10.672155112500223
           },
           {
             "name": "median_household_income",
@@ -6338,7 +6464,7 @@
             "missing": 60
           },
           {
-            "name": "population_density_direct",
+            "name": "population_density_geo20",
             "type": "float",
             "time_range": [
               6,
@@ -6347,24 +6473,11 @@
             "missing": 32,
             "mean": 3296.395211349725,
             "sd": 1125.383854734471,
-            "min": 2382.9936713509546,
+            "min": 2382.993671350954,
             "max": 5251.413117333978
           },
           {
-            "name": "population_density_parcels",
-            "type": "float",
-            "time_range": [
-              6,
-              12
-            ],
-            "missing": 32,
-            "mean": 3303.338581089017,
-            "sd": 1128.0940515325585,
-            "min": 2326.5744643326925,
-            "max": 5257.156923955863
-          },
-          {
-            "name": "population_direct",
+            "name": "population_geo20",
             "type": "float",
             "time_range": [
               6,
@@ -6372,22 +6485,9 @@
             ],
             "missing": 32,
             "mean": 291234.21428571426,
-            "sd": 35688.99047925648,
+            "sd": 35688.990479256485,
             "min": 249309.3980618809,
             "max": 333132.12656234205
-          },
-          {
-            "name": "population_parcels",
-            "type": "float",
-            "time_range": [
-              6,
-              12
-            ],
-            "missing": 32,
-            "mean": 291234.21428571426,
-            "sd": 35193.40118740405,
-            "min": 249424.89135954357,
-            "max": 331572.3749006597
           },
           {
             "name": "prevent_hosp_rate",
@@ -6408,7 +6508,7 @@
             "missing": 60
           },
           {
-            "name": "race_AAPI_percent_direct",
+            "name": "race_AAPI_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -6421,16 +6521,7 @@
             "max": 7.810161756472582
           },
           {
-            "name": "race_AAPI_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 60
-          },
-          {
-            "name": "race_afr_amer_alone_percent_direct",
+            "name": "race_afr_amer_alone_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -6438,43 +6529,25 @@
             ],
             "missing": 0,
             "mean": 19.897009197735972,
-            "sd": 8.705014230763663,
+            "sd": 8.70501423076366,
             "min": 7.51275476798625,
             "max": 37.33395038989907
           },
           {
-            "name": "race_afr_amer_alone_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 60
-          },
-          {
-            "name": "race_hispanic_or_latino_percent_direct",
+            "name": "race_hispanic_or_latino_percent_geo20",
             "type": "float",
             "time_range": [
               0,
               14
             ],
             "missing": 0,
-            "mean": 9.097506653911692,
+            "mean": 9.09750665391169,
             "sd": 2.566609758326458,
             "min": 2.923159906088522,
             "max": 13.737970383516634
           },
           {
-            "name": "race_hispanic_or_latino_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 60
-          },
-          {
-            "name": "race_native_alone_percent_direct",
+            "name": "race_native_alone_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -6483,20 +6556,11 @@
             "missing": 0,
             "mean": 0.29204477933360334,
             "sd": 0.08790351898903771,
-            "min": 0.11818244024902115,
+            "min": 0.1181824402490211,
             "max": 0.4868031974500761
           },
           {
-            "name": "race_native_alone_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 60
-          },
-          {
-            "name": "race_other_percent_direct",
+            "name": "race_other_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -6509,16 +6573,7 @@
             "max": 7.173073722195099
           },
           {
-            "name": "race_other_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 60
-          },
-          {
-            "name": "race_two_or_more_percent_direct",
+            "name": "race_two_or_more_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -6526,21 +6581,12 @@
             ],
             "missing": 0,
             "mean": 3.924952027873571,
-            "sd": 1.7575622545696934,
+            "sd": 1.7575622545696932,
             "min": 1.363125964640434,
             "max": 9.144103809286952
           },
           {
-            "name": "race_two_or_more_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 60
-          },
-          {
-            "name": "race_wht_alone_percent_direct",
+            "name": "race_wht_alone_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -6551,15 +6597,6 @@
             "sd": 4.943523483989013,
             "min": 56.19422418503815,
             "max": 79.79718738064132
-          },
-          {
-            "name": "race_wht_alone_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 60
           },
           {
             "name": "schools_2year_all",
@@ -6715,7 +6752,7 @@
             "missing": 60
           },
           {
-            "name": "veteran_percent_direct",
+            "name": "veteran_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -6726,23 +6763,10 @@
             "sd": 10.53392714626843,
             "min": 6.225465756360264,
             "max": 48.61812524190425
-          },
-          {
-            "name": "veteran_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              12
-            ],
-            "missing": 24,
-            "mean": 9.022016465835172,
-            "sd": 1.832937951778537,
-            "min": 6.326639797104434,
-            "max": 12.297567265932619
           }
         ]
       },
-      "bytes": 27337,
+      "bytes": 21801,
       "rows": 60,
       "entities": 4
     },
@@ -6814,7 +6838,7 @@
             "missing": 210
           },
           {
-            "name": "age_20_64_percent_direct",
+            "name": "age_20_64_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -6827,20 +6851,7 @@
             "max": 70.97579440736548
           },
           {
-            "name": "age_20_64_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              12
-            ],
-            "missing": 84,
-            "mean": 61.96996946651859,
-            "sd": 3.0336408760899882,
-            "min": 54.99958441632166,
-            "max": 68.74404187268897
-          },
-          {
-            "name": "age_65_plus_percent_direct",
+            "name": "age_65_plus_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -6853,20 +6864,7 @@
             "max": 17.469182935838617
           },
           {
-            "name": "age_65_plus_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              12
-            ],
-            "missing": 84,
-            "mean": 11.600984060993474,
-            "sd": 2.723896872337645,
-            "min": 6.236527042724741,
-            "max": 17.88370370072687
-          },
-          {
-            "name": "age_under_20_percent_direct",
+            "name": "age_under_20_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -6877,19 +6875,6 @@
             "sd": 2.033376982763403,
             "min": 20.82947743905795,
             "max": 32.31996520347477
-          },
-          {
-            "name": "age_under_20_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              12
-            ],
-            "missing": 84,
-            "mean": 26.03610970313651,
-            "sd": 1.7679319424619362,
-            "min": 20.879593907483518,
-            "max": 32.18149753943609
           },
           {
             "name": "at_risk_high_cnt",
@@ -7081,7 +7066,7 @@
             "missing": 210
           },
           {
-            "name": "gender_female_percent_direct",
+            "name": "gender_female_percent_geo20",
             "type": "unknown",
             "time_range": [
               -1,
@@ -7090,25 +7075,7 @@
             "missing": 210
           },
           {
-            "name": "gender_female_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 210
-          },
-          {
-            "name": "gender_male_percent_direct",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 210
-          },
-          {
-            "name": "gender_male_percent_parcels",
+            "name": "gender_male_percent_geo20",
             "type": "unknown",
             "time_range": [
               -1,
@@ -7171,7 +7138,7 @@
             "missing": 210
           },
           {
-            "name": "language_hh_limited_english_percent_direct",
+            "name": "language_hh_limited_english_percent_geo20",
             "type": "float",
             "time_range": [
               7,
@@ -7182,19 +7149,6 @@
             "sd": 2.2813174350928898,
             "min": 3.6873730811003047,
             "max": 12.512842723066802
-          },
-          {
-            "name": "language_hh_limited_english_percent_parcels",
-            "type": "float",
-            "time_range": [
-              7,
-              12
-            ],
-            "missing": 126,
-            "mean": 7.134005555789509,
-            "sd": 2.880417915904298,
-            "min": 2.588980717201418,
-            "max": 14.445842551182572
           },
           {
             "name": "median_household_income",
@@ -7485,7 +7439,7 @@
             "missing": 210
           },
           {
-            "name": "population_density_direct",
+            "name": "population_density_geo20",
             "type": "float",
             "time_range": [
               6,
@@ -7494,24 +7448,11 @@
             "missing": 112,
             "mean": 3914.0879989199307,
             "sd": 1736.3740922010688,
-            "min": 996.3547393683039,
+            "min": 996.354739368304,
             "max": 7982.85848108384
           },
           {
-            "name": "population_density_parcels",
-            "type": "float",
-            "time_range": [
-              6,
-              12
-            ],
-            "missing": 112,
-            "mean": 3908.7181265828763,
-            "sd": 1737.5616850114247,
-            "min": 1008.6476603411905,
-            "max": 7953.222577106105
-          },
-          {
-            "name": "population_direct",
+            "name": "population_geo20",
             "type": "float",
             "time_range": [
               6,
@@ -7522,19 +7463,6 @@
             "sd": 44290.768029855026,
             "min": 16779.208311936018,
             "max": 196222.4826418966
-          },
-          {
-            "name": "population_parcels",
-            "type": "float",
-            "time_range": [
-              6,
-              12
-            ],
-            "missing": 112,
-            "mean": 83209.77551020408,
-            "sd": 45002.67334047783,
-            "min": 16360.73897698026,
-            "max": 196700.69919365254
           },
           {
             "name": "prevent_hosp_rate",
@@ -7555,7 +7483,7 @@
             "missing": 210
           },
           {
-            "name": "race_AAPI_percent_direct",
+            "name": "race_AAPI_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -7564,20 +7492,11 @@
             "missing": 0,
             "mean": 5.869029680307235,
             "sd": 1.8062918666273848,
-            "min": 1.6037791538100923,
+            "min": 1.6037791538100925,
             "max": 9.876192036165197
           },
           {
-            "name": "race_AAPI_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 210
-          },
-          {
-            "name": "race_afr_amer_alone_percent_direct",
+            "name": "race_afr_amer_alone_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -7590,16 +7509,7 @@
             "max": 58.41394495556219
           },
           {
-            "name": "race_afr_amer_alone_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 210
-          },
-          {
-            "name": "race_hispanic_or_latino_percent_direct",
+            "name": "race_hispanic_or_latino_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -7607,21 +7517,12 @@
             ],
             "missing": 0,
             "mean": 9.427815522701534,
-            "sd": 3.5903574907600726,
+            "sd": 3.590357490760073,
             "min": 2.681692890857544,
-            "max": 18.136562850973206
+            "max": 18.13656285097321
           },
           {
-            "name": "race_hispanic_or_latino_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 210
-          },
-          {
-            "name": "race_native_alone_percent_direct",
+            "name": "race_native_alone_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -7630,20 +7531,11 @@
             "missing": 0,
             "mean": 0.2953734892366638,
             "sd": 0.1707948171386546,
-            "min": 0.022229850013191485,
+            "min": 0.0222298500131914,
             "max": 1.1051814298268126
           },
           {
-            "name": "race_native_alone_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 210
-          },
-          {
-            "name": "race_other_percent_direct",
+            "name": "race_other_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -7656,16 +7548,7 @@
             "max": 8.826084881193044
           },
           {
-            "name": "race_other_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 210
-          },
-          {
-            "name": "race_two_or_more_percent_direct",
+            "name": "race_two_or_more_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -7678,16 +7561,7 @@
             "max": 9.99588902100727
           },
           {
-            "name": "race_two_or_more_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 210
-          },
-          {
-            "name": "race_wht_alone_percent_direct",
+            "name": "race_wht_alone_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -7698,15 +7572,6 @@
             "sd": 8.05088936096929,
             "min": 46.14138213046458,
             "max": 84.40278438201402
-          },
-          {
-            "name": "race_wht_alone_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 210
           },
           {
             "name": "schools_2year_all",
@@ -7862,7 +7727,7 @@
             "missing": 210
           },
           {
-            "name": "veteran_percent_direct",
+            "name": "veteran_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -7873,23 +7738,10 @@
             "sd": 10.72916944558265,
             "min": 5.222368050541317,
             "max": 53.48299591551013
-          },
-          {
-            "name": "veteran_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              12
-            ],
-            "missing": 84,
-            "mean": 8.992390427386416,
-            "sd": 2.58745628420844,
-            "min": 4.930550205899048,
-            "max": 14.756973987316831
           }
         ]
       },
-      "bytes": 69694,
+      "bytes": 53167,
       "rows": 210,
       "entities": 14
     },
@@ -7961,7 +7813,7 @@
             "missing": 135
           },
           {
-            "name": "age_20_64_percent_direct",
+            "name": "age_20_64_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -7969,25 +7821,12 @@
             ],
             "missing": 18,
             "mean": 62.428098197255245,
-            "sd": 2.1570578202388675,
+            "sd": 2.157057820238867,
             "min": 57.1939990669873,
             "max": 66.94524140023377
           },
           {
-            "name": "age_20_64_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              12
-            ],
-            "missing": 54,
-            "mean": 61.73499134643601,
-            "sd": 1.9793723521584567,
-            "min": 57.86431911307415,
-            "max": 66.28901220723525
-          },
-          {
-            "name": "age_65_plus_percent_direct",
+            "name": "age_65_plus_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -7997,23 +7836,10 @@
             "mean": 11.00164922720965,
             "sd": 2.0612875114443225,
             "min": 5.39880127835486,
-            "max": 15.353200480462041
+            "max": 15.35320048046204
           },
           {
-            "name": "age_65_plus_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              12
-            ],
-            "missing": 54,
-            "mean": 11.758359308430101,
-            "sd": 1.8962635940194554,
-            "min": 6.059260969310101,
-            "max": 15.279234989822305
-          },
-          {
-            "name": "age_under_20_percent_direct",
+            "name": "age_under_20_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -8021,22 +7847,9 @@
             ],
             "missing": 18,
             "mean": 26.174893036166832,
-            "sd": 1.7859062211259502,
-            "min": 22.829495030971618,
+            "sd": 1.7859062211259507,
+            "min": 22.829495030971614,
             "max": 30.663451455794693
-          },
-          {
-            "name": "age_under_20_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              12
-            ],
-            "missing": 54,
-            "mean": 26.120731952640874,
-            "sd": 1.4402482372527965,
-            "min": 22.89967685632027,
-            "max": 29.87334166291855
           },
           {
             "name": "at_risk_high_cnt",
@@ -8228,7 +8041,7 @@
             "missing": 135
           },
           {
-            "name": "gender_female_percent_direct",
+            "name": "gender_female_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -8241,16 +8054,7 @@
             "max": 52.49456948748753
           },
           {
-            "name": "gender_female_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 135
-          },
-          {
-            "name": "gender_male_percent_direct",
+            "name": "gender_male_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -8258,18 +8062,9 @@
             ],
             "missing": 0,
             "mean": 49.166295992710346,
-            "sd": 0.5443686134595087,
+            "sd": 0.5443686134595086,
             "min": 47.53063854391558,
             "max": 50.58774996595206
-          },
-          {
-            "name": "gender_male_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 135
           },
           {
             "name": "gini_index_geo20",
@@ -8326,7 +8121,7 @@
             "missing": 135
           },
           {
-            "name": "language_hh_limited_english_percent_direct",
+            "name": "language_hh_limited_english_percent_geo20",
             "type": "float",
             "time_range": [
               7,
@@ -8334,22 +8129,9 @@
             ],
             "missing": 81,
             "mean": 6.6977039442511135,
-            "sd": 1.8547736846227303,
+            "sd": 1.8547736846227305,
             "min": 4.172240404058453,
             "max": 11.053459737061123
-          },
-          {
-            "name": "language_hh_limited_english_percent_parcels",
-            "type": "float",
-            "time_range": [
-              7,
-              12
-            ],
-            "missing": 81,
-            "mean": 6.6753692594258665,
-            "sd": 2.403276273952048,
-            "min": 3.596533825244486,
-            "max": 12.993998623474216
           },
           {
             "name": "median_household_income",
@@ -8640,7 +8422,7 @@
             "missing": 135
           },
           {
-            "name": "population_density_direct",
+            "name": "population_density_geo20",
             "type": "float",
             "time_range": [
               6,
@@ -8649,24 +8431,11 @@
             "missing": 72,
             "mean": 3493.5754623735256,
             "sd": 1410.4839534690832,
-            "min": 1759.5810413869779,
+            "min": 1759.581041386978,
             "max": 5494.044796981275
           },
           {
-            "name": "population_density_parcels",
-            "type": "float",
-            "time_range": [
-              6,
-              12
-            ],
-            "missing": 72,
-            "mean": 3437.465662214572,
-            "sd": 1327.5896998724172,
-            "min": 1745.9024710218753,
-            "max": 5465.598440637247
-          },
-          {
-            "name": "population_direct",
+            "name": "population_geo20",
             "type": "float",
             "time_range": [
               6,
@@ -8674,22 +8443,9 @@
             ],
             "missing": 72,
             "mean": 129437.42857142857,
-            "sd": 3902.8775349949137,
+            "sd": 3902.877534994913,
             "min": 123433.39252405328,
             "max": 138803.1731412551
-          },
-          {
-            "name": "population_parcels",
-            "type": "float",
-            "time_range": [
-              6,
-              12
-            ],
-            "missing": 72,
-            "mean": 129437.42857142857,
-            "sd": 3737.3273491097907,
-            "min": 123025.47125194747,
-            "max": 137651.8979909204
           },
           {
             "name": "prevent_hosp_rate",
@@ -8710,7 +8466,7 @@
             "missing": 135
           },
           {
-            "name": "race_AAPI_percent_direct",
+            "name": "race_AAPI_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -8718,21 +8474,12 @@
             ],
             "missing": 0,
             "mean": 6.011419341799041,
-            "sd": 1.656231553531402,
+            "sd": 1.6562315535314018,
             "min": 1.5322612731497487,
-            "max": 9.936028286653363
+            "max": 9.936028286653364
           },
           {
-            "name": "race_AAPI_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 135
-          },
-          {
-            "name": "race_afr_amer_alone_percent_direct",
+            "name": "race_afr_amer_alone_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -8745,16 +8492,7 @@
             "max": 42.603988572998674
           },
           {
-            "name": "race_afr_amer_alone_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 135
-          },
-          {
-            "name": "race_hispanic_or_latino_percent_direct",
+            "name": "race_hispanic_or_latino_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -8767,38 +8505,20 @@
             "max": 16.033360447971464
           },
           {
-            "name": "race_hispanic_or_latino_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 135
-          },
-          {
-            "name": "race_native_alone_percent_direct",
+            "name": "race_native_alone_percent_geo20",
             "type": "float",
             "time_range": [
               0,
               14
             ],
             "missing": 0,
-            "mean": 0.28859163284734024,
-            "sd": 0.12681474534202242,
-            "min": 0.09083187613896514,
+            "mean": 0.2885916328473402,
+            "sd": 0.12681474534202244,
+            "min": 0.0908318761389651,
             "max": 0.8866484436133456
           },
           {
-            "name": "race_native_alone_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 135
-          },
-          {
-            "name": "race_other_percent_direct",
+            "name": "race_other_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -8811,16 +8531,7 @@
             "max": 8.13916317424101
           },
           {
-            "name": "race_other_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 135
-          },
-          {
-            "name": "race_two_or_more_percent_direct",
+            "name": "race_two_or_more_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -8829,20 +8540,11 @@
             "missing": 0,
             "mean": 3.923444065933556,
             "sd": 1.7850115107075193,
-            "min": 1.2379388571882985,
-            "max": 9.209146653985055
+            "min": 1.2379388571882983,
+            "max": 9.209146653985057
           },
           {
-            "name": "race_two_or_more_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 135
-          },
-          {
-            "name": "race_wht_alone_percent_direct",
+            "name": "race_wht_alone_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -8853,15 +8555,6 @@
             "sd": 6.4280429793327185,
             "min": 51.156899295272815,
             "max": 81.66153930102395
-          },
-          {
-            "name": "race_wht_alone_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 135
           },
           {
             "name": "schools_2year_all",
@@ -9017,7 +8710,7 @@
             "missing": 135
           },
           {
-            "name": "veteran_percent_direct",
+            "name": "veteran_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -9028,23 +8721,10 @@
             "sd": 10.716945366538345,
             "min": 5.6193781143883665,
             "max": 52.61171687806797
-          },
-          {
-            "name": "veteran_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              12
-            ],
-            "missing": 54,
-            "mean": 9.006828066598386,
-            "sd": 2.3205335332180934,
-            "min": 5.347187990323731,
-            "max": 13.728263620762482
           }
         ]
       },
-      "bytes": 52631,
+      "bytes": 41520,
       "rows": 135,
       "entities": 9
     },
@@ -9116,7 +8796,7 @@
             "missing": 1035
           },
           {
-            "name": "age_20_64_percent_direct",
+            "name": "age_20_64_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -9129,20 +8809,7 @@
             "max": 87.25178713264495
           },
           {
-            "name": "age_20_64_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              12
-            ],
-            "missing": 544,
-            "mean": 61.669683551888404,
-            "sd": 6.09015737849198,
-            "min": 39.810426540284354,
-            "max": 91.92364170337738
-          },
-          {
-            "name": "age_65_plus_percent_direct",
+            "name": "age_65_plus_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -9152,23 +8819,10 @@
             "mean": 10.803560265559378,
             "sd": 3.9555334948521663,
             "min": 2.077778771708757,
-            "max": 22.268637532133678
+            "max": 22.26863753213368
           },
           {
-            "name": "age_65_plus_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              12
-            ],
-            "missing": 544,
-            "mean": 12.203749952417501,
-            "sd": 4.27552967197419,
-            "min": 1.106194690265487,
-            "max": 22.423889399487543
-          },
-          {
-            "name": "age_under_20_percent_direct",
+            "name": "age_under_20_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -9179,19 +8833,6 @@
             "sd": 5.382247406739683,
             "min": 7.744241461477363,
             "max": 42.36856074673932
-          },
-          {
-            "name": "age_under_20_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              12
-            ],
-            "missing": 544,
-            "mean": 25.59947616960497,
-            "sd": 4.106622757975198,
-            "min": 2.816901408450703,
-            "max": 43.12796208530806
           },
           {
             "name": "at_risk_high_cnt",
@@ -9383,7 +9024,7 @@
             "missing": 1035
           },
           {
-            "name": "gender_female_percent_direct",
+            "name": "gender_female_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -9396,16 +9037,7 @@
             "max": 58.76489458703683
           },
           {
-            "name": "gender_female_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 1035
-          },
-          {
-            "name": "gender_male_percent_direct",
+            "name": "gender_male_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -9416,15 +9048,6 @@
             "sd": 2.2571904066626924,
             "min": 41.338545012532805,
             "max": 60.37337429010342
-          },
-          {
-            "name": "gender_male_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 1035
           },
           {
             "name": "gini_index_geo20",
@@ -9481,7 +9104,7 @@
             "missing": 1035
           },
           {
-            "name": "language_hh_limited_english_percent_direct",
+            "name": "language_hh_limited_english_percent_geo20",
             "type": "float",
             "time_range": [
               7,
@@ -9492,19 +9115,6 @@
             "sd": 4.254404607732428,
             "min": 0.7821147060510618,
             "max": 26.850258175559382
-          },
-          {
-            "name": "language_hh_limited_english_percent_parcels",
-            "type": "float",
-            "time_range": [
-              7,
-              12
-            ],
-            "missing": 709,
-            "mean": 6.6965988118086575,
-            "sd": 5.116521750691031,
-            "min": 0,
-            "max": 28.67298578199052
           },
           {
             "name": "median_household_income",
@@ -9795,7 +9405,7 @@
             "missing": 1035
           },
           {
-            "name": "population_density_direct",
+            "name": "population_density_geo20",
             "type": "float",
             "time_range": [
               6,
@@ -9808,20 +9418,7 @@
             "max": 34212.46003387522
           },
           {
-            "name": "population_density_parcels",
-            "type": "float",
-            "time_range": [
-              6,
-              12
-            ],
-            "missing": 552,
-            "mean": 3576.7071445476017,
-            "sd": 3156.1304441615443,
-            "min": 0,
-            "max": 15864.069770906059
-          },
-          {
-            "name": "population_direct",
+            "name": "population_geo20",
             "type": "float",
             "time_range": [
               6,
@@ -9832,19 +9429,6 @@
             "sd": 14745.593468201865,
             "min": 143.8832989284529,
             "max": 60277.1575936594
-          },
-          {
-            "name": "population_parcels",
-            "type": "float",
-            "time_range": [
-              6,
-              12
-            ],
-            "missing": 552,
-            "mean": 16870.361850508863,
-            "sd": 16345.317706973045,
-            "min": 0,
-            "max": 61461.41956148673
           },
           {
             "name": "prevent_hosp_rate",
@@ -9865,7 +9449,7 @@
             "missing": 1035
           },
           {
-            "name": "race_AAPI_percent_direct",
+            "name": "race_AAPI_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -9873,21 +9457,12 @@
             ],
             "missing": 20,
             "mean": 6.177513246103367,
-            "sd": 2.755311114897903,
+            "sd": 2.7553111148979035,
             "min": 0.7279415746114292,
             "max": 22.597476682736357
           },
           {
-            "name": "race_AAPI_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 1035
-          },
-          {
-            "name": "race_afr_amer_alone_percent_direct",
+            "name": "race_afr_amer_alone_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -9897,19 +9472,10 @@
             "mean": 19.255707078779853,
             "sd": 14.653347500569453,
             "min": 1.2865357256903207,
-            "max": 108.00426797933265
+            "max": 108.00426797933264
           },
           {
-            "name": "race_afr_amer_alone_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 1035
-          },
-          {
-            "name": "race_hispanic_or_latino_percent_direct",
+            "name": "race_hispanic_or_latino_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -9922,16 +9488,7 @@
             "max": 34.88096493829648
           },
           {
-            "name": "race_hispanic_or_latino_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 1035
-          },
-          {
-            "name": "race_native_alone_percent_direct",
+            "name": "race_native_alone_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -9944,16 +9501,7 @@
             "max": 2.488073191063218
           },
           {
-            "name": "race_native_alone_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 1035
-          },
-          {
-            "name": "race_other_percent_direct",
+            "name": "race_other_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -9966,16 +9514,7 @@
             "max": 19.95129388008687
           },
           {
-            "name": "race_other_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 1035
-          },
-          {
-            "name": "race_two_or_more_percent_direct",
+            "name": "race_two_or_more_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -9985,19 +9524,10 @@
             "mean": 3.8657500059926084,
             "sd": 2.327619390358577,
             "min": 0.2028592012241023,
-            "max": 15.489105430598395
+            "max": 15.489105430598396
           },
           {
-            "name": "race_two_or_more_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 1035
-          },
-          {
-            "name": "race_wht_alone_percent_direct",
+            "name": "race_wht_alone_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -10007,16 +9537,7 @@
             "mean": 66.64524601512484,
             "sd": 13.252660035804682,
             "min": 21.904719675885143,
-            "max": 98.62633571145975
-          },
-          {
-            "name": "race_wht_alone_percent_parcels",
-            "type": "unknown",
-            "time_range": [
-              -1,
-              -1
-            ],
-            "missing": 1035
+            "max": 98.62633571145976
           },
           {
             "name": "schools_2year_all",
@@ -10172,7 +9693,7 @@
             "missing": 1035
           },
           {
-            "name": "veteran_percent_direct",
+            "name": "veteran_percent_geo20",
             "type": "float",
             "time_range": [
               0,
@@ -10183,23 +9704,10 @@
             "sd": 9.821387622334429,
             "min": 0.4203286205578908,
             "max": 54.89168920567459
-          },
-          {
-            "name": "veteran_percent_parcels",
-            "type": "float",
-            "time_range": [
-              4,
-              12
-            ],
-            "missing": 544,
-            "mean": 9.188142803804247,
-            "sd": 3.9427703843290822,
-            "min": 0,
-            "max": 36.893534809549195
           }
         ]
       },
-      "bytes": 332891,
+      "bytes": 270438,
       "rows": 1035,
       "entities": 69
     }
@@ -10385,9 +9893,8 @@
       "short_name": "{variant} {category}",
       "long_name": "{variant.short_description}",
       "short_description": "{variant}",
-      "long_description": "{variant} 5-year ACS estimates in provided census geolevels. For non-census geolevels (such as zip codes), spatial overlaps are calculated between census block groups {category} Redistribution to non-census geolevels was performed using the redistribute R package.",
+      "long_description": "{variant} 5-year ACS estimates, sourced from the U.S. Census American Community Survey.",
       "statement": "{variant}",
-      "citations": "bii-redist",
       "sources": [
         {
           "name": "American Community Survey",
@@ -10395,51 +9902,16 @@
           "location_url": "https://www.census.gov/data/developers/data-sets/acs-5year.html",
           "date_accessed": 2023,
           "url": "https://www.census.gov/programs-surveys/acs.html"
-        },
-        {
-          "name": "Fairfax County Geospatial Data",
-          "location": "Boundaries > Zip Codes",
-          "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::zip-codes/about",
-          "date_accessed": 2022,
-          "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Fairfax County Geospatial Data",
-          "location": "Boundaries > Supervisor Districts",
-          "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::supervisor-districts-5/about",
-          "date_accessed": 2022,
-          "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Fairfax County Geospatial Data",
-          "location": "Health & Human Service > Human Services Regions",
-          "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::human-services-regions/about",
-          "date_accessed": 2022,
-          "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Arlington County GIS Open Data",
-          "location": "MHUD Polygons",
-          "location_url": "https://gisdata-arlgis.opendata.arcgis.com/datasets/ArlGIS::mhud-polygons/about",
-          "date_accessed": 2023,
-          "url": "https://gisdata-arlgis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Arlington County GIS Open Data",
-          "location": "Civic Association Polygons",
-          "location_url": "https://gisdata-arlgis.opendata.arcgis.com/datasets/ArlGIS::civic-association-polygons-1/about",
-          "date_accessed": 2021,
-          "url": "https://gisdata-arlgis.opendata.arcgis.com/"
         }
       ],
       "categories": {
-        "_parcels": {
-          "default": "parcels",
-          "long_description": "and parcels, then the value of each block group is divided across all living units within each intersecting parcel. Once parcel-level values are assigned, spatial overlaps are calculated between parcels and target regions such that parcel values can be aggregated to each intersecting target region based on proportion of overlap."
+        "_geo20": {
+          "default": "2020 geographies",
+          "long_description": "Values are provided on Census 2020 geography boundaries. Pre-2020 values have been standardized to 2020 boundaries using area-weighted crosswalks."
         },
-        "_direct": {
-          "default": "direct",
-          "long_description": "and target regions, then the value of each block group is aggregated/disaggregated to any intersecting target region based on proportion of overlap."
+        "_geo10": {
+          "default": "2010 geographies",
+          "long_description": "Values are provided on original Census 2010 geography boundaries for years prior to 2020."
         }
       },
       "variants": {
@@ -10508,9 +9980,8 @@
       "short_name": "{variant} {category}",
       "long_name": "{variant.short_description}",
       "short_description": "{variant}",
-      "long_description": "{variant} 5-year ACS estimates in provided census geolevels. For non-census geolevels (such as zip codes), spatial overlaps are calculated between census block groups {category} Redistribution to non-census geolevels was performed using the redistribute R package.",
+      "long_description": "{variant} 5-year ACS estimates, sourced from the U.S. Census American Community Survey.",
       "statement": "{variant}",
-      "citations": "bii-redist",
       "sources": [
         {
           "name": "American Community Survey",
@@ -10518,51 +9989,16 @@
           "location_url": "https://www.census.gov/data/developers/data-sets/acs-5year.html",
           "date_accessed": 2023,
           "url": "https://www.census.gov/programs-surveys/acs.html"
-        },
-        {
-          "name": "Fairfax County Geospatial Data",
-          "location": "Boundaries > Zip Codes",
-          "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::zip-codes/about",
-          "date_accessed": 2022,
-          "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Fairfax County Geospatial Data",
-          "location": "Boundaries > Supervisor Districts",
-          "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::supervisor-districts-5/about",
-          "date_accessed": 2022,
-          "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Fairfax County Geospatial Data",
-          "location": "Health & Human Service > Human Services Regions",
-          "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::human-services-regions/about",
-          "date_accessed": 2022,
-          "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Arlington County GIS Open Data",
-          "location": "MHUD Polygons",
-          "location_url": "https://gisdata-arlgis.opendata.arcgis.com/datasets/ArlGIS::mhud-polygons/about",
-          "date_accessed": 2023,
-          "url": "https://gisdata-arlgis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Arlington County GIS Open Data",
-          "location": "Civic Association Polygons",
-          "location_url": "https://gisdata-arlgis.opendata.arcgis.com/datasets/ArlGIS::civic-association-polygons-1/about",
-          "date_accessed": 2021,
-          "url": "https://gisdata-arlgis.opendata.arcgis.com/"
         }
       ],
       "categories": {
-        "_parcels": {
-          "default": "parcels",
-          "long_description": "and parcels, then the value of each block group is divided across all living units within each intersecting parcel. Once parcel-level values are assigned, spatial overlaps are calculated between parcels and target regions such that parcel values can be aggregated to each intersecting target region based on proportion of overlap."
+        "_geo20": {
+          "default": "2020 geographies",
+          "long_description": "Values are provided on Census 2020 geography boundaries. Pre-2020 values have been standardized to 2020 boundaries using area-weighted crosswalks."
         },
-        "_direct": {
-          "default": "direct",
-          "long_description": "and target regions, then the value of each block group is aggregated to any intersecting target region based on proportion of overlap."
+        "_geo10": {
+          "default": "2010 geographies",
+          "long_description": "Values are provided on original Census 2010 geography boundaries for years prior to 2020."
         }
       },
       "variants": {
@@ -12012,9 +11448,8 @@
       "short_name": "{variant} {category}",
       "long_name": "{variant.short_description}",
       "short_description": "{variant}",
-      "long_description": "{variant} 5-year ACS estimates in provided census geolevels. For non-census geolevels (such as zip codes), spatial overlaps are calculated between census block groups {category} Redistribution to non-census geolevels was performed using the redistribute R package.",
+      "long_description": "{variant} 5-year ACS estimates, sourced from the U.S. Census American Community Survey.",
       "statement": "{variant}",
-      "citations": "bii-redist",
       "sources": [
         {
           "name": "American Community Survey",
@@ -12022,51 +11457,16 @@
           "location_url": "https://www.census.gov/data/developers/data-sets/acs-5year.html",
           "date_accessed": 2023,
           "url": "https://www.census.gov/programs-surveys/acs.html"
-        },
-        {
-          "name": "Fairfax County Geospatial Data",
-          "location": "Boundaries > Zip Codes",
-          "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::zip-codes/about",
-          "date_accessed": 2022,
-          "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Fairfax County Geospatial Data",
-          "location": "Boundaries > Supervisor Districts",
-          "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::supervisor-districts-5/about",
-          "date_accessed": 2022,
-          "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Fairfax County Geospatial Data",
-          "location": "Health & Human Service > Human Services Regions",
-          "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::human-services-regions/about",
-          "date_accessed": 2022,
-          "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Arlington County GIS Open Data",
-          "location": "MHUD Polygons",
-          "location_url": "https://gisdata-arlgis.opendata.arcgis.com/datasets/ArlGIS::mhud-polygons/about",
-          "date_accessed": 2023,
-          "url": "https://gisdata-arlgis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Arlington County GIS Open Data",
-          "location": "Civic Association Polygons",
-          "location_url": "https://gisdata-arlgis.opendata.arcgis.com/datasets/ArlGIS::civic-association-polygons-1/about",
-          "date_accessed": 2021,
-          "url": "https://gisdata-arlgis.opendata.arcgis.com/"
         }
       ],
       "categories": {
-        "_parcels": {
-          "default": "parcels",
-          "long_description": "and parcels, then the value of each block group is divided across all living units within each intersecting parcel. Once parcel-level values are assigned, spatial overlaps are calculated between parcels and target regions such that parcel values can be aggregated to each intersecting target region based on proportion of overlap."
+        "_geo20": {
+          "default": "2020 geographies",
+          "long_description": "Values are provided on Census 2020 geography boundaries. Pre-2020 values have been standardized to 2020 boundaries using area-weighted crosswalks."
         },
-        "_direct": {
-          "default": "direct",
-          "long_description": "and target regions, then the value of each block group is aggregated/disaggregated to any intersecting target region based on proportion of overlap."
+        "_geo10": {
+          "default": "2010 geographies",
+          "long_description": "Values are provided on original Census 2010 geography boundaries for years prior to 2020."
         }
       },
       "variants": {
@@ -12305,9 +11705,8 @@
       "short_name": "{variant} {category}",
       "long_name": "{variant.short_description}",
       "short_description": "{variant}",
-      "long_description": "{variant} 5-year ACS estimates in provided census geolevels. For non-census geolevels (such as zip codes), spatial overlaps are calculated between census block groups {category} Redistribution to non-census geolevels was performed using the redistribute R package.",
+      "long_description": "{variant} 5-year ACS estimates, sourced from the U.S. Census American Community Survey.",
       "statement": "{variant}",
-      "citations": "bii-redist",
       "sources": [
         {
           "name": "American Community Survey",
@@ -12315,51 +11714,16 @@
           "location_url": "https://www.census.gov/data/developers/data-sets/acs-5year.html",
           "date_accessed": 2023,
           "url": "https://www.census.gov/programs-surveys/acs.html"
-        },
-        {
-          "name": "Fairfax County Geospatial Data",
-          "location": "Boundaries > Zip Codes",
-          "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::zip-codes/about",
-          "date_accessed": 2022,
-          "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Fairfax County Geospatial Data",
-          "location": "Boundaries > Supervisor Districts",
-          "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::supervisor-districts-5/about",
-          "date_accessed": 2022,
-          "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Fairfax County Geospatial Data",
-          "location": "Health & Human Service > Human Services Regions",
-          "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::human-services-regions/about",
-          "date_accessed": 2022,
-          "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Arlington County GIS Open Data",
-          "location": "MHUD Polygons",
-          "location_url": "https://gisdata-arlgis.opendata.arcgis.com/datasets/ArlGIS::mhud-polygons/about",
-          "date_accessed": 2023,
-          "url": "https://gisdata-arlgis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Arlington County GIS Open Data",
-          "location": "Civic Association Polygons",
-          "location_url": "https://gisdata-arlgis.opendata.arcgis.com/datasets/ArlGIS::civic-association-polygons-1/about",
-          "date_accessed": 2021,
-          "url": "https://gisdata-arlgis.opendata.arcgis.com/"
         }
       ],
       "categories": {
-        "_parcels": {
-          "default": "parcels",
-          "long_description": "and parcels, then the value of each block group is divided across all living units within each intersecting parcel. Once parcel-level values are assigned, spatial overlaps are calculated between parcels and target regions such that parcel values can be aggregated to each intersecting target region based on proportion of overlap."
+        "_geo20": {
+          "default": "2020 geographies",
+          "long_description": "Values are provided on Census 2020 geography boundaries. Pre-2020 values have been standardized to 2020 boundaries using area-weighted crosswalks."
         },
-        "_direct": {
-          "default": "direct",
-          "long_description": "and target regions, then the value of each block group is aggregated/disaggregated to any intersecting target region based on proportion of overlap."
+        "_geo10": {
+          "default": "2010 geographies",
+          "long_description": "Values are provided on original Census 2010 geography boundaries for years prior to 2020."
         }
       },
       "variants": {
@@ -13427,9 +12791,8 @@
       "short_name": "Population{variant}",
       "long_name": "Population{variant}",
       "short_description": "{variant}",
-      "long_description": "{variant} For non-census geographies, values are redistributed {category}, using the redistribute R package.",
+      "long_description": "{variant}",
       "statement": "There are {value} people{variant} in {region_name}.",
-      "citations": "bii-redist",
       "sources": [
         {
           "name": "American Community Survey",
@@ -13444,48 +12807,6 @@
           "location_url": "https://www2.census.gov/geo/tiger",
           "date_accessed": 2023,
           "url": "https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html"
-        },
-        {
-          "name": "Fairfax County Geospatial Data",
-          "location": "Demography > Current Housing Units",
-          "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::current-housing-units/about",
-          "date_accessed": 2023,
-          "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Fairfax County Geospatial Data",
-          "location": "Boundaries > Zip Codes",
-          "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::zip-codes/about",
-          "date_accessed": 2022,
-          "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Fairfax County Geospatial Data",
-          "location": "Boundaries > Supervisor Districts",
-          "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::supervisor-districts-5/about",
-          "date_accessed": 2022,
-          "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Fairfax County Geospatial Data",
-          "location": "Health & Human Service > Human Services Regions",
-          "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::human-services-regions/about",
-          "date_accessed": 2022,
-          "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Arlington County GIS Open Data",
-          "location": "MHUD Polygons",
-          "location_url": "https://gisdata-arlgis.opendata.arcgis.com/datasets/ArlGIS::mhud-polygons/about",
-          "date_accessed": 2023,
-          "url": "https://gisdata-arlgis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Arlington County GIS Open Data",
-          "location": "Civic Association Polygons",
-          "location_url": "https://gisdata-arlgis.opendata.arcgis.com/datasets/ArlGIS::civic-association-polygons-1/about",
-          "date_accessed": 2021,
-          "url": "https://gisdata-arlgis.opendata.arcgis.com/"
         }
       ],
       "variants": {
@@ -13508,15 +12829,13 @@
         }
       },
       "categories": {
-        "_direct": {
-          "default": "(direct method)",
-          "short_description": "estimated by proportional overlap for non-census geographies",
-          "long_description": "based on proportional overlap between census block groups and the local regions"
+        "_geo20": {
+          "default": "2020 geographies",
+          "long_description": "Values are provided on Census 2020 geography boundaries. Pre-2020 values have been standardized to 2020 boundaries using area-weighted crosswalks."
         },
-        "_parcels": {
-          "default": "(parcels method)",
-          "short_description": "estimated by proportional overlap with parcels for non-census geographies",
-          "long_description": "from census block groups to parcels, based on proportional geometric overlap and weighted by number of living units per parcel, then from parcels to the local regions based on proportional geometric overlap"
+        "_geo10": {
+          "default": "2010 geographies",
+          "long_description": "Values are provided on original Census 2010 geography boundaries for years prior to 2020."
         }
       },
       "source_file": "https://github.com/uva-bi-sdad/sdc.demographics/blob/main/Overall/code/distribution/measure_info.json",
@@ -13594,9 +12913,8 @@
       "short_name": "{variant} {category}",
       "long_name": "{variant.short_description}",
       "short_description": "{variant}",
-      "long_description": "{variant} 5-year ACS estimates in provided census geolevels. For non-census geolevels (such as zip codes), spatial overlaps are calculated between census block groups {category} Redistribution to non-census geolevels was performed using the redistribute R package.",
+      "long_description": "{variant} 5-year ACS estimates, sourced from the U.S. Census American Community Survey.",
       "statement": "{variant}",
-      "citations": "bii-redist",
       "sources": [
         {
           "name": "American Community Survey",
@@ -13604,51 +12922,16 @@
           "location_url": "https://www.census.gov/data/developers/data-sets/acs-5year.html",
           "date_accessed": 2023,
           "url": "https://www.census.gov/programs-surveys/acs.html"
-        },
-        {
-          "name": "Fairfax County Geospatial Data",
-          "location": "Boundaries > Zip Codes",
-          "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::zip-codes/about",
-          "date_accessed": 2022,
-          "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Fairfax County Geospatial Data",
-          "location": "Boundaries > Supervisor Districts",
-          "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::supervisor-districts-5/about",
-          "date_accessed": 2022,
-          "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Fairfax County Geospatial Data",
-          "location": "Health & Human Service > Human Services Regions",
-          "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::human-services-regions/about",
-          "date_accessed": 2022,
-          "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Arlington County GIS Open Data",
-          "location": "MHUD Polygons",
-          "location_url": "https://gisdata-arlgis.opendata.arcgis.com/datasets/ArlGIS::mhud-polygons/about",
-          "date_accessed": 2023,
-          "url": "https://gisdata-arlgis.opendata.arcgis.com/"
-        },
-        {
-          "name": "Arlington County GIS Open Data",
-          "location": "Civic Association Polygons",
-          "location_url": "https://gisdata-arlgis.opendata.arcgis.com/datasets/ArlGIS::civic-association-polygons-1/about",
-          "date_accessed": 2021,
-          "url": "https://gisdata-arlgis.opendata.arcgis.com/"
         }
       ],
       "categories": {
-        "_parcels": {
-          "default": "parcels",
-          "long_description": "and parcels, then the value of each block group is divided across all living units within each intersecting parcel. Once parcel-level values are assigned, spatial overlaps are calculated between parcels and target regions such that parcel values can be aggregated to each intersecting target region based on proportion of overlap."
+        "_geo20": {
+          "default": "2020 geographies",
+          "long_description": "Values are provided on Census 2020 geography boundaries. Pre-2020 values have been standardized to 2020 boundaries using area-weighted crosswalks."
         },
-        "_direct": {
-          "default": "direct",
-          "long_description": "and target regions, then the value of each block group is aggregated/disaggregated to any intersecting target region based on proportion of overlap."
+        "_geo10": {
+          "default": "2010 geographies",
+          "long_description": "Values are provided on original Census 2010 geography boundaries for years prior to 2020."
         }
       },
       "variants": {

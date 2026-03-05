@@ -117,7 +117,7 @@
       "title": "A three-step floating catchment area method for analyzing spatial access to health services",
       "journal": "International Journal of Geographical Information Science",
       "volume": "26",
-      "page": "1073–1089",
+      "page": "1073\u20131089",
       "doi": "10.1080/13658816.2011.624987"
     },
     "bii21": {
@@ -179,9 +179,8 @@
     "short_name": "{variant} {category}",
     "long_name": "{variant.short_description}",
     "short_description": "{variant}",
-    "long_description": "{variant} 5-year ACS estimates in provided census geolevels. For non-census geolevels (such as zip codes), spatial overlaps are calculated between census block groups {category} Redistribution to non-census geolevels was performed using the redistribute R package.",
+    "long_description": "{variant} 5-year ACS estimates, sourced from the U.S. Census American Community Survey.",
     "statement": "{variant}",
-    "citations": "bii-redist",
     "sources": [
       {
         "name": "American Community Survey",
@@ -189,51 +188,16 @@
         "location_url": "https://www.census.gov/data/developers/data-sets/acs-5year.html",
         "date_accessed": 2023,
         "url": "https://www.census.gov/programs-surveys/acs.html"
-      },
-      {
-        "name": "Fairfax County Geospatial Data",
-        "location": "Boundaries > Zip Codes",
-        "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::zip-codes/about",
-        "date_accessed": 2022,
-        "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Fairfax County Geospatial Data",
-        "location": "Boundaries > Supervisor Districts",
-        "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::supervisor-districts-5/about",
-        "date_accessed": 2022,
-        "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Fairfax County Geospatial Data",
-        "location": "Health & Human Service > Human Services Regions",
-        "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::human-services-regions/about",
-        "date_accessed": 2022,
-        "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Arlington County GIS Open Data",
-        "location": "MHUD Polygons",
-        "location_url": "https://gisdata-arlgis.opendata.arcgis.com/datasets/ArlGIS::mhud-polygons/about",
-        "date_accessed": 2023,
-        "url": "https://gisdata-arlgis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Arlington County GIS Open Data",
-        "location": "Civic Association Polygons",
-        "location_url": "https://gisdata-arlgis.opendata.arcgis.com/datasets/ArlGIS::civic-association-polygons-1/about",
-        "date_accessed": 2021,
-        "url": "https://gisdata-arlgis.opendata.arcgis.com/"
       }
     ],
     "categories": {
-      "_parcels": {
-        "default": "parcels",
-        "long_description": "and parcels, then the value of each block group is divided across all living units within each intersecting parcel. Once parcel-level values are assigned, spatial overlaps are calculated between parcels and target regions such that parcel values can be aggregated to each intersecting target region based on proportion of overlap."
+      "_geo20": {
+        "default": "2020 geographies",
+        "long_description": "Values are provided on Census 2020 geography boundaries. Pre-2020 values have been standardized to 2020 boundaries using area-weighted crosswalks."
       },
-      "_direct": {
-        "default": "direct",
-        "long_description": "and target regions, then the value of each block group is aggregated/disaggregated to any intersecting target region based on proportion of overlap."
+      "_geo10": {
+        "default": "2010 geographies",
+        "long_description": "Values are provided on original Census 2010 geography boundaries for years prior to 2020."
       }
     },
     "variants": {
@@ -302,9 +266,8 @@
     "short_name": "{variant} {category}",
     "long_name": "{variant.short_description}",
     "short_description": "{variant}",
-    "long_description": "{variant} 5-year ACS estimates in provided census geolevels. For non-census geolevels (such as zip codes), spatial overlaps are calculated between census block groups {category} Redistribution to non-census geolevels was performed using the redistribute R package.",
+    "long_description": "{variant} 5-year ACS estimates, sourced from the U.S. Census American Community Survey.",
     "statement": "{variant}",
-    "citations": "bii-redist",
     "sources": [
       {
         "name": "American Community Survey",
@@ -312,51 +275,16 @@
         "location_url": "https://www.census.gov/data/developers/data-sets/acs-5year.html",
         "date_accessed": 2023,
         "url": "https://www.census.gov/programs-surveys/acs.html"
-      },
-      {
-        "name": "Fairfax County Geospatial Data",
-        "location": "Boundaries > Zip Codes",
-        "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::zip-codes/about",
-        "date_accessed": 2022,
-        "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Fairfax County Geospatial Data",
-        "location": "Boundaries > Supervisor Districts",
-        "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::supervisor-districts-5/about",
-        "date_accessed": 2022,
-        "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Fairfax County Geospatial Data",
-        "location": "Health & Human Service > Human Services Regions",
-        "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::human-services-regions/about",
-        "date_accessed": 2022,
-        "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Arlington County GIS Open Data",
-        "location": "MHUD Polygons",
-        "location_url": "https://gisdata-arlgis.opendata.arcgis.com/datasets/ArlGIS::mhud-polygons/about",
-        "date_accessed": 2023,
-        "url": "https://gisdata-arlgis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Arlington County GIS Open Data",
-        "location": "Civic Association Polygons",
-        "location_url": "https://gisdata-arlgis.opendata.arcgis.com/datasets/ArlGIS::civic-association-polygons-1/about",
-        "date_accessed": 2021,
-        "url": "https://gisdata-arlgis.opendata.arcgis.com/"
       }
     ],
     "categories": {
-      "_parcels": {
-        "default": "parcels",
-        "long_description": "and parcels, then the value of each block group is divided across all living units within each intersecting parcel. Once parcel-level values are assigned, spatial overlaps are calculated between parcels and target regions such that parcel values can be aggregated to each intersecting target region based on proportion of overlap."
+      "_geo20": {
+        "default": "2020 geographies",
+        "long_description": "Values are provided on Census 2020 geography boundaries. Pre-2020 values have been standardized to 2020 boundaries using area-weighted crosswalks."
       },
-      "_direct": {
-        "default": "direct",
-        "long_description": "and target regions, then the value of each block group is aggregated to any intersecting target region based on proportion of overlap."
+      "_geo10": {
+        "default": "2010 geographies",
+        "long_description": "Values are provided on original Census 2010 geography boundaries for years prior to 2020."
       }
     },
     "variants": {
@@ -487,7 +415,7 @@
         "date_accessed": 2022,
         "location": "",
         "location_url": "",
-        "name": "Department   of Labor Women’s Bureau National",
+        "name": "Department   of Labor Women\u2019s Bureau National",
         "url": "https://www.dol.gov/agencies/wb/topics/featured-childcare"
       },
       {
@@ -508,7 +436,7 @@
         "date_accessed": 2022,
         "location": "",
         "location_url": "",
-        "name": "National   Bureau of Economic Research’s program TAXSIM Version 35",
+        "name": "National   Bureau of Economic Research\u2019s program TAXSIM Version 35",
         "url": "http://taxsim.nber.org/taxsim35/"
       }
     ],
@@ -586,7 +514,7 @@
         "date_accessed": 2022,
         "location": "",
         "location_url": "",
-        "name": "Department   of Labor Women’s Bureau National",
+        "name": "Department   of Labor Women\u2019s Bureau National",
         "url": "https://www.dol.gov/agencies/wb/topics/featured-childcare"
       },
       {
@@ -607,7 +535,7 @@
         "date_accessed": 2022,
         "location": "",
         "location_url": "",
-        "name": "National   Bureau of Economic Research’s program TAXSIM Version 35",
+        "name": "National   Bureau of Economic Research\u2019s program TAXSIM Version 35",
         "url": "http://taxsim.nber.org/taxsim35/"
       }
     ],
@@ -685,7 +613,7 @@
         "date_accessed": 2022,
         "location": "",
         "location_url": "",
-        "name": "Department   of Labor Women’s Bureau National",
+        "name": "Department   of Labor Women\u2019s Bureau National",
         "url": "https://www.dol.gov/agencies/wb/topics/featured-childcare"
       },
       {
@@ -706,7 +634,7 @@
         "date_accessed": 2022,
         "location": "",
         "location_url": "",
-        "name": "National   Bureau of Economic Research’s program TAXSIM Version 35",
+        "name": "National   Bureau of Economic Research\u2019s program TAXSIM Version 35",
         "url": "http://taxsim.nber.org/taxsim35/"
       }
     ],
@@ -784,7 +712,7 @@
         "date_accessed": 2022,
         "location": "",
         "location_url": "",
-        "name": "Department   of Labor Women’s Bureau National",
+        "name": "Department   of Labor Women\u2019s Bureau National",
         "url": "https://www.dol.gov/agencies/wb/topics/featured-childcare"
       },
       {
@@ -805,7 +733,7 @@
         "date_accessed": 2022,
         "location": "",
         "location_url": "",
-        "name": "National   Bureau of Economic Research’s program TAXSIM Version 35",
+        "name": "National   Bureau of Economic Research\u2019s program TAXSIM Version 35",
         "url": "http://taxsim.nber.org/taxsim35/"
       }
     ],
@@ -883,7 +811,7 @@
         "date_accessed": 2022,
         "location": "",
         "location_url": "",
-        "name": "Department   of Labor Women’s Bureau National",
+        "name": "Department   of Labor Women\u2019s Bureau National",
         "url": "https://www.dol.gov/agencies/wb/topics/featured-childcare"
       },
       {
@@ -904,7 +832,7 @@
         "date_accessed": 2022,
         "location": "",
         "location_url": "",
-        "name": "National   Bureau of Economic Research’s program TAXSIM Version 35",
+        "name": "National   Bureau of Economic Research\u2019s program TAXSIM Version 35",
         "url": "http://taxsim.nber.org/taxsim35/"
       }
     ],
@@ -982,7 +910,7 @@
         "date_accessed": 2022,
         "location": "",
         "location_url": "",
-        "name": "Department   of Labor Women’s Bureau National",
+        "name": "Department   of Labor Women\u2019s Bureau National",
         "url": "https://www.dol.gov/agencies/wb/topics/featured-childcare"
       },
       {
@@ -1003,7 +931,7 @@
         "date_accessed": 2022,
         "location": "",
         "location_url": "",
-        "name": "National   Bureau of Economic Research’s program TAXSIM Version 35",
+        "name": "National   Bureau of Economic Research\u2019s program TAXSIM Version 35",
         "url": "http://taxsim.nber.org/taxsim35/"
       }
     ],
@@ -1138,7 +1066,7 @@
     "data_type": "numeric",
     "equity_category": "Status",
     "layer": "",
-    "long_description": "The percentage of food insecure children. Food insecurity refers to the US Department of Agriculture’s (USDA) measure of lack of access, at times, to enough food for an active, healthy life for all household members and limited or uncertain availability of nutritionally adequate foods. Food insecure children are those children living in households that are not necessarily food insecure all the time. Food insecurity may reflect a household’s need to make trade-offs between important basic needs, such as housing or medical bills, and purchasing nutritionally adequate foods. Geographies: County (5)",
+    "long_description": "The percentage of food insecure children. Food insecurity refers to the US Department of Agriculture\u2019s (USDA) measure of lack of access, at times, to enough food for an active, healthy life for all household members and limited or uncertain availability of nutritionally adequate foods. Food insecure children are those children living in households that are not necessarily food insecure all the time. Food insecurity may reflect a household\u2019s need to make trade-offs between important basic needs, such as housing or medical bills, and purchasing nutritionally adequate foods. Geographies: County (5)",
     "long_name": "Percentage of food insecure children",
     "measure_type": "percent",
     "short_description": "",
@@ -1259,10 +1187,10 @@
     "data_type": "decimal",
     "equity_category": "Status",
     "layer": "",
-    "long_description": "Earnings per job are calculated based on the GDP and Personal Income table for the Bureau of Economic Analysis (BEA). Earnings per job is the total earnings divided by total number of jobs. Total earnings is the sum of wages and salaries, supplements to wages and salaries, and proprietor’s income. Wages and salaries refer to the monetary remuneration of employees; it includes compensation of corporate officers; commissions, tips, and bonuses, compensation plans, such as a 401(k) plans; and receipts in kind, or pay-in0kind, that represent income to the recipient. Supplements to wages and salaries consist of employer contributions for employee pension and insurance funds and employer contributions for government social insurance. The proprietor’s income is the current-production income (including the income in kind) of sole proprietorships and partnerships and of tax-exempt cooperatives. Geographies: County(5), Health Districts (51_hd)",
+    "long_description": "Earnings per job are calculated based on the GDP and Personal Income table for the Bureau of Economic Analysis (BEA). Earnings per job is the total earnings divided by total number of jobs. Total earnings is the sum of wages and salaries, supplements to wages and salaries, and proprietor\u2019s income. Wages and salaries refer to the monetary remuneration of employees; it includes compensation of corporate officers; commissions, tips, and bonuses, compensation plans, such as a 401(k) plans; and receipts in kind, or pay-in0kind, that represent income to the recipient. Supplements to wages and salaries consist of employer contributions for employee pension and insurance funds and employer contributions for government social insurance. The proprietor\u2019s income is the current-production income (including the income in kind) of sole proprietorships and partnerships and of tax-exempt cooperatives. Geographies: County(5), Health Districts (51_hd)",
     "long_name": "Earnings per job",
     "measure_type": "",
-    "short_description": "Earnings per job are calculated based on the GDP and Personal Income table for the Bureau of Economic Analysis (BEA). Earnings per job is the total earnings divided by total number of jobs. Total earnings is the sum of wages and salaries, supplements to wages and salaries, and proprietor’s income. Wages and salaries refer to the monetary remuneration of employees; it includes compensation of corporate officers; commissions, tips, and bonuses, compensation plans, such as a 401(k) plans; and receipts in kind, or pay-in0kind, that represent income to the recipient. Supplements to wages and salaries consist of employer contributions for employee pension and insurance funds and employer contributions for government social insurance. The proprietor’s income is the current-production income (including the income in kind) of sole proprietorships and partnerships and of tax-exempt cooperatives. Geographies: County(5), Health Districts (51_hd)",
+    "short_description": "Earnings per job are calculated based on the GDP and Personal Income table for the Bureau of Economic Analysis (BEA). Earnings per job is the total earnings divided by total number of jobs. Total earnings is the sum of wages and salaries, supplements to wages and salaries, and proprietor\u2019s income. Wages and salaries refer to the monetary remuneration of employees; it includes compensation of corporate officers; commissions, tips, and bonuses, compensation plans, such as a 401(k) plans; and receipts in kind, or pay-in0kind, that represent income to the recipient. Supplements to wages and salaries consist of employer contributions for employee pension and insurance funds and employer contributions for government social insurance. The proprietor\u2019s income is the current-production income (including the income in kind) of sole proprietorships and partnerships and of tax-exempt cooperatives. Geographies: County(5), Health Districts (51_hd)",
     "short_name": "Earnings per job",
     "sources": [
       {
@@ -1409,7 +1337,7 @@
     "data_type": "numeric",
     "equity_category": "Status",
     "layer": "",
-    "long_description": "Estimate of the number of people in food-insecure households. Food insecurity refers to the US Department of Agriculture’s (USDA) measure of lack of access, at times, to enough food for an active, healthy life for all household members and limited or uncertain availability of nutritionally adequate foods. Food insecurity may reflect a household’s need to make trade-offs between important basic needs, such as housing or medical bills, and purchasing nutritionally adequate foods. Geographies: Census tract (11)",
+    "long_description": "Estimate of the number of people in food-insecure households. Food insecurity refers to the US Department of Agriculture\u2019s (USDA) measure of lack of access, at times, to enough food for an active, healthy life for all household members and limited or uncertain availability of nutritionally adequate foods. Food insecurity may reflect a household\u2019s need to make trade-offs between important basic needs, such as housing or medical bills, and purchasing nutritionally adequate foods. Geographies: Census tract (11)",
     "long_name": "Estimated number of food insecure people",
     "measure_type": "count",
     "short_description": "",
@@ -1468,7 +1396,7 @@
         "date_accessed": 2022,
         "location": "",
         "location_url": "",
-        "name": "Department   of Labor Women’s Bureau National",
+        "name": "Department   of Labor Women\u2019s Bureau National",
         "url": "https://www.dol.gov/agencies/wb/topics/featured-childcare"
       },
       {
@@ -1489,7 +1417,7 @@
         "date_accessed": 2022,
         "location": "",
         "location_url": "",
-        "name": "National   Bureau of Economic Research’s program TAXSIM Version 35",
+        "name": "National   Bureau of Economic Research\u2019s program TAXSIM Version 35",
         "url": "http://taxsim.nber.org/taxsim35/"
       }
     ],
@@ -1508,7 +1436,7 @@
     "data_type": "numeric",
     "equity_category": "Status",
     "layer": "",
-    "long_description": "Estimate of percentage of people in food-insecure households. Food insecurity refers to the US Department of Agriculture’s (USDA) measure of lack of access, at times, to enough food for an active, healthy life for all household members and limited or uncertain availability of nutritionally adequate foods. Food insecurity may reflect a household’s need to make trade-offs between important basic needs, such as housing or medical bills, and purchasing nutritionally adequate foods. Geographies: Census tract (11)",
+    "long_description": "Estimate of percentage of people in food-insecure households. Food insecurity refers to the US Department of Agriculture\u2019s (USDA) measure of lack of access, at times, to enough food for an active, healthy life for all household members and limited or uncertain availability of nutritionally adequate foods. Food insecurity may reflect a household\u2019s need to make trade-offs between important basic needs, such as housing or medical bills, and purchasing nutritionally adequate foods. Geographies: Census tract (11)",
     "long_name": "Estimated percentage of food insecure households",
     "measure_type": "percent",
     "short_description": "",
@@ -1567,7 +1495,7 @@
         "date_accessed": 2022,
         "location": "",
         "location_url": "",
-        "name": "Department   of Labor Women’s Bureau National",
+        "name": "Department   of Labor Women\u2019s Bureau National",
         "url": "https://www.dol.gov/agencies/wb/topics/featured-childcare"
       },
       {
@@ -1588,7 +1516,7 @@
         "date_accessed": 2022,
         "location": "",
         "location_url": "",
-        "name": "National   Bureau of Economic Research’s program TAXSIM Version 35",
+        "name": "National   Bureau of Economic Research\u2019s program TAXSIM Version 35",
         "url": "http://taxsim.nber.org/taxsim35/"
       }
     ],
@@ -1666,7 +1594,7 @@
         "date_accessed": 2022,
         "location": "",
         "location_url": "",
-        "name": "Department   of Labor Women’s Bureau National",
+        "name": "Department   of Labor Women\u2019s Bureau National",
         "url": "https://www.dol.gov/agencies/wb/topics/featured-childcare"
       },
       {
@@ -1687,7 +1615,7 @@
         "date_accessed": 2022,
         "location": "",
         "location_url": "",
-        "name": "National   Bureau of Economic Research’s program TAXSIM Version 35",
+        "name": "National   Bureau of Economic Research\u2019s program TAXSIM Version 35",
         "url": "http://taxsim.nber.org/taxsim35/"
       }
     ],
@@ -1765,7 +1693,7 @@
         "date_accessed": 2022,
         "location": "",
         "location_url": "",
-        "name": "Department   of Labor Women’s Bureau National",
+        "name": "Department   of Labor Women\u2019s Bureau National",
         "url": "https://www.dol.gov/agencies/wb/topics/featured-childcare"
       },
       {
@@ -1786,7 +1714,7 @@
         "date_accessed": 2022,
         "location": "",
         "location_url": "",
-        "name": "National   Bureau of Economic Research’s program TAXSIM Version 35",
+        "name": "National   Bureau of Economic Research\u2019s program TAXSIM Version 35",
         "url": "http://taxsim.nber.org/taxsim35/"
       }
     ],
@@ -1806,9 +1734,8 @@
     "short_name": "{variant} {category}",
     "long_name": "{variant.short_description}",
     "short_description": "{variant}",
-    "long_description": "{variant} 5-year ACS estimates in provided census geolevels. For non-census geolevels (such as zip codes), spatial overlaps are calculated between census block groups {category} Redistribution to non-census geolevels was performed using the redistribute R package.",
+    "long_description": "{variant} 5-year ACS estimates, sourced from the U.S. Census American Community Survey.",
     "statement": "{variant}",
-    "citations": "bii-redist",
     "sources": [
       {
         "name": "American Community Survey",
@@ -1816,51 +1743,16 @@
         "location_url": "https://www.census.gov/data/developers/data-sets/acs-5year.html",
         "date_accessed": 2023,
         "url": "https://www.census.gov/programs-surveys/acs.html"
-      },
-      {
-        "name": "Fairfax County Geospatial Data",
-        "location": "Boundaries > Zip Codes",
-        "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::zip-codes/about",
-        "date_accessed": 2022,
-        "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Fairfax County Geospatial Data",
-        "location": "Boundaries > Supervisor Districts",
-        "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::supervisor-districts-5/about",
-        "date_accessed": 2022,
-        "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Fairfax County Geospatial Data",
-        "location": "Health & Human Service > Human Services Regions",
-        "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::human-services-regions/about",
-        "date_accessed": 2022,
-        "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Arlington County GIS Open Data",
-        "location": "MHUD Polygons",
-        "location_url": "https://gisdata-arlgis.opendata.arcgis.com/datasets/ArlGIS::mhud-polygons/about",
-        "date_accessed": 2023,
-        "url": "https://gisdata-arlgis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Arlington County GIS Open Data",
-        "location": "Civic Association Polygons",
-        "location_url": "https://gisdata-arlgis.opendata.arcgis.com/datasets/ArlGIS::civic-association-polygons-1/about",
-        "date_accessed": 2021,
-        "url": "https://gisdata-arlgis.opendata.arcgis.com/"
       }
     ],
     "categories": {
-      "_parcels": {
-        "default": "parcels",
-        "long_description": "and parcels, then the value of each block group is divided across all living units within each intersecting parcel. Once parcel-level values are assigned, spatial overlaps are calculated between parcels and target regions such that parcel values can be aggregated to each intersecting target region based on proportion of overlap."
+      "_geo20": {
+        "default": "2020 geographies",
+        "long_description": "Values are provided on Census 2020 geography boundaries. Pre-2020 values have been standardized to 2020 boundaries using area-weighted crosswalks."
       },
-      "_direct": {
-        "default": "direct",
-        "long_description": "and target regions, then the value of each block group is aggregated/disaggregated to any intersecting target region based on proportion of overlap."
+      "_geo10": {
+        "default": "2010 geographies",
+        "long_description": "Values are provided on original Census 2010 geography boundaries for years prior to 2020."
       }
     },
     "variants": {
@@ -1906,7 +1798,10 @@
       }
     },
     "source_file": "https://github.com/uva-bi-sdad/sdc.demographics/blob/main/Gender/code/distribution/measure_info.json",
-    "origin": ["https://github.com/uva-bi-sdad/sdc.demographics/blob/main/Gender/data/distribution/va_hsrsdpdzccttrbg_sdad_2009_2023_gender_demographics.csv.xz", "https://github.com/uva-bi-sdad/sdc.demographics/blob/main/Gender/data/distribution/ncr_cttrbg_acs_2009_2023_gender_demographics.csv.xz"]
+    "origin": [
+      "https://github.com/uva-bi-sdad/sdc.demographics/blob/main/Gender/data/distribution/va_hsrsdpdzccttrbg_sdad_2009_2023_gender_demographics.csv.xz",
+      "https://github.com/uva-bi-sdad/sdc.demographics/blob/main/Gender/data/distribution/ncr_cttrbg_acs_2009_2023_gender_demographics.csv.xz"
+    ]
   },
   "gini_index_geo20": {
     "aggregation_method": "",
@@ -2096,9 +1991,8 @@
     "short_name": "{variant} {category}",
     "long_name": "{variant.short_description}",
     "short_description": "{variant}",
-    "long_description": "{variant} 5-year ACS estimates in provided census geolevels. For non-census geolevels (such as zip codes), spatial overlaps are calculated between census block groups {category} Redistribution to non-census geolevels was performed using the redistribute R package.",
+    "long_description": "{variant} 5-year ACS estimates, sourced from the U.S. Census American Community Survey.",
     "statement": "{variant}",
-    "citations": "bii-redist",
     "sources": [
       {
         "name": "American Community Survey",
@@ -2106,51 +2000,16 @@
         "location_url": "https://www.census.gov/data/developers/data-sets/acs-5year.html",
         "date_accessed": 2023,
         "url": "https://www.census.gov/programs-surveys/acs.html"
-      },
-      {
-        "name": "Fairfax County Geospatial Data",
-        "location": "Boundaries > Zip Codes",
-        "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::zip-codes/about",
-        "date_accessed": 2022,
-        "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Fairfax County Geospatial Data",
-        "location": "Boundaries > Supervisor Districts",
-        "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::supervisor-districts-5/about",
-        "date_accessed": 2022,
-        "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Fairfax County Geospatial Data",
-        "location": "Health & Human Service > Human Services Regions",
-        "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::human-services-regions/about",
-        "date_accessed": 2022,
-        "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Arlington County GIS Open Data",
-        "location": "MHUD Polygons",
-        "location_url": "https://gisdata-arlgis.opendata.arcgis.com/datasets/ArlGIS::mhud-polygons/about",
-        "date_accessed": 2023,
-        "url": "https://gisdata-arlgis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Arlington County GIS Open Data",
-        "location": "Civic Association Polygons",
-        "location_url": "https://gisdata-arlgis.opendata.arcgis.com/datasets/ArlGIS::civic-association-polygons-1/about",
-        "date_accessed": 2021,
-        "url": "https://gisdata-arlgis.opendata.arcgis.com/"
       }
     ],
     "categories": {
-      "_parcels": {
-        "default": "parcels",
-        "long_description": "and parcels, then the value of each block group is divided across all living units within each intersecting parcel. Once parcel-level values are assigned, spatial overlaps are calculated between parcels and target regions such that parcel values can be aggregated to each intersecting target region based on proportion of overlap."
+      "_geo20": {
+        "default": "2020 geographies",
+        "long_description": "Values are provided on Census 2020 geography boundaries. Pre-2020 values have been standardized to 2020 boundaries using area-weighted crosswalks."
       },
-      "_direct": {
-        "default": "direct",
-        "long_description": "and target regions, then the value of each block group is aggregated/disaggregated to any intersecting target region based on proportion of overlap."
+      "_geo10": {
+        "default": "2010 geographies",
+        "long_description": "Values are provided on original Census 2010 geography boundaries for years prior to 2020."
       }
     },
     "variants": {
@@ -2235,7 +2094,10 @@
     "unit": "",
     "variants": "",
     "source_file": "https://github.com/uva-bi-sdad/sdc.health/blob/main/Health Care Services/Mental Health/Service Access Scores/data/distribution/measure_info.json",
-    "origin": ["https://github.com/uva-bi-sdad/sdc.health/blob/main/Health Care Services/Mental Health/Service Access Scores/data/distribution/ncr_cttrbg_samhsa_2021_access_scores_mental.csv.xz", "https://github.com/uva-bi-sdad/sdc.health/blob/main/Health Care Services/Mental Health/Service Access Scores/data/distribution/va_hdcttrbgca_samhsa_2021_access_scores_mental.csv.xz"]
+    "origin": [
+      "https://github.com/uva-bi-sdad/sdc.health/blob/main/Health Care Services/Mental Health/Service Access Scores/data/distribution/ncr_cttrbg_samhsa_2021_access_scores_mental.csv.xz",
+      "https://github.com/uva-bi-sdad/sdc.health/blob/main/Health Care Services/Mental Health/Service Access Scores/data/distribution/va_hdcttrbgca_samhsa_2021_access_scores_mental.csv.xz"
+    ]
   },
   "mental_cnt": {
     "aggregation_method": "",
@@ -2264,7 +2126,10 @@
     "unit": "",
     "variants": "",
     "source_file": "https://github.com/uva-bi-sdad/sdc.health/blob/main/Health Care Services/Mental Health/Service Access Scores/data/distribution/measure_info.json",
-    "origin": ["https://github.com/uva-bi-sdad/sdc.health/blob/main/Health Care Services/Mental Health/Service Access Scores/data/distribution/ncr_cttrbg_samhsa_2021_access_scores_mental.csv.xz", "https://github.com/uva-bi-sdad/sdc.health/blob/main/Health Care Services/Mental Health/Service Access Scores/data/distribution/va_hdcttrbgca_samhsa_2021_access_scores_mental.csv.xz"]
+    "origin": [
+      "https://github.com/uva-bi-sdad/sdc.health/blob/main/Health Care Services/Mental Health/Service Access Scores/data/distribution/ncr_cttrbg_samhsa_2021_access_scores_mental.csv.xz",
+      "https://github.com/uva-bi-sdad/sdc.health/blob/main/Health Care Services/Mental Health/Service Access Scores/data/distribution/va_hdcttrbgca_samhsa_2021_access_scores_mental.csv.xz"
+    ]
   },
   "mental_near_10_median": {
     "aggregation_method": "",
@@ -2293,7 +2158,10 @@
     "unit": "",
     "variants": "",
     "source_file": "https://github.com/uva-bi-sdad/sdc.health/blob/main/Health Care Services/Mental Health/Service Access Scores/data/distribution/measure_info.json",
-    "origin": ["https://github.com/uva-bi-sdad/sdc.health/blob/main/Health Care Services/Mental Health/Service Access Scores/data/distribution/ncr_cttrbg_samhsa_2021_access_scores_mental.csv.xz", "https://github.com/uva-bi-sdad/sdc.health/blob/main/Health Care Services/Mental Health/Service Access Scores/data/distribution/va_hdcttrbgca_samhsa_2021_access_scores_mental.csv.xz"]
+    "origin": [
+      "https://github.com/uva-bi-sdad/sdc.health/blob/main/Health Care Services/Mental Health/Service Access Scores/data/distribution/ncr_cttrbg_samhsa_2021_access_scores_mental.csv.xz",
+      "https://github.com/uva-bi-sdad/sdc.health/blob/main/Health Care Services/Mental Health/Service Access Scores/data/distribution/va_hdcttrbgca_samhsa_2021_access_scores_mental.csv.xz"
+    ]
   },
   "Minority_employment": {
     "aggregation_method": "",
@@ -2528,7 +2396,10 @@
     "unit": "",
     "variants": "",
     "source_file": "https://github.com/uva-bi-sdad/sdc.health/blob/main/Population Health/System Usage and Insurance/Without Health Insurance/data/distribution/measure_info.json",
-    "origin": ["https://github.com/uva-bi-sdad/sdc.health/blob/main/Population Health/System Usage and Insurance/Without Health Insurance/data/distribution/ncr_cttrbg_acs5_2015_2023_no_health_insurance_19_to_64.csv.xz", "https://github.com/uva-bi-sdad/sdc.health/blob/main/Population Health/System Usage and Insurance/Without Health Insurance/data/distribution/va_hdcttr_acs5_2015_2023_no_health_insurance_19_to_64.csv.xz"]
+    "origin": [
+      "https://github.com/uva-bi-sdad/sdc.health/blob/main/Population Health/System Usage and Insurance/Without Health Insurance/data/distribution/ncr_cttrbg_acs5_2015_2023_no_health_insurance_19_to_64.csv.xz",
+      "https://github.com/uva-bi-sdad/sdc.health/blob/main/Population Health/System Usage and Insurance/Without Health Insurance/data/distribution/va_hdcttr_acs5_2015_2023_no_health_insurance_19_to_64.csv.xz"
+    ]
   },
   "Nonminority_employment": {
     "aggregation_method": "",
@@ -2567,7 +2438,7 @@
     "data_type": "numeric",
     "equity_category": "Status",
     "layer": "",
-    "long_description": "The number of food insecure children. Food insecurity refers to the US Department of Agriculture’s (USDA) measure of lack of access, at times, to enough food for an active, healthy life for all household members and limited or uncertain availability of nutritionally adequate foods. Food insecure children are those children living in households that are not necessarily food insecure all the time. Food insecurity may reflect a household’s need to make trade-offs between important basic needs, such as housing or medical bills, and purchasing nutritionally adequate foods. Geographies: County (5)",
+    "long_description": "The number of food insecure children. Food insecurity refers to the US Department of Agriculture\u2019s (USDA) measure of lack of access, at times, to enough food for an active, healthy life for all household members and limited or uncertain availability of nutritionally adequate foods. Food insecure children are those children living in households that are not necessarily food insecure all the time. Food insecurity may reflect a household\u2019s need to make trade-offs between important basic needs, such as housing or medical bills, and purchasing nutritionally adequate foods. Geographies: County (5)",
     "long_name": "Count of food insecure children",
     "measure_type": "count",
     "short_description": "",
@@ -2596,7 +2467,7 @@
     "data_type": "numeric",
     "equity_category": "",
     "layer": "",
-    "long_description": "Estimated number of total people in food insecure households according to Feeding America. Food insecurity refers to the US Department of Agriculture’s (USDA) measure of lack of access, at times, to enough food for an active, healthy life for all household members and limited or uncertain availability of nutritionally adequate foods. The brief providing the methodology of calculating these estimates is available on Feeding America’s Map the Meal Gap website. Food insecurity may reflect a household’s need to make trade-offs between important basic needs, such as housing or medical bills, and purchasing nutritionally adequate foods. Geographies: Census tract (11), County (5), Health Districts (51_hd)",
+    "long_description": "Estimated number of total people in food insecure households according to Feeding America. Food insecurity refers to the US Department of Agriculture\u2019s (USDA) measure of lack of access, at times, to enough food for an active, healthy life for all household members and limited or uncertain availability of nutritionally adequate foods. The brief providing the methodology of calculating these estimates is available on Feeding America\u2019s Map the Meal Gap website. Food insecurity may reflect a household\u2019s need to make trade-offs between important basic needs, such as housing or medical bills, and purchasing nutritionally adequate foods. Geographies: Census tract (11), County (5), Health Districts (51_hd)",
     "long_name": "Estimated number of total people in food insecure households",
     "measure_type": "count",
     "short_description": "",
@@ -2693,7 +2564,7 @@
     "data_type": "decimal",
     "equity_category": "",
     "layer": "",
-    "long_description": "The percentage of households whose monthly housing costs from mortgage payments or rent account for 30% or more of their household’s income in the past 12 months.",
+    "long_description": "The percentage of households whose monthly housing costs from mortgage payments or rent account for 30% or more of their household\u2019s income in the past 12 months.",
     "long_name": "Percentage of Households Whose Mortgage Payments or Rent Account for 30% or More of Their Household Income",
     "measure_type": "percent",
     "short_description": "",
@@ -2751,7 +2622,7 @@
     "data_type": "decimal",
     "equity_category": "",
     "layer": "",
-    "long_description": "The percentage of renter-occupied households whose monthly housing costs from rent payments account for 30% or more of their household’s income in the past 12 months.",
+    "long_description": "The percentage of renter-occupied households whose monthly housing costs from rent payments account for 30% or more of their household\u2019s income in the past 12 months.",
     "long_name": "Percentage of Renter-Occupied Households Whose Rent Accounts for 30% or More of Their Household Income",
     "measure_type": "percent",
     "short_description": "",
@@ -3178,7 +3049,7 @@
     "data_type": "numeric",
     "equity_category": "",
     "layer": "",
-    "long_description": "Estimated percentage of total people in food insecure households according to Feeding America. Food insecurity refers to the US Department of Agriculture’s (USDA) measure of lack of access, at times, to enough food for an active, healthy life for all household members and limited or uncertain availability of nutritionally adequate foods. The brief providing the methodology of calculating these estimates is available on Feeding America’s Map the Meal Gap website. Food insecurity may reflect a household’s need to make trade-offs between important basic needs, such as housing or medical bills, and purchasing nutritionally adequate foods. Geographies: Census tract (11), County (5), Health Districts (51_hd)",
+    "long_description": "Estimated percentage of total people in food insecure households according to Feeding America. Food insecurity refers to the US Department of Agriculture\u2019s (USDA) measure of lack of access, at times, to enough food for an active, healthy life for all household members and limited or uncertain availability of nutritionally adequate foods. The brief providing the methodology of calculating these estimates is available on Feeding America\u2019s Map the Meal Gap website. Food insecurity may reflect a household\u2019s need to make trade-offs between important basic needs, such as housing or medical bills, and purchasing nutritionally adequate foods. Geographies: Census tract (11), County (5), Health Districts (51_hd)",
     "long_name": "Estimated percentage of total people in food insecure households",
     "measure_type": "percent",
     "short_description": "",
@@ -3206,9 +3077,8 @@
     "short_name": "Population{variant}",
     "long_name": "Population{variant}",
     "short_description": "{variant}",
-    "long_description": "{variant} For non-census geographies, values are redistributed {category}, using the redistribute R package.",
+    "long_description": "{variant}",
     "statement": "There are {value} people{variant} in {region_name}.",
-    "citations": "bii-redist",
     "sources": [
       {
         "name": "American Community Survey",
@@ -3223,48 +3093,6 @@
         "location_url": "https://www2.census.gov/geo/tiger",
         "date_accessed": 2023,
         "url": "https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html"
-      },
-      {
-        "name": "Fairfax County Geospatial Data",
-        "location": "Demography > Current Housing Units",
-        "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::current-housing-units/about",
-        "date_accessed": 2023,
-        "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Fairfax County Geospatial Data",
-        "location": "Boundaries > Zip Codes",
-        "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::zip-codes/about",
-        "date_accessed": 2022,
-        "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Fairfax County Geospatial Data",
-        "location": "Boundaries > Supervisor Districts",
-        "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::supervisor-districts-5/about",
-        "date_accessed": 2022,
-        "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Fairfax County Geospatial Data",
-        "location": "Health & Human Service > Human Services Regions",
-        "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::human-services-regions/about",
-        "date_accessed": 2022,
-        "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Arlington County GIS Open Data",
-        "location": "MHUD Polygons",
-        "location_url": "https://gisdata-arlgis.opendata.arcgis.com/datasets/ArlGIS::mhud-polygons/about",
-        "date_accessed": 2023,
-        "url": "https://gisdata-arlgis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Arlington County GIS Open Data",
-        "location": "Civic Association Polygons",
-        "location_url": "https://gisdata-arlgis.opendata.arcgis.com/datasets/ArlGIS::civic-association-polygons-1/about",
-        "date_accessed": 2021,
-        "url": "https://gisdata-arlgis.opendata.arcgis.com/"
       }
     ],
     "variants": {
@@ -3287,15 +3115,13 @@
       }
     },
     "categories": {
-      "_direct": {
-        "default": "(direct method)",
-        "short_description": "estimated by proportional overlap for non-census geographies",
-        "long_description": "based on proportional overlap between census block groups and the local regions"
+      "_geo20": {
+        "default": "2020 geographies",
+        "long_description": "Values are provided on Census 2020 geography boundaries. Pre-2020 values have been standardized to 2020 boundaries using area-weighted crosswalks."
       },
-      "_parcels": {
-        "default": "(parcels method)",
-        "short_description": "estimated by proportional overlap with parcels for non-census geographies",
-        "long_description": "from census block groups to parcels, based on proportional geometric overlap and weighted by number of living units per parcel, then from parcels to the local regions based on proportional geometric overlap"
+      "_geo10": {
+        "default": "2010 geographies",
+        "long_description": "Values are provided on original Census 2010 geography boundaries for years prior to 2020."
       }
     },
     "source_file": "https://github.com/uva-bi-sdad/sdc.demographics/blob/main/Overall/code/distribution/measure_info.json",
@@ -3373,9 +3199,8 @@
     "short_name": "{variant} {category}",
     "long_name": "{variant.short_description}",
     "short_description": "{variant}",
-    "long_description": "{variant} 5-year ACS estimates in provided census geolevels. For non-census geolevels (such as zip codes), spatial overlaps are calculated between census block groups {category} Redistribution to non-census geolevels was performed using the redistribute R package.",
+    "long_description": "{variant} 5-year ACS estimates, sourced from the U.S. Census American Community Survey.",
     "statement": "{variant}",
-    "citations": "bii-redist",
     "sources": [
       {
         "name": "American Community Survey",
@@ -3383,51 +3208,16 @@
         "location_url": "https://www.census.gov/data/developers/data-sets/acs-5year.html",
         "date_accessed": 2023,
         "url": "https://www.census.gov/programs-surveys/acs.html"
-      },
-      {
-        "name": "Fairfax County Geospatial Data",
-        "location": "Boundaries > Zip Codes",
-        "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::zip-codes/about",
-        "date_accessed": 2022,
-        "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Fairfax County Geospatial Data",
-        "location": "Boundaries > Supervisor Districts",
-        "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::supervisor-districts-5/about",
-        "date_accessed": 2022,
-        "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Fairfax County Geospatial Data",
-        "location": "Health & Human Service > Human Services Regions",
-        "location_url": "https://data-fairfaxcountygis.opendata.arcgis.com/datasets/Fairfaxcountygis::human-services-regions/about",
-        "date_accessed": 2022,
-        "url": "https://data-fairfaxcountygis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Arlington County GIS Open Data",
-        "location": "MHUD Polygons",
-        "location_url": "https://gisdata-arlgis.opendata.arcgis.com/datasets/ArlGIS::mhud-polygons/about",
-        "date_accessed": 2023,
-        "url": "https://gisdata-arlgis.opendata.arcgis.com/"
-      },
-      {
-        "name": "Arlington County GIS Open Data",
-        "location": "Civic Association Polygons",
-        "location_url": "https://gisdata-arlgis.opendata.arcgis.com/datasets/ArlGIS::civic-association-polygons-1/about",
-        "date_accessed": 2021,
-        "url": "https://gisdata-arlgis.opendata.arcgis.com/"
       }
     ],
     "categories": {
-      "_parcels": {
-        "default": "parcels",
-        "long_description": "and parcels, then the value of each block group is divided across all living units within each intersecting parcel. Once parcel-level values are assigned, spatial overlaps are calculated between parcels and target regions such that parcel values can be aggregated to each intersecting target region based on proportion of overlap."
+      "_geo20": {
+        "default": "2020 geographies",
+        "long_description": "Values are provided on Census 2020 geography boundaries. Pre-2020 values have been standardized to 2020 boundaries using area-weighted crosswalks."
       },
-      "_direct": {
-        "default": "direct",
-        "long_description": "and target regions, then the value of each block group is aggregated/disaggregated to any intersecting target region based on proportion of overlap."
+      "_geo10": {
+        "default": "2010 geographies",
+        "long_description": "Values are provided on original Census 2010 geography boundaries for years prior to 2020."
       }
     },
     "variants": {
@@ -3561,7 +3351,10 @@
       }
     },
     "source_file": "https://github.com/uva-bi-sdad/sdc.demographics/blob/main/Race/code/distribution/measure_info.json",
-    "origin": ["https://github.com/uva-bi-sdad/sdc.demographics/blob/main/Race/data/distribution/va_hsrsdpdzccttrbg_sdad_2009_2023_race_demographics.csv.xz", "https://github.com/uva-bi-sdad/sdc.demographics/blob/main/Race/data/distribution/ncr_cttrbg_acs_2009_2023_race_demographics.csv.xz"]
+    "origin": [
+      "https://github.com/uva-bi-sdad/sdc.demographics/blob/main/Race/data/distribution/va_hsrsdpdzccttrbg_sdad_2009_2023_race_demographics.csv.xz",
+      "https://github.com/uva-bi-sdad/sdc.demographics/blob/main/Race/data/distribution/ncr_cttrbg_acs_2009_2023_race_demographics.csv.xz"
+    ]
   },
   "schools_{variant.name}_min_drivetime": {
     "data_type": "decimal",
@@ -3879,7 +3672,7 @@
         "date_accessed": 2022,
         "location": "",
         "location_url": "",
-        "name": "Department   of Labor Women’s Bureau National",
+        "name": "Department   of Labor Women\u2019s Bureau National",
         "url": "https://www.dol.gov/agencies/wb/topics/featured-childcare"
       },
       {
@@ -3900,7 +3693,7 @@
         "date_accessed": 2022,
         "location": "",
         "location_url": "",
-        "name": "National   Bureau of Economic Research’s program TAXSIM Version 35",
+        "name": "National   Bureau of Economic Research\u2019s program TAXSIM Version 35",
         "url": "http://taxsim.nber.org/taxsim35/"
       },
       {
@@ -3992,7 +3785,7 @@
         "date_accessed": 2022,
         "location": "",
         "location_url": "",
-        "name": "Department   of Labor Women’s Bureau National",
+        "name": "Department   of Labor Women\u2019s Bureau National",
         "url": "https://www.dol.gov/agencies/wb/topics/featured-childcare"
       },
       {
@@ -4013,7 +3806,7 @@
         "date_accessed": 2022,
         "location": "",
         "location_url": "",
-        "name": "National   Bureau of Economic Research’s program TAXSIM Version 35",
+        "name": "National   Bureau of Economic Research\u2019s program TAXSIM Version 35",
         "url": "http://taxsim.nber.org/taxsim35/"
       },
       {
