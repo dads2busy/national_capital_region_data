@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { useDashboardStore } from '@/lib/store'
 import { useData } from '@/components/DataProvider'
 import type { MeasureInfo, MeasureInfoMap } from '@/lib/data/types'
@@ -31,6 +31,7 @@ function findMeasureInfo(measureInfo: MeasureInfoMap, variableName: string): Mea
 export function VariableInfo() {
   const selectedVariable = useDashboardStore((s) => s.selectedVariable)
   const { measureInfo } = useData()
+  const [showLongDesc, setShowLongDesc] = useState(false)
 
   const info = useMemo((): MeasureInfo | null => {
     if (!measureInfo) return null
@@ -50,6 +51,21 @@ export function VariableInfo() {
       <h3 className="mb-1 text-sm font-semibold">{info.short_name || selectedVariable}</h3>
       {info.short_description && (
         <p className="mb-2 text-xs text-gray-600 dark:text-gray-400">{info.short_description}</p>
+      )}
+      {info.long_description && (
+        <div className="mb-2">
+          <button
+            onClick={() => setShowLongDesc(!showLongDesc)}
+            className="text-xs text-blue-500 hover:text-blue-400 hover:underline"
+          >
+            {showLongDesc ? 'Less info' : 'More info'}
+          </button>
+          {showLongDesc && (
+            <p className="mt-1 text-xs leading-relaxed text-gray-600 dark:text-gray-400">
+              {info.long_description}
+            </p>
+          )}
+        </div>
       )}
       {info.sources && info.sources.length > 0 && (
         <div className="text-xs text-gray-500">

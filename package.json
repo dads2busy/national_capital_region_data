@@ -5,7 +5,7 @@
   "description": "National Capital Region Data Commons",
   "scripts": {
     "dev": "next dev",
-    "build:data": "tsx scripts/build-data.ts",
+    "build:data": "NODE_OPTIONS='--max-old-space-size=16384' tsx scripts/build-data.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

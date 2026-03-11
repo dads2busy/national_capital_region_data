@@ -4,6 +4,8 @@ interface ResolvedVariable {
   name: string
   label: string
   category: string
+  shortDescription: string
+  longDescription: string
 }
 
 /**
@@ -24,7 +26,7 @@ export function resolveVariables(
   datasetVariableNames: string[]
 ): ResolvedVariable[] {
   // Build a map from expanded variable name -> resolved info
-  const resolvedMap = new Map<string, { label: string; category: string }>()
+  const resolvedMap = new Map<string, { label: string; category: string; shortDescription: string; longDescription: string }>()
 
   for (const [name, info] of Object.entries(measureInfo)) {
     if (name === '_references' || !info || typeof info !== 'object') continue
@@ -33,10 +35,12 @@ export function resolveVariables(
 
     const category = (entry.category as string) || 'Other'
     const shortName = (entry.short_name as string) || name
+    const shortDescription = (entry.short_description as string) || ''
+    const longDescription = (entry.long_description as string) || ''
 
     if (!name.includes('{')) {
       // Direct entry
-      resolvedMap.set(name, { label: shortName, category })
+      resolvedMap.set(name, { label: shortName, category, shortDescription, longDescription })
     } else {
       // Template entry — expand all variant x category combinations
       const variants = entry.variants as Record<string, Record<string, string>> | undefined
@@ -48,23 +52,29 @@ export function resolveVariables(
         for (const [varKey, varMeta] of Object.entries(variants)) {
           for (const [catKey, catMeta] of Object.entries(categories)) {
             const label = resolveLabel(shortName, varMeta, catMeta)
+            const sd = resolveLabel(shortDescription, varMeta, catMeta)
+            const ld = resolveLabel(longDescription, varMeta, catMeta)
             for (const expanded of expandNames(name, varKey, catKey)) {
-              resolvedMap.set(expanded, { label, category })
+              resolvedMap.set(expanded, { label, category, shortDescription: sd, longDescription: ld })
             }
           }
         }
       } else if (hasVariants) {
         for (const [varKey, varMeta] of Object.entries(variants)) {
           const label = resolveLabel(shortName, varMeta, null)
+          const sd = resolveLabel(shortDescription, varMeta, null)
+          const ld = resolveLabel(longDescription, varMeta, null)
           for (const expanded of expandNames(name, varKey, null)) {
-            resolvedMap.set(expanded, { label, category })
+            resolvedMap.set(expanded, { label, category, shortDescription: sd, longDescription: ld })
           }
         }
       } else if (hasCategories) {
         for (const [catKey, catMeta] of Object.entries(categories)) {
           const label = resolveLabel(shortName, null, catMeta)
+          const sd = resolveLabel(shortDescription, null, catMeta)
+          const ld = resolveLabel(longDescription, null, catMeta)
           for (const expanded of expandNames(name, null, catKey)) {
-            resolvedMap.set(expanded, { label, category })
+            resolvedMap.set(expanded, { label, category, shortDescription: sd, longDescription: ld })
           }
         }
       }
@@ -74,9 +84,9 @@ export function resolveVariables(
   return datasetVariableNames.map((varName) => {
     const resolved = resolvedMap.get(varName)
     if (resolved) {
-      return { name: varName, label: resolved.label, category: resolved.category }
+      return { name: varName, label: resolved.label, category: resolved.category, shortDescription: resolved.shortDescription, longDescription: resolved.longDescription }
     }
-    return { name: varName, label: formatFallbackLabel(varName), category: 'Other' }
+    return { name: varName, label: formatFallbackLabel(varName), category: 'Other', shortDescription: '', longDescription: '' }
   })
 }
 
@@ -156,11 +166,11 @@ function formatFallbackLabel(name: string): string {
  */
 export function groupByCategory(
   variables: ResolvedVariable[]
-): { category: string; variables: { name: string; label: string }[] }[] {
-  const groups = new Map<string, { name: string; label: string }[]>()
+): { category: string; variables: { name: string; label: string; shortDescription: string; longDescription: string }[] }[] {
+  const groups = new Map<string, { name: string; label: string; shortDescription: string; longDescription: string }[]>()
   for (const v of variables) {
     if (!groups.has(v.category)) groups.set(v.category, [])
-    groups.get(v.category)!.push({ name: v.name, label: v.label })
+    groups.get(v.category)!.push({ name: v.name, label: v.label, shortDescription: v.shortDescription, longDescription: v.longDescription })
   }
   return Array.from(groups.entries())
     .sort(([a], [b]) => a.localeCompare(b))

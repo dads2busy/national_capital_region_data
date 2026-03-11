@@ -76,6 +76,36 @@ const GEOJSON_COPY: Record<string, string> = {
   'zip_code.geojson': 'zip_code.json',
 }
 
+/**
+ * Load valid region IDs from a GeoJSON file in docs/.
+ * Only regions present in the GeoJSON are included in built data.
+ */
+function loadGeoIds(datasetName: string): Set<string> | null {
+  const geoSrcName = GEOJSON_COPY[`${datasetName}.geojson`]
+  if (!geoSrcName) return null
+  const srcPath = path.join(DOCS_DIR, geoSrcName)
+  if (!fs.existsSync(srcPath)) return null
+
+  const geo = JSON.parse(fs.readFileSync(srcPath, 'utf-8'))
+  const ids = new Set<string>()
+
+  if (geo.features && Array.isArray(geo.features)) {
+    for (const f of geo.features) {
+      const id = f.properties?.geoid || f.properties?.GEOID || f.id
+      if (id) ids.add(String(id))
+    }
+  } else {
+    // Keyed format: top-level keys are region IDs
+    for (const key of Object.keys(geo)) {
+      if (key !== '_meta' && key !== 'type' && key !== 'name' && key !== 'crs') {
+        ids.add(key)
+      }
+    }
+  }
+
+  return ids.size > 0 ? ids : null
+}
+
 async function decompressXz(filePath: string): Promise<string> {
   const compressed = fs.readFileSync(filePath)
   return new Promise((resolve, reject) => {
@@ -306,13 +336,16 @@ async function buildDataset(datasetName: string, csvFile: string): Promise<{
 
   console.log(`  Parsed ${rows.length} rows`)
 
+  // Filter to only regions present in the GeoJSON
+  const validIds = loadGeoIds(datasetName)
+
   const allColumns = Object.keys(rows[0])
   const variableNames = allColumns.filter((col) => {
     const clean = col.replace(/^"|"$/g, '')
     return clean !== 'ID' && clean !== 'time'
   })
 
-  const cleanRows = rows.map((row) => {
+  let cleanRows = rows.map((row) => {
     const clean: CsvRow = { ID: '', time: '' }
     for (const [key, val] of Object.entries(row)) {
       const cleanKey = key.replace(/^"|"$/g, '')
@@ -320,6 +353,12 @@ async function buildDataset(datasetName: string, csvFile: string): Promise<{
     }
     return clean
   })
+
+  if (validIds) {
+    const before = cleanRows.length
+    cleanRows = cleanRows.filter((row) => validIds.has(row.ID))
+    console.log(`  Filtered to ${cleanRows.length} rows (${before - cleanRows.length} outside region removed)`)
+  }
 
   const cleanVariableNames = variableNames.map((v) => v.replace(/^"|"$/g, ''))
 

@@ -8,6 +8,7 @@ import { resolveVariables, groupByCategory } from '@/lib/data/measure-info-resol
 import { resolveEntityName } from '@/lib/data/entity-resolver'
 import { ALL_SHAPE_LEVELS, SHAPE_LABELS } from '@/lib/data/types'
 import type { ShapeLevel } from '@/lib/data/types'
+import { VariableDropdown } from '@/components/shared/VariableDropdown'
 
 export function FilterMenu() {
   const filterOpen = useDashboardStore((s) => s.filterOpen)
@@ -112,21 +113,11 @@ export function FilterMenu() {
         {/* Variable */}
         <div className="min-w-[200px] flex-1">
           <label className="mb-1 block text-xs font-medium text-slate-400">Variable</label>
-          <select
+          <VariableDropdown
             value={selectedVariable}
-            onChange={(e) => setSelectedVariable(e.target.value)}
-            className="w-full rounded border border-slate-600 bg-slate-700 px-3 py-1 text-sm text-slate-200"
-          >
-            {variableOptions.map((group) => (
-              <optgroup key={group.category} label={group.category}>
-                {group.variables.map((v) => (
-                  <option key={v.name} value={v.name}>
-                    {v.label}
-                  </option>
-                ))}
-              </optgroup>
-            ))}
-          </select>
+            onChange={setSelectedVariable}
+            options={variableOptions}
+          />
         </div>
       </div>
     </div>

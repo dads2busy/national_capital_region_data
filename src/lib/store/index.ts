@@ -106,7 +106,7 @@ export const useDashboardStore = create<DashboardState>()(
       selectedLayer: 'county',
       selectedCounty: null,
       selectedTract: null,
-      selectedVariable: 'no_hlth_ins_pct',
+      selectedVariable: 'perc_above_25_3_geo20',
       selectedYear: 2023,
 
       // Settings
