@@ -73,18 +73,29 @@ export function MapInner() {
   const [geoData, setGeoData] = useState<Record<string, GeoJSONFeatureCollection>>({})
   const [mapBounds, setMapBounds] = useState<L.LatLngBounds | null>(null)
 
-  // Adjust map bounds when drilling back up
+  // Adjust map bounds when county/tract selection changes
   const prevCounty = useRef(selectedCounty)
   const prevTract = useRef(selectedTract)
   useEffect(() => {
     const countyCleared = prevCounty.current && !selectedCounty
     const tractCleared = prevTract.current && !selectedTract
+    const countySet = !prevCounty.current && selectedCounty
+    const countyChanged = prevCounty.current && selectedCounty && prevCounty.current !== selectedCounty
 
     if (countyCleared) {
       // Went all the way back to county overview
       setMapBounds(null)
     } else if (tractCleared && selectedCounty && geoData.county) {
       // Went back from block_group to tract: re-zoom to the selected county
+      const feature = geoData.county.features.find(
+        (f) => f.properties.geoid === selectedCounty
+      )
+      if (feature) {
+        const layer = L.geoJSON(feature as GeoJSON.Feature)
+        setMapBounds(layer.getBounds())
+      }
+    } else if ((countySet || countyChanged) && geoData.county) {
+      // County selected (from dropdown or map click): zoom to it
       const feature = geoData.county.features.find(
         (f) => f.properties.geoid === selectedCounty
       )
