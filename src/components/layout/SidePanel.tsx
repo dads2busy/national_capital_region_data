@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useEffect, useRef } from 'react'
 import { useDashboardStore } from '@/lib/store'
 import { useData } from '@/components/DataProvider'
 import { resolveVariables, groupByCategory } from '@/lib/data/measure-info-resolver'
@@ -20,30 +20,42 @@ export function SidePanel() {
     return groupByCategory(resolved)
   }, [measureInfo, datasets])
 
-  // Find which category contains the selected variable so it starts expanded
-  const activeCategory = useMemo(() => {
-    for (const group of categoryGroups) {
-      if (group.variables.some((v) => v.name === selectedVariable)) return group.category
-    }
-    return null
-  }, [categoryGroups, selectedVariable])
-
   const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set())
+  // Track categories the user has explicitly collapsed
+  const userCollapsed = useRef<Set<string>>(new Set())
+
+  // Auto-expand the category when the selected variable changes
+  useEffect(() => {
+    for (const group of categoryGroups) {
+      if (group.variables.some((v) => v.name === selectedVariable)) {
+        if (!userCollapsed.current.has(group.category)) {
+          setExpandedCategories((prev) => {
+            if (prev.has(group.category)) return prev
+            const next = new Set(prev)
+            next.add(group.category)
+            return next
+          })
+        }
+        break
+      }
+    }
+  }, [selectedVariable, categoryGroups])
 
   const toggleCategory = (category: string) => {
     setExpandedCategories((prev) => {
       const next = new Set(prev)
       if (next.has(category)) {
         next.delete(category)
+        userCollapsed.current.add(category)
       } else {
         next.add(category)
+        userCollapsed.current.delete(category)
       }
       return next
     })
   }
 
-  const isCategoryOpen = (category: string) =>
-    expandedCategories.has(category) || category === activeCategory
+  const isCategoryOpen = (category: string) => expandedCategories.has(category)
 
   return (
     <aside className="hidden w-64 shrink-0 border-r bg-gray-50 dark:border-gray-700 dark:bg-gray-900 lg:block">
