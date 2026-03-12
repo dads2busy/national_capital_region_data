@@ -16,6 +16,7 @@ import * as zlib from 'zlib'
 import * as lzma from 'lzma-native'
 import { parse } from 'csv-parse/sync'
 import { mean, median, standardDeviation, min as ssMin, max as ssMax } from 'simple-statistics'
+import * as yazl from 'yazl'
 
 const ROOT = path.resolve(__dirname, '..')
 const DATA_DIR = path.join(ROOT, 'data')
@@ -377,6 +378,88 @@ async function buildDataset(datasetName: string, csvFile: string): Promise<{
   return { lookup, fields, rowCount: cleanRows.length, entityCount: entityIds.length }
 }
 
+/** Extract a tall CSV (geoid,time,value) for a single variable from a lookup object */
+function extractVariableCsv(lookup: DataLookup, varName: string): string {
+  const meta = lookup._meta
+  const varInfo = meta.variables[varName]
+  if (!varInfo || varInfo.time_range[0] === -1) return ''
+
+  const { code, time_range: [rangeStart, rangeEnd] } = varInfo
+  const lines: string[] = ['geoid,time,value']
+
+  for (const [regionId, regionData] of Object.entries(lookup)) {
+    if (regionId === '_meta') continue
+    const rd = regionData as Record<string, number | string | (number | string)[]>
+    const raw = rd[code]
+    if (raw === undefined) continue
+
+    if (Array.isArray(raw)) {
+      for (let i = 0; i < raw.length; i++) {
+        const val = raw[i]
+        if (val === 'NA') continue
+        const year = meta.time.value[rangeStart + i]
+        lines.push(`${regionId},${year},${val}`)
+      }
+    } else if (raw !== 'NA') {
+      const year = meta.time.value[rangeStart] || ''
+      lines.push(`${regionId},${year},${raw}`)
+    }
+  }
+
+  return lines.length > 1 ? lines.join('\n') : ''
+}
+
+/** Write per-variable zip files: each zip contains a CSV per level */
+async function writePerVariableZips(builtDatasets: { name: string; lookup: DataLookup }[]): Promise<void> {
+  if (builtDatasets.length === 0) return
+
+  // Get all variable names from the first dataset's meta
+  const allVarNames = new Set<string>()
+  for (const { lookup } of builtDatasets) {
+    for (const varName of Object.keys(lookup._meta.variables)) {
+      if (varName !== 'time') allVarNames.add(varName)
+    }
+  }
+
+  console.log(`\nGenerating per-variable zip files for ${allVarNames.size} variables...`)
+  let zipCount = 0
+  let totalBytes = 0
+
+  for (const varName of allVarNames) {
+    const csvFiles: { name: string; content: string }[] = []
+
+    for (const { name: levelName, lookup } of builtDatasets) {
+      const csv = extractVariableCsv(lookup, varName)
+      if (csv) {
+        csvFiles.push({ name: `${levelName}.csv`, content: csv })
+      }
+    }
+
+    if (csvFiles.length === 0) continue
+
+    const zipfile = new yazl.ZipFile()
+    for (const { name, content } of csvFiles) {
+      zipfile.addBuffer(Buffer.from(content, 'utf-8'), name)
+    }
+    zipfile.end()
+
+    const chunks: Buffer[] = []
+    zipfile.outputStream.on('data', (chunk: Buffer) => chunks.push(chunk))
+
+    // Wait for the zip stream to finish
+    const zipBuffer: Buffer = await new Promise((resolve) => {
+      zipfile.outputStream.on('end', () => resolve(Buffer.concat(chunks)))
+    })
+
+    const outPath = path.join(PUBLIC_DATA_DIR, `${varName}.csv.zip`)
+    fs.writeFileSync(outPath, zipBuffer)
+    totalBytes += zipBuffer.length
+    zipCount++
+  }
+
+  console.log(`  Wrote ${zipCount} zip files (${(totalBytes / 1024 / 1024).toFixed(1)} MB total)`)
+}
+
 async function main() {
   console.log('=== NCR Data Commons Build ===\n')
 
@@ -416,9 +499,11 @@ async function main() {
 
   // Datasets that should be gzip-compressed (too large for regular git)
   const GZIP_THRESHOLD_MB = 50
+  const builtDatasets: { name: string; lookup: DataLookup }[] = []
 
   for (const [name, csvFile] of Object.entries(DATASETS)) {
     const result = await buildDataset(name, csvFile)
+    builtDatasets.push({ name, lookup: result.lookup })
 
     const jsonStr = JSON.stringify(result.lookup)
     const sizeMB = jsonStr.length / 1024 / 1024
@@ -460,6 +545,9 @@ async function main() {
 
   fs.writeFileSync(path.join(PUBLIC_DATA_DIR, 'datapackage.json'), JSON.stringify(datapackage, null, 2))
   console.log('\nWrote datapackage.json')
+
+  // Generate per-variable zip files
+  await writePerVariableZips(builtDatasets)
 
   // Copy GeoJSON shapes from docs/
   console.log('\nCopying GeoJSON shapes...')

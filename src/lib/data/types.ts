@@ -187,3 +187,6 @@ export type SummarySelection = 'dataset' | 'filtered' | 'all'
 
 /** Table scroll behavior */
 export type ScrollBehavior = 'instant' | 'smooth' | 'auto'
+
+/** Correlation matrix: level → "varA|varB" → Pearson r */
+export type CorrelationMatrix = Record<string, Record<string, number>>

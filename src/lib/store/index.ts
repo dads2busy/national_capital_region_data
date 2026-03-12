@@ -59,6 +59,10 @@ export interface DashboardState {
   // Filter menu visibility
   filterOpen: boolean
 
+  // Chat
+  chatOpen: boolean
+  chatMessages: { role: 'user' | 'model'; text: string }[]
+
   // Actions
   setSelectedLayer: (layer: ShapeLevel) => void
   setSelectedCounty: (id: string | null) => void
@@ -71,6 +75,9 @@ export interface DashboardState {
   setExportTableFormat: (format: TableFormat) => void
   setExportFileFormat: (format: FileFormat) => void
   setFilterOpen: (open: boolean) => void
+  setChatOpen: (open: boolean) => void
+  addChatMessage: (msg: { role: 'user' | 'model'; text: string }) => void
+  clearChatMessages: () => void
   resetSelection: () => void
 }
 
@@ -124,6 +131,10 @@ export const useDashboardStore = create<DashboardState>()(
       // Filter
       filterOpen: true,
 
+      // Chat
+      chatOpen: false,
+      chatMessages: [],
+
       // Actions
       setSelectedLayer: (selectedLayer) =>
         set({
@@ -148,6 +159,9 @@ export const useDashboardStore = create<DashboardState>()(
       setExportTableFormat: (exportTableFormat) => set({ exportTableFormat }),
       setExportFileFormat: (exportFileFormat) => set({ exportFileFormat }),
       setFilterOpen: (filterOpen) => set({ filterOpen }),
+      setChatOpen: (chatOpen) => set({ chatOpen }),
+      addChatMessage: (msg) => set((state) => ({ chatMessages: [...state.chatMessages, msg] })),
+      clearChatMessages: () => set({ chatMessages: [] }),
       resetSelection: () =>
         set({
           selectedCounty: null,

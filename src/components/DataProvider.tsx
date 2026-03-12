@@ -4,7 +4,7 @@ import { createContext, useContext, useEffect, useMemo, useState, useCallback, t
 import { loadInitialData, loadDataset, isDatasetCached } from '@/lib/data/loader'
 import { useDashboardStore } from '@/lib/store'
 import { selectShapes } from '@/lib/store/selectors'
-import type { DataLookup, MeasureInfoMap, Datapackage, EntityInfoMap, ShapeLevel, DatasetName } from '@/lib/data/types'
+import type { DataLookup, MeasureInfoMap, Datapackage, EntityInfoMap, ShapeLevel, DatasetName, CorrelationMatrix } from '@/lib/data/types'
 
 /** Check if a variable has data at a given level using the datapackage metadata */
 function variableAvailableAtLevel(
@@ -31,6 +31,9 @@ interface DataContextValue {
   error: string | null
   activeDataset: DataLookup | null
   availableLevels: AvailableLevels
+  narratives: Record<string, string>
+  correlations: CorrelationMatrix
+  regionNameMap: Record<string, string>
 }
 
 const defaultAvailableLevels: AvailableLevels = {
@@ -53,6 +56,9 @@ const DataContext = createContext<DataContextValue>({
   error: null,
   activeDataset: null,
   availableLevels: defaultAvailableLevels,
+  narratives: {},
+  correlations: {},
+  regionNameMap: {},
 })
 
 export function useData() {
@@ -64,6 +70,8 @@ export function DataProvider({ children }: { children: ReactNode }) {
   const [measureInfo, setMeasureInfo] = useState<MeasureInfoMap | null>(null)
   const [datapackage, setDatapackage] = useState<Datapackage | null>(null)
   const [entityInfo, setEntityInfo] = useState<EntityInfoMap | null>(null)
+  const [narratives, setNarratives] = useState<Record<string, string>>({})
+  const [correlations, setCorrelations] = useState<CorrelationMatrix>({})
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
@@ -86,6 +94,11 @@ export function DataProvider({ children }: { children: ReactNode }) {
         setError(err.message)
         setLoading(false)
       })
+
+    // Load optional data (narratives + correlations) — non-blocking
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+    fetch(`${basePath}/data/narratives.json`).then((r) => (r.ok ? r.json() : {})).then(setNarratives).catch(() => {})
+    fetch(`${basePath}/data/correlations.json`).then((r) => (r.ok ? r.json() : {})).then(setCorrelations).catch(() => {})
   }, [])
 
   // Lazy-load datasets when their layer is selected
@@ -130,9 +143,21 @@ export function DataProvider({ children }: { children: ReactNode }) {
   // Determine the active dataset based on current shape level
   const activeDataset = datasets[shapes] || null
 
+  // Build regionNameMap from entityInfo
+  const regionNameMap = useMemo(() => {
+    if (!entityInfo) return {}
+    const map: Record<string, string> = {}
+    for (const level of Object.values(entityInfo)) {
+      for (const [id, entry] of Object.entries(level)) {
+        if (!map[id]) map[id] = entry.name
+      }
+    }
+    return map
+  }, [entityInfo])
+
   return (
     <DataContext.Provider
-      value={{ datasets, measureInfo, datapackage, entityInfo, loading, error, activeDataset, availableLevels }}
+      value={{ datasets, measureInfo, datapackage, entityInfo, loading, error, activeDataset, availableLevels, narratives, correlations, regionNameMap }}
     >
       {children}
     </DataContext.Provider>
