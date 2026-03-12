@@ -12,6 +12,7 @@
 
 import * as fs from 'fs'
 import * as path from 'path'
+import * as zlib from 'zlib'
 import * as lzma from 'lzma-native'
 import { parse } from 'csv-parse/sync'
 import { mean, median, standardDeviation, min as ssMin, max as ssMax } from 'simple-statistics'
@@ -413,13 +414,29 @@ async function main() {
     entities: number
   }> = []
 
+  // Datasets that should be gzip-compressed (too large for regular git)
+  const GZIP_THRESHOLD_MB = 50
+
   for (const [name, csvFile] of Object.entries(DATASETS)) {
     const result = await buildDataset(name, csvFile)
 
-    const lookupPath = path.join(PUBLIC_DATA_DIR, `${name}.json`)
     const jsonStr = JSON.stringify(result.lookup)
-    fs.writeFileSync(lookupPath, jsonStr)
-    console.log(`  Wrote ${name}.json (${(jsonStr.length / 1024 / 1024).toFixed(1)} MB)`)
+    const sizeMB = jsonStr.length / 1024 / 1024
+
+    if (sizeMB > GZIP_THRESHOLD_MB) {
+      // Write gzip-compressed version for browser (DecompressionStream)
+      const gzPath = path.join(PUBLIC_DATA_DIR, `${name}.json.gz`)
+      const compressed = zlib.gzipSync(Buffer.from(jsonStr, 'utf-8'), { level: 9 })
+      fs.writeFileSync(gzPath, compressed)
+      // Remove uncompressed version if it exists (no longer needed)
+      const plainPath = path.join(PUBLIC_DATA_DIR, `${name}.json`)
+      if (fs.existsSync(plainPath)) fs.unlinkSync(plainPath)
+      console.log(`  Wrote ${name}.json.gz (${(compressed.length / 1024 / 1024).toFixed(1)} MB, uncompressed ${sizeMB.toFixed(1)} MB)`)
+    } else {
+      const lookupPath = path.join(PUBLIC_DATA_DIR, `${name}.json`)
+      fs.writeFileSync(lookupPath, jsonStr)
+      console.log(`  Wrote ${name}.json (${sizeMB.toFixed(1)} MB)`)
+    }
 
     resources.push({
       name,

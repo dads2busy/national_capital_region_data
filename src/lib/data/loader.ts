@@ -3,6 +3,9 @@ import type { DataLookup, MeasureInfoMap, Datapackage, GeoJSONFeatureCollection,
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
 const dataCache = new Map<string, unknown>()
 
+/** Datasets served as gzip-compressed .json.gz (too large for regular git) */
+const GZIPPED_DATASETS = new Set<string>(['tract', 'block_group'])
+
 async function fetchJson<T>(url: string, cacheKey?: string): Promise<T> {
   const key = cacheKey || url
   if (dataCache.has(key)) return dataCache.get(key) as T
@@ -14,8 +17,27 @@ async function fetchJson<T>(url: string, cacheKey?: string): Promise<T> {
   return data
 }
 
-/** Load a dataset lookup JSON */
+/** Fetch a gzip-compressed JSON file and decompress it in the browser */
+async function fetchGzippedJson<T>(url: string, cacheKey?: string): Promise<T> {
+  const key = cacheKey || url
+  if (dataCache.has(key)) return dataCache.get(key) as T
+
+  const response = await fetch(url)
+  if (!response.ok) throw new Error(`Failed to fetch ${url}: ${response.status}`)
+
+  const ds = new DecompressionStream('gzip')
+  const decompressed = response.body!.pipeThrough(ds)
+  const text = await new Response(decompressed).text()
+  const data = JSON.parse(text) as T
+  dataCache.set(key, data)
+  return data
+}
+
+/** Load a dataset lookup JSON (gzip-compressed for large datasets) */
 export async function loadDataset(name: DatasetName): Promise<DataLookup> {
+  if (GZIPPED_DATASETS.has(name)) {
+    return fetchGzippedJson<DataLookup>(`${basePath}/data/${name}.json.gz`, `dataset:${name}`)
+  }
   return fetchJson<DataLookup>(`${basePath}/data/${name}.json`, `dataset:${name}`)
 }
 

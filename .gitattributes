@@ -1,2 +1,0 @@
-public/data/block_group.json filter=lfs diff=lfs merge=lfs -text
-public/data/tract.json filter=lfs diff=lfs merge=lfs -text
