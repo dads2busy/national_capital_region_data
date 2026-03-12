@@ -63,8 +63,12 @@ function centerScale(value: number, min: number, max: number, center: number, st
 }
 
 /**
- * Get the NA color (gray).
+ * Get the NA color (gray). Reads from CSS variable when available.
  */
 export function getNAColor(dark: boolean = false): string {
+  if (typeof document !== 'undefined') {
+    const val = getComputedStyle(document.documentElement).getPropertyValue('--na-color').trim()
+    if (val) return val
+  }
   return dark ? '#555555' : '#cccccc'
 }

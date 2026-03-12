@@ -128,8 +128,9 @@ export function MapInner() {
     return { regionValues: values, summary: summ, sortedValues: sorted }
   }, [activeDataset, selectedVariable, selectedYear])
 
-  const borderColor = themeDark ? '#475569' : '#94a3b8'
-  const hoverBorderColor = themeDark ? '#93c5fd' : '#1e3a5f'
+  const css = typeof document !== 'undefined' ? getComputedStyle(document.documentElement) : null
+  const borderColor = css?.getPropertyValue('--border-map').trim() || (themeDark ? '#475569' : '#94a3b8')
+  const hoverBorderColor = css?.getPropertyValue('--border-map-hover').trim() || '#93c5fd'
 
   // Style function for GeoJSON features
   const styleFeature = useCallback(
@@ -203,10 +204,11 @@ export function MapInner() {
   const countyOverlayGeoJson = showCountyOverlay ? geoData.county : null
   const tileUrl = themeDark ? tileSources.dark : tileSources.light
 
+  const overlayColor = css?.getPropertyValue('--border-map-overlay').trim() || (themeDark ? '#e2e8f0' : '#1e293b')
   const countyOverlayStyle: PathOptions = {
     fillOpacity: 0,
     weight: 2.5,
-    color: themeDark ? '#e2e8f0' : '#1e293b',
+    color: overlayColor,
     opacity: 0.8,
   }
 
@@ -216,7 +218,7 @@ export function MapInner() {
       zoom={mapDefaults.zoom}
       zoomSnap={0.1}
       scrollWheelZoom={false}
-      style={{ height: mapDefaults.height, width: '100%', background: '#0f1b35' }}
+      style={{ height: mapDefaults.height, width: '100%', background: 'var(--surface-dark)' }}
       attributionControl={false}
     >
       <TileLayer url={tileUrl} />

@@ -1,21 +1,40 @@
 @import 'tailwindcss';
 
 :root {
-  --navbar-bg: #141e3c;
+  --navbar-bg: linear-gradient(135deg, #141e3c 0%, #1a2744 50%, #162040 100%);
   --navbar-color: #fff;
   --link: #007eb3;
   --highlight: #173a64;
   --primary-accent: #ed79f9;
-  --font-family: 'Lato', sans-serif;
+  --font-family: var(--font-lato), 'Lato', sans-serif;
+
+  --surface-dark: #0f1b35;
+  --surface-darker: #0b1120;
+  --border-map: #94a3b8;
+  --border-map-hover: #93c5fd;
+  --border-map-overlay: #1e293b;
+  --grid-line: #1e3a5f;
+  --text-plot: #cbd5e1;
+  --na-color: #cccccc;
 }
 
 .dark {
   --link: #5bb8d4;
   --highlight: #4a7eb5;
+  --border-map: #475569;
+  --border-map-overlay: #e2e8f0;
+  --grid-line: #1e293b;
+  --text-plot: #94a3b8;
+  --na-color: #555555;
 }
 
 body {
   font-family: var(--font-family);
+}
+
+@keyframes dropdown-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Leaflet container needs explicit height */

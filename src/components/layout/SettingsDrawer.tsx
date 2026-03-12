@@ -18,14 +18,12 @@ export function SettingsDrawer({ open, onClose }: SettingsDrawerProps) {
     setTheme(value ? 'dark' : 'light')
   }
 
-  if (!open) return null
-
   return (
-    <div className="fixed inset-0 z-50 flex justify-end">
+    <div className={`fixed inset-0 z-50 flex justify-end transition-colors duration-300 ${open ? 'bg-black/30 backdrop-blur-sm' : 'pointer-events-none bg-black/0'}`}>
       <div className="absolute inset-0" onClick={onClose} />
-      <div className="relative z-10 flex h-full w-80 flex-col bg-white shadow-xl dark:bg-gray-900">
+      <div className={`relative z-10 flex h-full w-80 flex-col bg-white shadow-xl transition-transform duration-300 ease-out dark:bg-gray-900 ${open ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="flex items-center justify-between border-b px-4 py-3 dark:border-gray-700">
-          <h5 className="text-lg font-semibold">Settings</h5>
+          <h5 className="text-lg font-semibold" style={{ fontFamily: 'var(--font-heading)' }}>Settings</h5>
           <button onClick={onClose} className="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
             &times;
           </button>
@@ -173,7 +171,7 @@ export function SettingsDrawer({ open, onClose }: SettingsDrawerProps) {
         <div className="border-t p-4 dark:border-gray-700">
           <button
             onClick={() => {
-              localStorage.removeItem('ncr-dashboard-settings')
+              localStorage.removeItem('vdh-dashboard-settings')
               window.location.reload()
             }}
             className="w-full rounded bg-red-600 px-4 py-2 text-sm text-white hover:bg-red-700"

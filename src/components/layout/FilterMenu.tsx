@@ -54,7 +54,7 @@ export function FilterMenu() {
   if (!filterOpen) return null
 
   return (
-    <div className="border-b border-slate-700 bg-[#0f1b35] px-4 py-3">
+    <div className="border-b border-slate-700 px-4 py-3" style={{ backgroundColor: 'var(--surface-dark)' }}>
       <div className="flex flex-wrap items-end gap-4">
         {/* Geographic Layer */}
         <div>

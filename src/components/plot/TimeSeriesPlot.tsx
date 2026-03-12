@@ -112,9 +112,10 @@ export function TimeSeriesPlot() {
     return { traces: plotTraces, years: timeValues }
   }, [activeDataset, selectedVariable, plotType, boxplots, iqrBox, traceLimit, hoveredRegionId, paletteName, shapes])
 
-  const bgColor = themeDark ? '#0b1120' : '#0f1b35'
-  const textColor = themeDark ? '#94a3b8' : '#cbd5e1'
-  const gridColor = themeDark ? '#1e293b' : '#1e3a5f'
+  const css = typeof document !== 'undefined' ? getComputedStyle(document.documentElement) : null
+  const bgColor = css?.getPropertyValue(themeDark ? '--surface-darker' : '--surface-dark').trim() || (themeDark ? '#0b1120' : '#0f1b35')
+  const textColor = css?.getPropertyValue('--text-plot').trim() || (themeDark ? '#94a3b8' : '#cbd5e1')
+  const gridColor = css?.getPropertyValue('--grid-line').trim() || (themeDark ? '#1e293b' : '#1e3a5f')
 
   return (
     <div className="w-full">

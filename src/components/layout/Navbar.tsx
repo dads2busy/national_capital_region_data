@@ -14,10 +14,10 @@ export function Navbar() {
 
   return (
     <>
-      <nav className="flex items-center justify-between px-4 py-2 text-white" style={{ backgroundColor: 'var(--navbar-bg)' }}>
+      <nav className="flex items-center justify-between px-4 py-2 text-white" style={{ background: 'var(--navbar-bg)' }}>
         <div className="flex items-center gap-2">
           <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/icon.svg`} alt="site logo" width={24} height={24} />
-          <span className="text-lg font-semibold">National Capital Region Data Commons</span>
+          <span className="text-lg font-semibold" style={{ fontFamily: 'var(--font-heading)' }}>National Capital Region Data Commons</span>
         </div>
         <div className="flex items-center gap-1">
           <button

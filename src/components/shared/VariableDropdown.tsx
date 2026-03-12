@@ -73,7 +73,7 @@ export function VariableDropdown({ value, onChange, options }: Props) {
       </button>
 
       {open && (
-        <div className="absolute z-50 mt-1 max-h-[400px] w-full overflow-y-auto rounded border border-slate-600 bg-slate-700 shadow-lg">
+        <div className="absolute z-50 mt-1 max-h-[400px] w-full overflow-y-auto rounded border border-slate-600 bg-slate-700 shadow-xl animate-[dropdown-in_150ms_ease-out]">
           {options.map((group) => {
             const isExpanded = expandedCategories.has(group.category)
             return (
