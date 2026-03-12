@@ -225,7 +225,7 @@ export function MapInner() {
       <MapController bounds={mapBounds} />
       {currentGeoJson && (
         <GeoJSON
-          key={`${shapes}-${selectedVariable}-${selectedYear}-${paletteName}-${hoveredRegionId}`}
+          key={`${shapes}-${selectedVariable}-${selectedYear}-${paletteName}-${hoveredRegionId}-${regionValues.size}`}
           data={currentGeoJson}
           style={styleFeature as (feature?: GeoJSON.Feature) => PathOptions}
           onEachFeature={onEachFeature as (feature: GeoJSON.Feature, layer: Layer) => void}
@@ -233,7 +233,7 @@ export function MapInner() {
       )}
       {countyOverlayGeoJson && (
         <GeoJSON
-          key={`county-overlay-${selectedVariable}-${selectedYear}-${paletteName}-${hoveredRegionId}-${themeDark}`}
+          key={`county-overlay-${selectedVariable}-${selectedYear}-${paletteName}-${hoveredRegionId}-${themeDark}-${regionValues.size}`}
           data={countyOverlayGeoJson}
           style={() => countyOverlayStyle}
           interactive={false}
