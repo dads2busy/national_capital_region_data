@@ -14,6 +14,7 @@
     "build:correlations": "tsx scripts/generate-correlations.ts"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "@tanstack/react-table": "^8.20.0",
     "@tanstack/react-virtual": "^3.11.0",
     "clsx": "^2.1.0",
