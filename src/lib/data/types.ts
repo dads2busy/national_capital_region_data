@@ -33,6 +33,7 @@ export interface MeasureInfo {
   long_description: string
   statement: string
   type: string
+  provenance?: string
   sources: MeasureSource[]
   source_file?: string
 }

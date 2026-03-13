@@ -70,7 +70,6 @@ export function DataProvider({ children }: { children: ReactNode }) {
   const [measureInfo, setMeasureInfo] = useState<MeasureInfoMap | null>(null)
   const [datapackage, setDatapackage] = useState<Datapackage | null>(null)
   const [entityInfo, setEntityInfo] = useState<EntityInfoMap | null>(null)
-  const [narratives, setNarratives] = useState<Record<string, string>>({})
   const [correlations, setCorrelations] = useState<CorrelationMatrix>({})
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -95,9 +94,8 @@ export function DataProvider({ children }: { children: ReactNode }) {
         setLoading(false)
       })
 
-    // Load optional data (narratives + correlations) — non-blocking
+    // Load optional data (correlations) — non-blocking
     const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
-    fetch(`${basePath}/data/narratives.json`).then((r) => (r.ok ? r.json() : {})).then(setNarratives).catch(() => {})
     fetch(`${basePath}/data/correlations.json`).then((r) => (r.ok ? r.json() : {})).then(setCorrelations).catch(() => {})
   }, [])
 
@@ -139,6 +137,18 @@ export function DataProvider({ children }: { children: ReactNode }) {
       }
     }
   }, [availableLevels, selectedLayer, setSelectedLayer, loading])
+
+  // Derive narratives from measureInfo long_description
+  const narratives = useMemo(() => {
+    if (!measureInfo) return {}
+    const map: Record<string, string> = {}
+    for (const [key, info] of Object.entries(measureInfo)) {
+      if (info && typeof info === 'object' && 'long_description' in info && typeof info.long_description === 'string') {
+        map[key] = info.long_description
+      }
+    }
+    return map
+  }, [measureInfo])
 
   // Determine the active dataset based on current shape level
   const activeDataset = datasets[shapes] || null

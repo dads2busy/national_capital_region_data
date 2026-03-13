@@ -32,6 +32,7 @@ export function VariableInfo() {
   const selectedVariable = useDashboardStore((s) => s.selectedVariable)
   const { measureInfo } = useData()
   const [showLongDesc, setShowLongDesc] = useState(false)
+  const [showProvenance, setShowProvenance] = useState(false)
 
   const info = useMemo((): MeasureInfo | null => {
     if (!measureInfo) return null
@@ -52,17 +53,34 @@ export function VariableInfo() {
       {info.short_description && (
         <p className="mb-2 text-xs text-gray-600 dark:text-gray-400">{info.short_description}</p>
       )}
-      {info.long_description && (
+      {(info.long_description || info.provenance) && (
         <div className="mb-2">
-          <button
-            onClick={() => setShowLongDesc(!showLongDesc)}
-            className="text-xs text-blue-500 hover:text-blue-400 hover:underline"
-          >
-            {showLongDesc ? 'Less info' : 'More info'}
-          </button>
-          {showLongDesc && (
+          <span className="inline-flex gap-2">
+            {info.long_description && (
+              <button
+                onClick={() => { setShowLongDesc(!showLongDesc); setShowProvenance(false) }}
+                className="text-xs text-blue-500 hover:text-blue-400 hover:underline"
+              >
+                {showLongDesc ? 'Less info' : 'More info'}
+              </button>
+            )}
+            {info.provenance && (
+              <button
+                onClick={() => { setShowProvenance(!showProvenance); setShowLongDesc(false) }}
+                className="text-xs text-blue-500 hover:text-blue-400 hover:underline"
+              >
+                {showProvenance ? 'Hide provenance' : 'Provenance'}
+              </button>
+            )}
+          </span>
+          {showLongDesc && info.long_description && (
             <p className="mt-1 text-xs leading-relaxed text-gray-600 dark:text-gray-400">
               {info.long_description}
+            </p>
+          )}
+          {showProvenance && info.provenance && (
+            <p className="mt-1 text-xs leading-relaxed text-gray-600 dark:text-gray-400">
+              {info.provenance}
             </p>
           )}
         </div>

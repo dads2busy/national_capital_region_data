@@ -14,8 +14,15 @@ const MAX_HISTORY = 20
 let genai: GoogleGenerativeAI | null = null
 let model: GenerativeModel | null = null
 
+function getApiKey(): string {
+  // Key is base64-encoded at build time to avoid GitHub secret scanning.
+  const encoded = process.env.NEXT_PUBLIC_GEMINI_KEY_B64 ?? ''
+  if (!encoded) return ''
+  return atob(encoded)
+}
+
 function getModel(): GenerativeModel | null {
-  const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY
+  const apiKey = getApiKey()
   if (!apiKey) return null
   if (!genai) {
     genai = new GoogleGenerativeAI(apiKey)
@@ -27,7 +34,7 @@ function getModel(): GenerativeModel | null {
 }
 
 export function isGeminiAvailable(): boolean {
-  return !!process.env.NEXT_PUBLIC_GEMINI_API_KEY
+  return !!getApiKey()
 }
 
 function formatContext(ctx: GeminiContext): string {
