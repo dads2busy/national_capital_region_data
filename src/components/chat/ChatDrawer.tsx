@@ -113,8 +113,10 @@ export function ChatDrawer() {
         }
       } catch (err: unknown) {
         const msg = err instanceof Error ? err.message : 'An error occurred'
-        if (msg.includes('429') || msg.toLowerCase().includes('rate')) {
+        if (msg.includes('429')) {
           setError('Please wait a moment before sending another message.')
+        } else if (msg.includes('403') || msg.includes('PERMISSION_DENIED') || msg.includes('blocked')) {
+          setError('API key permission error. Check referrer restrictions in Google Cloud Console.')
         } else {
           setError('Unable to reach the AI service. Please try again.')
         }
