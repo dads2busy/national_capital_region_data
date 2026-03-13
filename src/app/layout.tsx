@@ -12,7 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning className={`${lato.variable} ${sourceSerif.variable}`}>
       <head>
-        <link rel="icon" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/capitol-icon.png`} />
+        <link rel="icon" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/favicon.png`} />
         <title>National Capital Region Data Commons</title>
         <meta name="description" content="National Capital Region Health Data Dashboard" />
       </head>
