@@ -16509,7 +16509,7 @@
         ]
     },
     "transport_cost_pct_geo20": {
-        "category": "Housing",
+        "category": "Transportation",
         "data_type": "numeric",
         "unit": "percent",
         "long_name": "Transportation Cost as Percent of Income",
@@ -16528,7 +16528,7 @@
         ]
     },
     "autos_per_hh_geo20": {
-        "category": "Housing",
+        "category": "Transportation",
         "data_type": "numeric",
         "unit": "vehicles",
         "long_name": "Predicted Autos per Household",
@@ -16547,7 +16547,7 @@
         ]
     },
     "vmt_per_hh_geo20": {
-        "category": "Housing",
+        "category": "Transportation",
         "data_type": "numeric",
         "unit": "miles",
         "long_name": "Predicted Annual Vehicle Miles Traveled per Household",
@@ -16566,7 +16566,7 @@
         ]
     },
     "transit_frac_geo20": {
-        "category": "Housing",
+        "category": "Transportation",
         "data_type": "numeric",
         "unit": "percent",
         "long_name": "Predicted Transit Commuter Fraction",
