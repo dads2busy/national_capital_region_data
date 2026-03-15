@@ -54,12 +54,13 @@ export function FilterMenu() {
   if (!filterOpen) return null
 
   return (
-    <div className="border-b border-slate-700 px-4 py-3" style={{ backgroundColor: 'var(--surface-dark)' }}>
+    <div data-testid="filter-menu" className="border-b border-slate-700 px-4 py-3" style={{ backgroundColor: 'var(--surface-dark)' }}>
       <div className="flex flex-wrap items-end gap-4">
         {/* Geographic Layer */}
         <div>
           <label className="mb-1 block text-xs font-medium text-slate-400">Geographic Layer</label>
           <select
+            data-testid="layer-select"
             value={shapes}
             onChange={(e) => setSelectedLayer(e.target.value as ShapeLevel)}
             className="rounded border border-slate-600 bg-slate-700 px-3 py-1 text-sm text-slate-200"

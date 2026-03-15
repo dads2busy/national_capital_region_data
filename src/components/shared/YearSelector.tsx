@@ -39,6 +39,7 @@ export function YearSelector() {
     <div className="flex items-center justify-center gap-2 whitespace-nowrap">
       <label className="text-sm font-medium text-gray-600 dark:text-gray-400">Selected Year</label>
       <button
+        data-testid="year-prev"
         onClick={() => setSelectedYear(Math.max(minYear, selectedYear - 1))}
         disabled={selectedYear <= minYear}
         className="rounded border px-2 py-0.5 text-sm disabled:opacity-30 dark:border-gray-600"
@@ -46,6 +47,7 @@ export function YearSelector() {
         &larr;
       </button>
       <input
+        data-testid="year-input"
         type="text"
         inputMode="numeric"
         value={selectedYear}
@@ -56,6 +58,7 @@ export function YearSelector() {
         className="w-16 rounded border border-gray-300 px-2 py-0.5 text-center text-sm dark:border-gray-600 dark:bg-gray-800"
       />
       <button
+        data-testid="year-next"
         onClick={() => setSelectedYear(Math.min(maxYear, selectedYear + 1))}
         disabled={selectedYear >= maxYear}
         className="rounded border px-2 py-0.5 text-sm disabled:opacity-30 dark:border-gray-600"

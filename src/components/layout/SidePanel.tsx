@@ -69,6 +69,7 @@ export function SidePanel() {
           return (
             <div key={group.category} className="mb-1">
               <button
+                data-testid={`var-category-${group.category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
                 onClick={() => toggleCategory(group.category)}
                 className="flex w-full items-center justify-between rounded px-2 pt-2 pb-1 text-left text-xs font-semibold text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
               >
@@ -80,6 +81,7 @@ export function SidePanel() {
                   {group.variables.map((v) => (
                     <button
                       key={v.name}
+                      data-testid={`var-btn-${v.name}`}
                       onClick={() => setSelectedVariable(v.name)}
                       className={`w-full rounded px-3 py-1.5 text-left text-sm transition-colors ${
                         selectedVariable === v.name

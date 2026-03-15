@@ -10,5 +10,5 @@ const MapInner = dynamic(() => import('./MapInner').then((m) => m.MapInner), {
 })
 
 export function DashboardMap() {
-  return <MapInner />
+  return <div data-testid="dashboard-map"><MapInner /></div>
 }

@@ -66,6 +66,7 @@ export function VariableDropdown({ value, onChange, options }: Props) {
   return (
     <div ref={containerRef} className="relative">
       <button
+        data-testid="variable-dropdown"
         onClick={() => setOpen(!open)}
         className="w-full rounded border border-slate-600 bg-slate-700 px-3 py-1 text-left text-sm text-slate-200"
       >
@@ -90,6 +91,7 @@ export function VariableDropdown({ value, onChange, options }: Props) {
                   group.variables.map((v) => (
                     <button
                       key={v.name}
+                      data-testid={`variable-option-${v.name}`}
                       onClick={() => {
                         onChange(v.name)
                         setOpen(false)
