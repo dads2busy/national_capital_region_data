@@ -33,3 +33,7 @@ public/data/*.zip
 
 # Narrative cache
 data/.narrative-cache.json
+
+# Playwright
+test-results/
+playwright-report/
