@@ -100,7 +100,11 @@ export async function waitForDataUpdate(page: Page) {
  */
 export async function assertVariableChanged(page: Page, previousHeading: string | null) {
   const heading = page.locator('[data-testid="variable-heading"]')
-  if (await heading.count() === 0) return null
+  if (await heading.count() === 0) {
+    throw new Error(
+      'Variable heading not found — variable has no measure_info entry or failed to render'
+    )
+  }
 
   const text = await heading.textContent()
   if (previousHeading !== null && text === previousHeading) {
