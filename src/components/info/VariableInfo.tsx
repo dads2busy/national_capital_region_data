@@ -49,7 +49,7 @@ export function VariableInfo() {
 
   return (
     <div className="rounded border p-3 dark:border-gray-700">
-      <h3 className="mb-1 text-sm font-semibold">{info.short_name || selectedVariable}</h3>
+      <h3 data-testid="variable-heading" className="mb-1 text-sm font-semibold">{info.short_name || selectedVariable}</h3>
       {info.short_description && (
         <p className="mb-2 text-xs text-gray-600 dark:text-gray-400">{info.short_description}</p>
       )}

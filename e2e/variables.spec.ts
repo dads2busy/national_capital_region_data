@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test'
-import { attachNetworkGuards, waitForAppShell, waitForDataUpdate, assertSomeDataAppears } from './lib/signals'
+import { attachNetworkGuards, waitForAppShell, waitForDataUpdate, assertSomeDataAppears, getVariableHeading, assertVariableChanged } from './lib/signals'
 import { getAvailableVariables, selectVariableFromSidePanel, selectVariableFromDropdown } from './lib/navigation'
 
 // Sample up to N variables per category to keep test runtime reasonable
@@ -49,6 +49,7 @@ test.describe('Variable coverage', () => {
     await waitForAppShell(page)
 
     const failures: string[] = []
+    let prevHeading = await getVariableHeading(page)
 
     for (const v of variables) {
       try {
@@ -60,6 +61,7 @@ test.describe('Variable coverage', () => {
           await selectVariableFromDropdown(page, v)
         }
         await waitForDataUpdate(page)
+        prevHeading = await assertVariableChanged(page, prevHeading)
         await assertSomeDataAppears(page, guards.getSuccessfulDataResponses())
       } catch (e) {
         const msg = (e as Error).message

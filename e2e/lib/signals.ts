@@ -93,6 +93,33 @@ export async function waitForDataUpdate(page: Page) {
   await page.waitForTimeout(500)
 }
 
+/**
+ * Assert that the variable heading changed after clicking a variable.
+ * This catches the case where clicking a variable does nothing —
+ * the heading stays the same as the previous variable.
+ */
+export async function assertVariableChanged(page: Page, previousHeading: string | null) {
+  const heading = page.locator('[data-testid="variable-heading"]')
+  if (await heading.count() === 0) return null
+
+  const text = await heading.textContent()
+  if (previousHeading !== null && text === previousHeading) {
+    throw new Error(
+      `Variable heading did not change. Still showing: "${text}"`
+    )
+  }
+  return text
+}
+
+/**
+ * Get the current variable heading text for comparison.
+ */
+export async function getVariableHeading(page: Page): Promise<string | null> {
+  const heading = page.locator('[data-testid="variable-heading"]')
+  if (await heading.count() === 0) return null
+  return heading.textContent()
+}
+
 export async function assertSomeDataAppears(page: Page, successfulDataResponses: number) {
   const signals = await collectDataSignals(page)
   signals.successfulDataResponses = successfulDataResponses
