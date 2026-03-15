@@ -11,17 +11,25 @@ test.describe('Year navigation', () => {
 
     const startYear = await getCurrentYear(page)
 
-    // Navigate forward
-    await changeYear(page, 'next')
-    await waitForDataUpdate(page)
-    const afterNext = await getCurrentYear(page)
-    expect(afterNext).toBeGreaterThanOrEqual(startYear)
-    await assertSomeDataAppears(page, guards.getSuccessfulDataResponses())
+    const nextBtn = page.locator('[data-testid="year-next"]')
+    const prevBtn = page.locator('[data-testid="year-prev"]')
 
-    // Navigate backward
-    await changeYear(page, 'prev')
-    await waitForDataUpdate(page)
-    await assertSomeDataAppears(page, guards.getSuccessfulDataResponses())
+    // Try navigating forward (skip if already at max)
+    if (!(await nextBtn.isDisabled())) {
+      await changeYear(page, 'next')
+      await waitForDataUpdate(page)
+      const afterNext = await getCurrentYear(page)
+      expect(afterNext).toBe(startYear + 1)
+      await assertSomeDataAppears(page, guards.getSuccessfulDataResponses())
+    }
+
+    // Navigate backward (should always work unless at min)
+    if (!(await prevBtn.isDisabled())) {
+      guards.resetDataResponseCount()
+      await changeYear(page, 'prev')
+      await waitForDataUpdate(page)
+      await assertSomeDataAppears(page, guards.getSuccessfulDataResponses())
+    }
   })
 
   test('prev button disabled at min year', async ({ page }) => {

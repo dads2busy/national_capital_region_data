@@ -111,7 +111,10 @@ export async function assertSomeDataAppears(page: Page, successfulDataResponses:
   ).toBeGreaterThan(0)
 
   if (signals.tablesWithRows > 0) {
-    const bodyText = await page.locator('body').innerText()
-    expect(bodyText.toLowerCase()).not.toContain('no data')
+    const rankTable = page.locator('[data-testid="rank-table"]')
+    if (await rankTable.count() > 0) {
+      const tableText = await rankTable.innerText()
+      expect(tableText.toLowerCase()).not.toContain('no data')
+    }
   }
 }

@@ -1,34 +1,13 @@
 import { test, expect } from '@playwright/test'
 import { attachNetworkGuards, waitForAppShell, waitForDataUpdate, assertSomeDataAppears } from './lib/signals'
 
-async function clickFirstUsefulNavLink(page: import('@playwright/test').Page) {
-  const candidates = page
-    .locator('a[href^="/"]')
-    .filter({ hasNotText: /github|privacy|terms|mailto|http/i })
-
-  const count = await candidates.count()
-  for (let i = 0; i < Math.min(count, 30); i++) {
-    const a = candidates.nth(i)
-    if (!(await a.isVisible())) continue
-
-    const href = (await a.getAttribute('href')) ?? ''
-    if (!href || href === '/' || href.startsWith('/#')) continue
-
-    await a.click()
-    return
-  }
-}
-
 test.describe('Dashboard smoke', () => {
-  test('home loads and at least one data-driven view can be reached', async ({ page }) => {
+  test('home loads with data visible', async ({ page }) => {
     const guards = await attachNetworkGuards(page)
 
     await page.goto('/', { waitUntil: 'domcontentloaded' })
     await waitForAppShell(page)
-
-    await clickFirstUsefulNavLink(page)
-    await waitForAppShell(page)
-    await page.waitForTimeout(500)
+    await waitForDataUpdate(page)
 
     await assertSomeDataAppears(page, guards.getSuccessfulDataResponses())
 
@@ -42,18 +21,24 @@ test.describe('Dashboard smoke', () => {
     ).toEqual([])
   })
 
-  test('can click through a few internal links without blanking out data', async ({ page }) => {
+  test('clicking a variable button loads new data', async ({ page }) => {
     const guards = await attachNetworkGuards(page)
 
     await page.goto('/', { waitUntil: 'domcontentloaded' })
     await waitForAppShell(page)
+    await waitForDataUpdate(page)
 
-    for (let step = 0; step < 3; step++) {
-      await clickFirstUsefulNavLink(page)
-      await waitForAppShell(page)
-      await page.waitForTimeout(500)
-      await assertSomeDataAppears(page, guards.getSuccessfulDataResponses())
-    }
+    // Find any variable button that is not already selected and click it
+    const varButtons = page.locator('[data-testid^="var-btn-"]')
+    const count = await varButtons.count()
+    expect(count, 'Expected at least one variable button').toBeGreaterThan(0)
+
+    // Click the second button (first might already be selected)
+    const idx = count > 1 ? 1 : 0
+    await varButtons.nth(idx).click()
+    await waitForDataUpdate(page)
+
+    await assertSomeDataAppears(page, guards.getSuccessfulDataResponses())
 
     const failures = guards.getFailures()
     expect(
