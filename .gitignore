@@ -39,3 +39,6 @@ data/.narrative-cache.json
 # Playwright
 test-results/
 playwright-report/
+
+# Superpowers (local tooling)
+docs/superpowers/
