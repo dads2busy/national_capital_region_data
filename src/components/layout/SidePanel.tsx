@@ -16,6 +16,7 @@ const featuredSections: FeaturedSection[] = [
   {
     heading: 'Community Indices',
     buttons: [
+      { label: 'Social Vulnerability Index', variable: 'vi_overall' },
       { label: 'H+T Affordability Index', variable: 'affordability_index_geo20' },
       { label: 'Material Deprivation', variable: 'material_deprivation_indicator_geo20' },
       { label: 'Walkability Index', variable: 'walkability_index_geo20' },
