@@ -37,6 +37,7 @@ Read the memory index at `/Users/ads7fg/.claude/projects/-Users-ads7fg-git-natio
 
 ## Hard Rules (CONSTRAINTS)
 
+- **Dashboard parity**: Any operational change to this dashboard (build process, data loading, geo sourcing, CI workflow, state management patterns) must be considered for the VA dashboard too, and vice versa. The two dashboards must stay architecturally in sync. Flag divergences explicitly.
 - Never install a new dependency without asking first.
 - Never swap a library in the stack (e.g. don't replace Leaflet with Mapbox, Zustand with Redux, Plotly with Recharts).
 - All data flows through DataProvider context — never fetch JSON directly in components.
