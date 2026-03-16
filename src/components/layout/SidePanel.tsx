@@ -1,102 +1,85 @@
 'use client'
 
-import { useMemo, useState, useEffect, useRef } from 'react'
 import { useDashboardStore } from '@/lib/store'
-import { useData } from '@/components/DataProvider'
-import { resolveVariables, groupByCategory } from '@/lib/data/measure-info-resolver'
+
+interface FeaturedButton {
+  label: string
+  variable: string
+}
+
+interface FeaturedSection {
+  heading: string
+  buttons: FeaturedButton[]
+}
+
+const featuredSections: FeaturedSection[] = [
+  {
+    heading: 'Community Indices',
+    buttons: [
+      { label: 'H+T Affordability Index', variable: 'affordability_index_geo20' },
+      { label: 'Material Deprivation', variable: 'material_deprivation_indicator_geo20' },
+      { label: 'Walkability Index', variable: 'walkability_index_geo20' },
+      { label: 'Income Inequality (Gini)', variable: 'gini_index_geo20' },
+    ],
+  },
+  {
+    heading: 'Health',
+    buttons: [
+      { label: 'Frequent Mental Distress', variable: 'perc_freq_mental_distress' },
+      { label: 'Frequent Physical Distress', variable: 'perc_freq_physical_distress' },
+      { label: 'APNCU: Inadequate', variable: 'inadequate_pc' },
+      { label: 'APNCU: Adequate', variable: 'adequate_pc' },
+      { label: 'Uninsured Population', variable: 'no_hlth_ins_pct_geo20' },
+    ],
+  },
+  {
+    heading: 'Broadband & Connectivity',
+    buttons: [
+      { label: 'Average Download Speed', variable: 'avg_down_speed_geo20' },
+      { label: 'Households with Broadband', variable: 'perc_hh_with_broadband_geo20' },
+    ],
+  },
+  {
+    heading: 'Housing & Transportation Costs',
+    buttons: [
+      { label: 'Housing Cost %', variable: 'housing_cost_pct_geo20' },
+      { label: 'Transport Cost %', variable: 'transport_cost_pct_geo20' },
+    ],
+  },
+]
 
 export function SidePanel() {
   const selectedVariable = useDashboardStore((s) => s.selectedVariable)
   const setSelectedVariable = useDashboardStore((s) => s.setSelectedVariable)
 
-  const { measureInfo, datasets } = useData()
-
-  // Build category-grouped variable list dynamically from measure_info + county dataset
-  const categoryGroups = useMemo(() => {
-    const county = datasets.county
-    if (!measureInfo || !county) return []
-    const varNames = Object.keys(county._meta.variables)
-    const resolved = resolveVariables(measureInfo, varNames)
-    return groupByCategory(resolved)
-  }, [measureInfo, datasets])
-
-  const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set())
-  // Track categories the user has explicitly collapsed
-  const userCollapsed = useRef<Set<string>>(new Set())
-
-  // Auto-expand the category when the selected variable changes
-  useEffect(() => {
-    for (const group of categoryGroups) {
-      if (group.variables.some((v) => v.name === selectedVariable)) {
-        if (!userCollapsed.current.has(group.category)) {
-          setExpandedCategories((prev) => {
-            if (prev.has(group.category)) return prev
-            const next = new Set(prev)
-            next.add(group.category)
-            return next
-          })
-        }
-        break
-      }
-    }
-  }, [selectedVariable, categoryGroups])
-
-  const toggleCategory = (category: string) => {
-    setExpandedCategories((prev) => {
-      const next = new Set(prev)
-      if (next.has(category)) {
-        next.delete(category)
-        userCollapsed.current.add(category)
-      } else {
-        next.add(category)
-        userCollapsed.current.delete(category)
-      }
-      return next
-    })
-  }
-
-  const isCategoryOpen = (category: string) => expandedCategories.has(category)
-
   return (
     <aside className="hidden w-64 shrink-0 border-r bg-gray-50 dark:border-gray-700 dark:bg-gray-900 lg:block">
       <div className="border-b px-4 py-3 dark:border-gray-700">
-        <span className="text-sm font-medium">Variables</span>
+        <span className="text-sm font-medium">Featured Measures</span>
       </div>
 
       <div className="overflow-y-auto p-2" style={{ maxHeight: 'calc(100vh - 150px)' }}>
-        {categoryGroups.map((group) => {
-          const open = isCategoryOpen(group.category)
-          return (
-            <div key={group.category} className="mb-1">
+        {featuredSections.map((section) => (
+          <div key={section.heading} className="mb-2">
+            <p className="px-2 pt-2 pb-1 text-xs font-semibold text-gray-500 dark:text-gray-400">
+              {section.heading}
+            </p>
+            {section.buttons.map((btn) => (
               <button
-                data-testid={`var-category-${group.category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
-                onClick={() => toggleCategory(group.category)}
-                className="flex w-full items-center justify-between rounded px-2 pt-2 pb-1 text-left text-xs font-semibold text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                key={btn.variable}
+                data-testid={`var-btn-${btn.variable}`}
+                onClick={() => setSelectedVariable(btn.variable)}
+                className={`w-full rounded px-3 py-1.5 text-left text-sm transition-colors ${
+                  selectedVariable === btn.variable
+                    ? 'bg-blue-600 text-white'
+                    : 'text-gray-700 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-800'
+                }`}
               >
-                <span>{group.category}</span>
-                <span className="text-[10px]">{open ? '\u25B2' : '\u25BC'}</span>
+                {btn.label}
               </button>
-              {open && (
-                <div>
-                  {group.variables.map((v) => (
-                    <button
-                      key={v.name}
-                      data-testid={`var-btn-${v.name}`}
-                      onClick={() => setSelectedVariable(v.name)}
-                      className={`w-full rounded px-3 py-1.5 text-left text-sm transition-colors ${
-                        selectedVariable === v.name
-                          ? 'bg-blue-600 text-white'
-                          : 'text-gray-700 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-800'
-                      }`}
-                    >
-                      {v.label}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-          )
-        })}
+            ))}
+          </div>
+        ))}
       </div>
     </aside>
   )
