@@ -81,13 +81,12 @@ export function resolveVariables(
     }
   }
 
-  return datasetVariableNames.map((varName) => {
-    const resolved = resolvedMap.get(varName)
-    if (resolved) {
+  return datasetVariableNames
+    .filter((varName) => resolvedMap.has(varName))
+    .map((varName) => {
+      const resolved = resolvedMap.get(varName)!
       return { name: varName, label: resolved.label, category: resolved.category, shortDescription: resolved.shortDescription, longDescription: resolved.longDescription }
-    }
-    return { name: varName, label: formatFallbackLabel(varName), category: 'Other', shortDescription: '', longDescription: '' }
-  })
+    })
 }
 
 /**
