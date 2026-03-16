@@ -21,6 +21,7 @@ import * as yazl from 'yazl'
 const ROOT = path.resolve(__dirname, '..')
 const DATA_DIR = path.join(ROOT, 'data')
 const DOCS_DIR = path.join(ROOT, 'docs')
+const GEO_SRC_DIR = path.join(ROOT, 'geo-sources')
 const PUBLIC_DATA_DIR = path.join(ROOT, 'public', 'data')
 const PUBLIC_GEO_DIR = path.join(ROOT, 'public', 'geo')
 
@@ -66,26 +67,24 @@ const DATASETS: Record<string, string> = {
   zip_code: 'zip_code.csv.xz',
 }
 
-// GeoJSON files to copy from docs/ directory (existing built shapes)
-const GEOJSON_COPY: Record<string, string> = {
-  'county.geojson': 'county.json',
-  'tract.geojson': 'tract.json',
-  'block_group.geojson': 'block_group.json',
-  'civic_association.geojson': 'civic_association.json',
-  'human_services_region.geojson': 'human_services_region.json',
-  'planning_district.geojson': 'planning_district.json',
-  'supervisor_district.geojson': 'supervisor_district.json',
-  'zip_code.geojson': 'zip_code.json',
-}
+// GeoJSON files to copy from geo-sources/ directory
+const GEOJSON_FILES = [
+  'county.geojson',
+  'tract.geojson',
+  'block_group.geojson',
+  'civic_association.geojson',
+  'human_services_region.geojson',
+  'planning_district.geojson',
+  'supervisor_district.geojson',
+  'zip_code.geojson',
+]
 
 /**
- * Load valid region IDs from a GeoJSON file in docs/.
+ * Load valid region IDs from a GeoJSON file in geo-sources/.
  * Only regions present in the GeoJSON are included in built data.
  */
 function loadGeoIds(datasetName: string): Set<string> | null {
-  const geoSrcName = GEOJSON_COPY[`${datasetName}.geojson`]
-  if (!geoSrcName) return null
-  const srcPath = path.join(DOCS_DIR, geoSrcName)
+  const srcPath = path.join(GEO_SRC_DIR, `${datasetName}.geojson`)
   if (!fs.existsSync(srcPath)) return null
 
   const geo = JSON.parse(fs.readFileSync(srcPath, 'utf-8'))
@@ -95,13 +94,6 @@ function loadGeoIds(datasetName: string): Set<string> | null {
     for (const f of geo.features) {
       const id = f.properties?.geoid || f.properties?.GEOID || f.id
       if (id) ids.add(String(id))
-    }
-  } else {
-    // Keyed format: top-level keys are region IDs
-    for (const key of Object.keys(geo)) {
-      if (key !== '_meta' && key !== 'type' && key !== 'name' && key !== 'crs') {
-        ids.add(key)
-      }
     }
   }
 
@@ -292,14 +284,9 @@ function buildFieldInfo(rows: CsvRow[], variableNames: string[], timeValues: num
 function copyGeoJsonShapes(): void {
   fs.mkdirSync(PUBLIC_GEO_DIR, { recursive: true })
 
-  for (const [destFilename, srcFilename] of Object.entries(GEOJSON_COPY)) {
-    const srcPath = path.join(DOCS_DIR, srcFilename)
-    const destPath = path.join(PUBLIC_GEO_DIR, destFilename)
-
-    if (fs.existsSync(destPath)) {
-      console.log(`  Skipping ${destFilename} (already exists)`)
-      continue
-    }
+  for (const filename of GEOJSON_FILES) {
+    const srcPath = path.join(GEO_SRC_DIR, filename)
+    const destPath = path.join(PUBLIC_GEO_DIR, filename)
 
     if (!fs.existsSync(srcPath)) {
       console.warn(`  Warning: Source GeoJSON not found: ${srcPath}`)
@@ -308,7 +295,7 @@ function copyGeoJsonShapes(): void {
 
     fs.copyFileSync(srcPath, destPath)
     const size = (fs.statSync(destPath).size / 1024 / 1024).toFixed(1)
-    console.log(`  Copied ${srcFilename} → ${destFilename} (${size} MB)`)
+    console.log(`  Copied ${filename} (${size} MB)`)
   }
 }
 
