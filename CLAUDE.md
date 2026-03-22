@@ -4,13 +4,13 @@
 
 This is the National Capital Region (NCR) Next.js dashboard. It displays demographic, economic, health, housing, and other indicator data on interactive maps and charts.
 
-Data is produced by pipelines in the sdc-monorepo and copied into `data/` as wide-format compressed CSVs. `npm run build:data` transforms these into JSON lookups in `public/data/`.
+Data is produced by pipelines in the social-data-commons and copied into `data/` as wide-format compressed CSVs. `npm run build:data` transforms these into JSON lookups in `public/data/`.
 
 Success = the dashboard builds via `npm run build` with zero TypeScript errors, renders correctly as a static export, and all data flows from data/*.csv.xz → public/data/*.json → map/chart/table components.
 
 ## Related Repos
 
-- `/Users/ads7fg/git/sdc-monorepo` — data pipelines (Python/uv) that produce the datasets for this dashboard. Read `/Users/ads7fg/git/sdc-monorepo/CLAUDE.md` when working on data pipeline tasks.
+- `/Users/ads7fg/git/social-data-commons` — data pipelines (Python/uv) that produce the datasets for this dashboard. Read `/Users/ads7fg/git/social-data-commons/CLAUDE.md` when working on data pipeline tasks.
 - `/Users/ads7fg/git/virginia_public_health_data` — VA dashboard (same architecture)
 
 ## Architecture

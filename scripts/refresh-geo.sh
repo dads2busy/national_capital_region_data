@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
-# Refresh geo-sources/ from sdc-monorepo geographies.
-# Run this when census boundary files change in sdc-monorepo.
+# Refresh geo-sources/ from social-data-commons geographies.
+# Run this when census boundary files change in social-data-commons.
 
 set -euo pipefail
 
-SDC="${SDC_MONOREPO:-/Users/ads7fg/git/sdc-monorepo}"
+SDC="${SDC_MONOREPO:-/Users/ads7fg/git/social-data-commons}"
 DEST="$(cd "$(dirname "$0")/.." && pwd)/geo-sources"
 
 if [ ! -d "$SDC/geographies" ]; then
-  echo "Error: sdc-monorepo not found at $SDC" >&2
+  echo "Error: social-data-commons not found at $SDC" >&2
   echo "Set SDC_MONOREPO env var to the correct path." >&2
   exit 1
 fi
