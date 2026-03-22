@@ -15,6 +15,8 @@ export interface DataMeta {
 export interface VariableMapping {
   code: string
   time_range: [number, number]
+  /** Specific time offsets that have data (skips gaps). Falls back to contiguous range if absent. */
+  time_indices?: number[]
 }
 
 /** Region data: X-code keys mapped to time-series arrays or scalar values */

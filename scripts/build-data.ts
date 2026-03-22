@@ -34,6 +34,7 @@ interface CsvRow {
 interface VariableMeta {
   code: string
   time_range: [number, number]
+  time_indices?: number[]
 }
 
 interface DataLookup {
@@ -139,20 +140,25 @@ function buildLookup(rows: CsvRow[], variableNames: string[]): DataLookup {
   }
 
   const variableTimeRanges = new Map<string, [number, number]>()
+  const variableTimeIndices = new Map<string, number[]>()
   for (const varName of variableNames) {
-    let minOffset = totalTimeSlots
-    let maxOffset = -1
+    const offsetsWithData = new Set<number>()
     for (const row of rows) {
       const val = row[varName]
       if (val !== '' && val !== 'NA' && val !== undefined) {
         const t = parseInt(row.time, 10)
         const offset = t - timeMin
-        if (offset < minOffset) minOffset = offset
-        if (offset > maxOffset) maxOffset = offset
+        offsetsWithData.add(offset)
       }
     }
-    if (maxOffset >= 0) {
-      variableTimeRanges.set(varName, [minOffset, maxOffset])
+    const sortedOffsets = Array.from(offsetsWithData).sort((a, b) => a - b)
+    if (sortedOffsets.length > 0) {
+      variableTimeRanges.set(varName, [sortedOffsets[0], sortedOffsets[sortedOffsets.length - 1]])
+      // Store time_indices only if there are gaps in the range
+      const rangeLen = sortedOffsets[sortedOffsets.length - 1] - sortedOffsets[0] + 1
+      if (sortedOffsets.length < rangeLen) {
+        variableTimeIndices.set(varName, sortedOffsets)
+      }
     } else {
       variableTimeRanges.set(varName, [-1, -1])
     }
@@ -164,7 +170,10 @@ function buildLookup(rows: CsvRow[], variableNames: string[]): DataLookup {
     const varName = variableNames[i]
     const code = `X${i + 2}`
     const timeRange = variableTimeRanges.get(varName) || [-1, -1]
-    variableMeta[varName] = { code, time_range: timeRange }
+    const meta: VariableMeta = { code, time_range: timeRange }
+    const indices = variableTimeIndices.get(varName)
+    if (indices) meta.time_indices = indices
+    variableMeta[varName] = meta
     codeToVar.set(code, varName)
   }
 

@@ -27,14 +27,18 @@ export function RankTable() {
   const { activeDataset } = useData()
   const containerRef = useRef<HTMLDivElement>(null)
 
-  // Determine available years for the selected variable
+  // Determine available years for the selected variable (skipping gaps)
   const years = useMemo((): number[] => {
     if (!activeDataset) return []
     const meta = activeDataset._meta
     const varInfo = meta.variables[selectedVariable]
-    if (!varInfo) return []
+    if (!varInfo || varInfo.time_range[0] === -1) return []
+
+    if (varInfo.time_indices) {
+      return varInfo.time_indices.map((i) => meta.time.value[i]).filter((y) => y !== undefined)
+    }
+
     const [rangeStart, rangeEnd] = varInfo.time_range
-    if (rangeStart === -1) return []
     const result: number[] = []
     for (let i = rangeStart; i <= rangeEnd; i++) {
       if (i < meta.time.value.length) {
