@@ -22,6 +22,12 @@
             }
         ],
         "provenance": "Computed from ACS 5-year estimates, Table B28002 (Presence and Types of Internet Subscriptions in Household): B28002_004 (broadband of any type) / B28002_001 (total households) \u00d7 100. Broadband is defined by the Census Bureau as any internet subscription type other than dial-up.",
+        "geo_standardize": {
+            "measure_type": "ratio",
+            "numerator": "hh_with_broadband",
+            "denominator": "total_hh",
+            "scale": 100
+        },
         "statement": "{value}% of households in {features.name} have a broadband connection.",
         "type": "percent",
         "unit": "percent",
@@ -50,6 +56,12 @@
             }
         ],
         "provenance": "Computed from ACS 5-year estimates, Table B28002: B28002_007 (cable, fiber optic, or DSL subscription) / B28002_001 (total households) \u00d7 100.",
+        "geo_standardize": {
+            "measure_type": "ratio",
+            "numerator": "hh_with_cable_fiber_dsl",
+            "denominator": "total_hh",
+            "scale": 100
+        },
         "statement": "{value}% of households in {features.name} have a cable, fiber, or DSL connection.",
         "type": "percent",
         "unit": "percent",
@@ -78,6 +90,12 @@
             }
         ],
         "provenance": "Computed from ACS 5-year estimates, Table B28002: B28002_013 (no internet access) / B28002_001 (total households) \u00d7 100.",
+        "geo_standardize": {
+            "measure_type": "ratio",
+            "numerator": "hh_without_internet",
+            "denominator": "total_hh",
+            "scale": 100
+        },
         "statement": "{value}% of households in {features.name} do not have internet access.",
         "type": "percent",
         "unit": "percent",
@@ -34664,6 +34682,12 @@
         "variants": ""
     },
     "perc_moving_geo20": {
+        "geo_standardize": {
+            "measure_type": "ratio",
+            "numerator": "geo_mobility_moving_count",
+            "denominator": "geo_mobility_total_count",
+            "scale": 100
+        },
         "aggregation_method": "Population Weighted Average",
         "categories": "",
         "category": "Demographics",
@@ -34692,6 +34716,9 @@
         "variants": ""
     },
     "perc_moving_direct_geo20": {
+        "geo_standardize": {
+            "measure_type": "external"
+        },
         "aggregation_method": "Population Weighted Average",
         "categories": "",
         "category": "Demographics",
@@ -34720,6 +34747,9 @@
         "variants": ""
     },
     "geo_mobility_total_count_geo20": {
+        "geo_standardize": {
+            "measure_type": "count"
+        },
         "aggregation_method": "Sum",
         "categories": "",
         "category": "Demographics",
@@ -34748,6 +34778,9 @@
         "variants": ""
     },
     "geo_mobility_moving_count_geo20": {
+        "geo_standardize": {
+            "measure_type": "count"
+        },
         "aggregation_method": "Sum",
         "categories": "",
         "category": "Demographics",
@@ -34776,6 +34809,9 @@
         "variants": ""
     },
     "language_hh_limited_english_count_geo20": {
+        "geo_standardize": {
+            "measure_type": "count"
+        },
         "aggregation_method": "arithmetic mean",
         "categories": "",
         "category": "Demographics",
@@ -34804,6 +34840,12 @@
         "variants": ""
     },
     "language_hh_limited_english_percent_geo20": {
+        "geo_standardize": {
+            "measure_type": "ratio",
+            "numerator": "language_hh_limited_english_count",
+            "denominator": "language_total_hh_count",
+            "scale": 100
+        },
         "aggregation_method": "percent",
         "categories": "",
         "category": "Demographics",
@@ -34832,6 +34874,11 @@
         "variants": ""
     },
     "population_density_geo20": {
+        "geo_standardize": {
+            "measure_type": "density",
+            "count": "population_count",
+            "area_divisor": 2589988.11
+        },
         "aggregation_method": "Population Weighted Average",
         "categories": "",
         "category": "Demographics",
@@ -35296,6 +35343,9 @@
         "layer": "",
         "long_description": "The Segregation Index measures how much a community's racial and ethnic composition differs from the state as a whole, using the Entropy Index (Theil's H) across eight racial/ethnic categories. Communities with high segregation values tend to have more concentrated poverty, unequal access to services, and wider disparities in educational and economic outcomes. As a component of the VDH Health Opportunity Index Social Impact profile, this measure helps identify areas where residential sorting by race may reinforce structural inequities.",
         "long_name": "Segregation Indicator",
+        "geo_standardize": {
+            "measure_type": "replicate"
+        },
         "measure_type": "index",
         "short_description": "Entropy Index (Theil's H) measuring how sub-area racial/ethnic composition differs from the overall state composition.",
         "short_name": "Segregation indicator",
@@ -35315,6 +35365,9 @@
         "variants": ""
     },
     "veteran_count_geo20": {
+        "geo_standardize": {
+            "measure_type": "count"
+        },
         "aggregation_method": "count",
         "categories": "",
         "category": "Demographics",
@@ -35343,6 +35396,12 @@
         "variants": ""
     },
     "veteran_percent_geo20": {
+        "geo_standardize": {
+            "measure_type": "ratio",
+            "numerator": "veteran_count",
+            "denominator": "veteran_denom_count",
+            "scale": 100
+        },
         "aggregation_method": "percent",
         "categories": "",
         "category": "Demographics",
@@ -35371,6 +35430,12 @@
         "variants": ""
     },
     "acs_postsecondary_percent_geo20": {
+        "geo_standardize": {
+            "measure_type": "ratio",
+            "numerator": "acs_postsecondary_count",
+            "denominator": "acs_postsecondary_denom_count",
+            "scale": 100
+        },
         "aggregation_method": "percent",
         "categories": "",
         "category": "Education",
@@ -35399,6 +35464,9 @@
         "variants": ""
     },
     "acs_postsecondary_count_geo20": {
+        "geo_standardize": {
+            "measure_type": "count"
+        },
         "aggregation_method": "count",
         "categories": "",
         "category": "Education",
@@ -35436,6 +35504,9 @@
         "layer": "",
         "long_description": "Average years of schooling estimates the typical education level of adults in a community by converting Census educational attainment categories into equivalent years of formal education. Areas with lower average schooling tend to have fewer economic opportunities, lower health literacy, and reduced civic engagement. This measure serves as a key input to the VDH Health Opportunity Index, where it contributes to the Consumer Opportunity profile.",
         "long_name": "Education Index (Average Years of Schooling)",
+        "geo_standardize": {
+            "measure_type": "mean"
+        },
         "measure_type": "average",
         "provenance": "Computed from ACS 5-year estimates, table B15003 (Sex by Age by Educational Attainment for the Population 18 Years and Over). Each educational attainment category is mapped to a number of years using the crosswalk in Bennett, D.L. (2011), 'Educational Inequality in the United States,' Center for College Affordability and Productivity. The population-weighted average across all attainment levels produces a single years-of-schooling estimate per geography.",
         "short_description": "Average years of formal education among adults, derived from ACS educational attainment categories.",
@@ -35455,6 +35526,9 @@
         "variants": ""
     },
     "environmental_hazard_index_geo20": {
+        "geo_standardize": {
+            "measure_type": "external"
+        },
         "aggregation_method": "mean",
         "categories": "",
         "category": "Environmental Health",
@@ -35485,6 +35559,9 @@
         "variants": ""
     },
     "labor_participate_rate_geo20": {
+        "geo_standardize": {
+            "measure_type": "replicate"
+        },
         "aggregation_method": "percent",
         "categories": "",
         "category": "Employment/Workforce Development",
@@ -35513,6 +35590,12 @@
         "variants": ""
     },
     "emp_rate_geo20": {
+        "geo_standardize": {
+            "measure_type": "ratio",
+            "numerator": "emp_employed_count",
+            "denominator": "emp_civilian_lf_count",
+            "scale": 100
+        },
         "aggregation_method": "percent",
         "categories": "",
         "category": "Employment/Workforce Development",
@@ -35541,6 +35624,9 @@
         "variants": ""
     },
     "median_household_income_geo20": {
+        "geo_standardize": {
+            "measure_type": "median"
+        },
         "aggregation_method": "median",
         "categories": "",
         "category": "Financial Well Being",
@@ -35569,6 +35655,9 @@
         "variants": ""
     },
     "gini_index_geo20": {
+        "geo_standardize": {
+            "measure_type": "replicate"
+        },
         "aggregation_method": "mean",
         "categories": "",
         "category": "Financial Well Being",
@@ -35597,6 +35686,9 @@
         "variants": ""
     },
     "material_deprivation_indicator_geo20": {
+        "geo_standardize": {
+            "measure_type": "replicate"
+        },
         "aggregation_method": "mean",
         "categories": "",
         "category": "Financial Well Being",
@@ -37165,90 +37257,6 @@
         "statement": "{value} percent of the population in {features.name} are food insecure.",
         "type": "percent",
         "unit": "",
-        "variants": ""
-    },
-    "hh_received_snap_cnt": {
-        "aggregation_method": "sum",
-        "categories": "",
-        "category": "Nutrition and Food Security",
-        "citations": "",
-        "data_type": "numeric",
-        "equity_category": "",
-        "layer": "",
-        "long_description": "The count of households receiving Supplemental Nutrition Assistance Program (SNAP) benefits reflects the scale of food assistance need in a community. SNAP participation correlates with poverty, food insecurity, and limited access to affordable nutrition. High counts help size the demand for complementary food assistance programs such as food banks and community meal sites.",
-        "long_name": "Count of Households That Received Supplemental Nutrition Assistance Program (SNAP)",
-        "measure_type": "count",
-        "provenance": "From ACS 5-year estimates, table B22010 (Receipt of Food Stamps/SNAP in the Past 12 Months by Household Type). Count of households where at least one member received SNAP benefits. Does not include households receiving only WIC, school lunch, or food bank assistance.",
-        "short_description": "Number of households with at least one member receiving SNAP benefits in the past 12 months.",
-        "short_name": "Count of Households That Received SNAP",
-        "sources": [
-            {
-                "date_accessed": 2022,
-                "location": "Table B22010",
-                "location_url": "",
-                "name": "American Community Survey (ACS)",
-                "url": "https://www.census.gov/programs-surveys/acs.html"
-            }
-        ],
-        "statement": "The count of households that received SNAP in {features.name} is {value}.",
-        "type": "count",
-        "unit": "households",
-        "variants": ""
-    },
-    "hh_received_snap_pct": {
-        "aggregation_method": "mean",
-        "categories": "",
-        "category": "Nutrition and Food Security",
-        "citations": "",
-        "data_type": "numeric",
-        "equity_category": "",
-        "layer": "",
-        "long_description": "The SNAP participation rate measures the share of households relying on federal food assistance. Higher rates indicate communities with greater economic hardship and food insecurity. This measure is useful for targeting nutrition assistance programs and identifying areas where food access interventions may have the greatest impact.",
-        "long_name": "Percentage of Households That Received Supplemental Nutrition Assistance Program (SNAP)",
-        "measure_type": "percent",
-        "provenance": "From ACS 5-year estimates, table B22010 (Receipt of Food Stamps/SNAP in the Past 12 Months by Household Type). Percentage of total households where at least one member received SNAP benefits.",
-        "short_description": "Percentage of households with at least one member receiving SNAP benefits in the past 12 months.",
-        "short_name": "Percentage of Households That Received SNAP",
-        "sources": [
-            {
-                "date_accessed": 2022,
-                "location": "Table B22010",
-                "location_url": "",
-                "name": "American Community Survey (ACS)",
-                "url": "https://www.census.gov/programs-surveys/acs.html"
-            }
-        ],
-        "statement": "The percentage of households that received SNAP in {features.name} is {value}.",
-        "type": "percent",
-        "unit": "percent",
-        "variants": ""
-    },
-    "population": {
-        "aggregation_method": "sum",
-        "categories": "",
-        "category": "Nutrition and Food Security",
-        "citations": "",
-        "data_type": "numeric",
-        "equity_category": "",
-        "layer": "",
-        "long_description": "The total household count provides the denominator for SNAP participation rate calculations and reflects the overall size of the residential population at the household level. This baseline count is essential for contextualizing food assistance metrics.",
-        "long_name": "Count of Households",
-        "measure_type": "count",
-        "provenance": "From ACS 5-year estimates, table B22010 (Receipt of Food Stamps/SNAP in the Past 12 Months by Household Type). Total household universe for the SNAP participation question.",
-        "short_description": "Total number of households in the geographic area.",
-        "short_name": "Count of Households",
-        "sources": [
-            {
-                "date_accessed": 2022,
-                "location": "Table B22010",
-                "location_url": "",
-                "name": "American Community Survey (ACS), 5-year estimates",
-                "url": "https://www.census.gov/programs-surveys/acs.html"
-            }
-        ],
-        "statement": "The number of households in {features.name} is {value}.",
-        "type": "count",
-        "unit": "persons",
         "variants": ""
     },
     "dent_cnt": {
@@ -38944,62 +38952,6 @@
         "unit": "dollars per month",
         "variants": ""
     },
-    "perc_freq_mental_distress": {
-        "aggregation_method": "mean",
-        "categories": "",
-        "category": "Health",
-        "citations": "",
-        "data_type": "numeric",
-        "equity_category": "Status",
-        "layer": "",
-        "long_description": "Estimated percentage of adults reporting 14 or more days of poor mental health in the past 30 days. High prevalence of frequent mental distress reflects unmet behavioral health needs and is associated with reduced work productivity, strained social relationships, and increased demand for crisis services. Persistent mental distress at the neighborhood level often tracks with poverty, housing instability, and limited access to mental health providers.",
-        "long_name": "Frequent Mental Distress Among Adults",
-        "measure_type": "prevalence estimate",
-        "short_description": "Modeled prevalence of adults with 14+ poor mental health days per month, from BRFSS small-area estimation.",
-        "short_name": "Frequent mental distress",
-        "sources": [
-            {
-                "date_accessed": 2026,
-                "location": "CDC PLACES",
-                "location_url": "https://www.cdc.gov/places/",
-                "name": "Centers for Disease Control and Prevention",
-                "url": "https://www.cdc.gov"
-            }
-        ],
-        "provenance": "Tract-level estimates from CDC PLACES (Population Level Analysis and Community Estimates), which applies multilevel regression with poststratification (MRP) to Behavioral Risk Factor Surveillance System (BRFSS) survey responses. Each model year pools two years of BRFSS data with Census tract demographics to generate small-area predictions. Values are crude prevalence (%). Confidence intervals converted from 95% CI (PLACES default) to approximate 90% MOE using the ratio 1.645/1.96.",
-        "statement": "{value}% of adults in {features.name} report frequent mental distress.",
-        "type": "percent",
-        "unit": "percent",
-        "variants": ""
-    },
-    "perc_freq_physical_distress": {
-        "aggregation_method": "mean",
-        "categories": "",
-        "category": "Health",
-        "citations": "",
-        "data_type": "numeric",
-        "equity_category": "Status",
-        "layer": "",
-        "long_description": "Estimated percentage of adults reporting 14 or more days of poor physical health in the past 30 days. Frequent physical distress captures chronic pain, disability, and illness burden at the community level. Neighborhoods with high rates often face compounding challenges including limited healthcare access, environmental hazards, and higher proportions of residents in physically demanding occupations.",
-        "long_name": "Frequent Physical Distress Among Adults",
-        "measure_type": "prevalence estimate",
-        "short_description": "Modeled prevalence of adults with 14+ poor physical health days per month, from BRFSS small-area estimation.",
-        "short_name": "Frequent physical distress",
-        "sources": [
-            {
-                "date_accessed": 2026,
-                "location": "CDC PLACES",
-                "location_url": "https://www.cdc.gov/places/",
-                "name": "Centers for Disease Control and Prevention",
-                "url": "https://www.cdc.gov"
-            }
-        ],
-        "provenance": "Tract-level estimates from CDC PLACES, which applies multilevel regression with poststratification (MRP) to BRFSS survey responses. Each model year pools two years of BRFSS data with Census tract demographics to generate small-area predictions. Values are crude prevalence (%). Confidence intervals converted from 95% CI to approximate 90% MOE.",
-        "statement": "{value}% of adults in {features.name} report frequent physical distress.",
-        "type": "percent",
-        "unit": "percent",
-        "variants": ""
-    },
     "adequateplus_pc": {
         "aggregation_method": "mean",
         "categories": "",
@@ -39365,6 +39317,9 @@
         "variants": ""
     },
     "affordability_index_geo20": {
+        "geo_standardize": {
+            "measure_type": "replicate"
+        },
         "category": "Housing",
         "data_type": "numeric",
         "unit": "percent",
@@ -39401,6 +39356,9 @@
         ]
     },
     "housing_cost_pct_geo20": {
+        "geo_standardize": {
+            "measure_type": "replicate"
+        },
         "category": "Housing",
         "data_type": "numeric",
         "unit": "percent",
@@ -39420,6 +39378,9 @@
         ]
     },
     "transport_cost_pct_geo20": {
+        "geo_standardize": {
+            "measure_type": "replicate"
+        },
         "category": "Transportation",
         "data_type": "numeric",
         "unit": "percent",
@@ -39439,6 +39400,9 @@
         ]
     },
     "autos_per_hh_geo20": {
+        "geo_standardize": {
+            "measure_type": "replicate"
+        },
         "category": "Transportation",
         "data_type": "numeric",
         "unit": "vehicles",
@@ -39458,6 +39422,9 @@
         ]
     },
     "vmt_per_hh_geo20": {
+        "geo_standardize": {
+            "measure_type": "replicate"
+        },
         "category": "Transportation",
         "data_type": "numeric",
         "unit": "miles",
@@ -39477,6 +39444,9 @@
         ]
     },
     "transit_frac_geo20": {
+        "geo_standardize": {
+            "measure_type": "replicate"
+        },
         "category": "Transportation",
         "data_type": "numeric",
         "unit": "percent",
@@ -39494,146 +39464,6 @@
                 "url": "https://htaindex.cnt.org/"
             }
         ]
-    },
-    "monthly_rent_0br": {
-        "aggregation_method": "",
-        "categories": "",
-        "category": "Housing",
-        "citations": "",
-        "data_type": "decimal",
-        "equity_category": "",
-        "layer": "",
-        "long_description": "Fair Market Rent (FMR) represents the 40th percentile of gross rents for typical, non-substandard rental units in a market area. Studio FMRs set the baseline for housing assistance programs and reflect the minimum cost of independent housing. Areas where even studio rents are high relative to incomes face acute affordability challenges for single-person households and individuals transitioning out of homelessness.",
-        "long_name": "0 Bedroom Dwelling Fair Market Rent",
-        "measure_type": "cost",
-        "provenance": "Fair Market Rents estimated by the U.S. Department of Housing and Urban Development (HUD) for metropolitan areas and nonmetropolitan counties, FY2019\u2013FY2026. County-level values are population-weighted averages of ZIP-code-level Small Area Fair Market Rents (SAFMRs) using ZCTA-county population intersection weights from the 2010 Census. Tract-level values are population-weighted averages of ZIP-level SAFMRs using the 2021 Q4 HUD USPS ZIP-to-tract crosswalk, with fallback to county-level FMR where ZIP data is unavailable.",
-        "short_description": "Fair Market Rent for a studio (0-bedroom) dwelling.",
-        "short_name": "0 Bedroom Dwelling Fair Market Rent",
-        "sources": [
-            {
-                "date_accessed": 2026,
-                "location": "",
-                "location_url": "",
-                "name": "US Department of Housing and Urban Development (HUD)",
-                "url": "https://www.huduser.gov/portal/datasets/fmr.html"
-            }
-        ],
-        "statement": "The Fair Market Rent (FMR) for a zero bedroom dwelling in {features.name} is {value}.",
-        "type": "count",
-        "unit": "dollars",
-        "variants": ""
-    },
-    "monthly_rent_1br": {
-        "aggregation_method": "",
-        "categories": "",
-        "category": "Housing",
-        "citations": "",
-        "data_type": "decimal",
-        "equity_category": "",
-        "layer": "",
-        "long_description": "Fair Market Rent (FMR) represents the 40th percentile of gross rents for typical, non-substandard rental units. One-bedroom FMRs are commonly used to assess affordability for single adults and couples. HUD uses FMRs to set payment standards for Housing Choice Vouchers and determine eligibility thresholds for rental assistance programs.",
-        "long_name": "1 Bedroom Dwelling Fair Market Rent",
-        "measure_type": "cost",
-        "provenance": "Fair Market Rents estimated by the U.S. Department of Housing and Urban Development (HUD) for metropolitan areas and nonmetropolitan counties, FY2019\u2013FY2026. County-level values are population-weighted averages of ZIP-code-level Small Area Fair Market Rents (SAFMRs) using ZCTA-county population intersection weights from the 2010 Census. Tract-level values are population-weighted averages of ZIP-level SAFMRs using the 2021 Q4 HUD USPS ZIP-to-tract crosswalk, with fallback to county-level FMR where ZIP data is unavailable.",
-        "short_description": "Fair Market Rent for a 1-bedroom dwelling.",
-        "short_name": "1 Bedroom Dwelling Fair Market Rent",
-        "sources": [
-            {
-                "date_accessed": 2026,
-                "location": "",
-                "location_url": "",
-                "name": "US Department of Housing and Urban Development (HUD)",
-                "url": "https://www.huduser.gov/portal/datasets/fmr.html"
-            }
-        ],
-        "statement": "The Fair Market Rent (FMR) for a one bedroom dwelling in {features.name} is {value}.",
-        "type": "count",
-        "unit": "dollars",
-        "variants": ""
-    },
-    "monthly_rent_2br": {
-        "aggregation_method": "",
-        "categories": "",
-        "category": "Housing",
-        "citations": "",
-        "data_type": "decimal",
-        "equity_category": "",
-        "layer": "",
-        "long_description": "Fair Market Rent (FMR) represents the 40th percentile of gross rents for typical, non-substandard rental units. The two-bedroom FMR is HUD's primary benchmark for setting Housing Choice Voucher payment standards and is the most commonly referenced FMR tier. It serves as the standard measure of area rent levels for federal housing policy.",
-        "long_name": "2 Bedroom Dwelling Fair Market Rent",
-        "measure_type": "cost",
-        "provenance": "Fair Market Rents estimated by the U.S. Department of Housing and Urban Development (HUD) for metropolitan areas and nonmetropolitan counties, FY2019\u2013FY2026. County-level values are population-weighted averages of ZIP-code-level Small Area Fair Market Rents (SAFMRs) using ZCTA-county population intersection weights from the 2010 Census. Tract-level values are population-weighted averages of ZIP-level SAFMRs using the 2021 Q4 HUD USPS ZIP-to-tract crosswalk, with fallback to county-level FMR where ZIP data is unavailable.",
-        "short_description": "Fair Market Rent for a 2-bedroom dwelling.",
-        "short_name": "2 Bedroom Dwelling Fair Market Rent",
-        "sources": [
-            {
-                "date_accessed": 2026,
-                "location": "",
-                "location_url": "",
-                "name": "US Department of Housing and Urban Development (HUD)",
-                "url": "https://www.huduser.gov/portal/datasets/fmr.html"
-            }
-        ],
-        "statement": "The Fair Market Rent (FMR) for a two bedroom dwelling in {features.name} is {value}.",
-        "type": "count",
-        "unit": "dollars",
-        "variants": ""
-    },
-    "monthly_rent_3br": {
-        "aggregation_method": "",
-        "categories": "",
-        "category": "Housing",
-        "citations": "",
-        "data_type": "decimal",
-        "equity_category": "",
-        "layer": "",
-        "long_description": "Fair Market Rent (FMR) represents the 40th percentile of gross rents for typical, non-substandard rental units. Three-bedroom FMRs reflect the cost of housing for families with children, which is typically the largest segment of households needing affordable housing assistance. Areas with high 3-bedroom FMRs relative to family incomes face particular challenges in family housing stability.",
-        "long_name": "3 Bedroom Dwelling Fair Market Rent",
-        "measure_type": "cost",
-        "provenance": "Fair Market Rents estimated by the U.S. Department of Housing and Urban Development (HUD) for metropolitan areas and nonmetropolitan counties, FY2019\u2013FY2026. County-level values are population-weighted averages of ZIP-code-level Small Area Fair Market Rents (SAFMRs) using ZCTA-county population intersection weights from the 2010 Census. Tract-level values are population-weighted averages of ZIP-level SAFMRs using the 2021 Q4 HUD USPS ZIP-to-tract crosswalk, with fallback to county-level FMR where ZIP data is unavailable.",
-        "short_description": "Fair Market Rent for a 3-bedroom dwelling.",
-        "short_name": "3 Bedroom Dwelling Fair Market Rent",
-        "sources": [
-            {
-                "date_accessed": 2026,
-                "location": "",
-                "location_url": "",
-                "name": "US Department of Housing and Urban Development (HUD)",
-                "url": "https://www.huduser.gov/portal/datasets/fmr.html"
-            }
-        ],
-        "statement": "The Fair Market Rent (FMR) for a three bedroom dwelling in {features.name} is {value}.",
-        "type": "count",
-        "unit": "dollars",
-        "variants": ""
-    },
-    "monthly_rent_4br": {
-        "aggregation_method": "",
-        "categories": "",
-        "category": "Housing",
-        "citations": "",
-        "data_type": "decimal",
-        "equity_category": "",
-        "layer": "",
-        "long_description": "Fair Market Rent (FMR) represents the 40th percentile of gross rents for typical, non-substandard rental units. Four-bedroom FMRs capture the cost of housing for larger families, who face the most constrained rental markets. The gap between 4-bedroom and smaller-unit FMRs highlights the premium that larger families must pay, which disproportionately affects multigenerational and immigrant households.",
-        "long_name": "4 Bedroom Dwelling Fair Market Rent",
-        "measure_type": "cost",
-        "provenance": "Fair Market Rents estimated by the U.S. Department of Housing and Urban Development (HUD) for metropolitan areas and nonmetropolitan counties, FY2019\u2013FY2026. County-level values are population-weighted averages of ZIP-code-level Small Area Fair Market Rents (SAFMRs) using ZCTA-county population intersection weights from the 2010 Census. Tract-level values are population-weighted averages of ZIP-level SAFMRs using the 2021 Q4 HUD USPS ZIP-to-tract crosswalk, with fallback to county-level FMR where ZIP data is unavailable.",
-        "short_description": "Fair Market Rent for a 4-bedroom dwelling.",
-        "short_name": "4 Bedroom Dwelling Fair Market Rent",
-        "sources": [
-            {
-                "date_accessed": 2026,
-                "location": "",
-                "location_url": "",
-                "name": "US Department of Housing and Urban Development (HUD)",
-                "url": "https://www.huduser.gov/portal/datasets/fmr.html"
-            }
-        ],
-        "statement": "The Fair Market Rent (FMR) for a four bedroom dwelling in {features.name} is {value}.",
-        "type": "count",
-        "unit": "dollars",
-        "variants": ""
     },
     "commute_time_geo20": {
         "aggregation_method": "Mean",
@@ -39661,7 +39491,10 @@
         "type": "drive time",
         "unit": "minutes",
         "variants": "",
-        "provenance": "American Community Survey 5-Year Estimates, Table S0801 (Commuting Characteristics by Sex). Tract-level data standardized to 2020 census boundaries via area-weighted redistribution."
+        "provenance": "American Community Survey 5-Year Estimates, Table S0801 (Commuting Characteristics by Sex). Tract-level data standardized to 2020 census boundaries via area-weighted redistribution.",
+        "geo_standardize": {
+            "measure_type": "mean"
+        }
     },
     "perc_carpool_geo20": {
         "aggregation_method": "Mean",
@@ -39689,7 +39522,10 @@
         "type": "percent",
         "unit": "percent",
         "variants": "",
-        "provenance": "American Community Survey 5-Year Estimates, Table S0801 (Commuting Characteristics by Sex). Tract-level data standardized to 2020 census boundaries via area-weighted redistribution."
+        "provenance": "American Community Survey 5-Year Estimates, Table S0801 (Commuting Characteristics by Sex). Tract-level data standardized to 2020 census boundaries via area-weighted redistribution.",
+        "geo_standardize": {
+            "measure_type": "replicate"
+        }
     },
     "perc_no_vehicle_geo20": {
         "aggregation_method": "Mean",
@@ -39717,7 +39553,10 @@
         "type": "percent",
         "unit": "percent",
         "variants": "",
-        "provenance": "American Community Survey 5-Year Estimates, Table S2504 (Physical Housing Characteristics for Occupied Housing Units). Tract-level data standardized to 2020 census boundaries via area-weighted redistribution."
+        "provenance": "American Community Survey 5-Year Estimates, Table S2504 (Physical Housing Characteristics for Occupied Housing Units). Tract-level data standardized to 2020 census boundaries via area-weighted redistribution.",
+        "geo_standardize": {
+            "measure_type": "replicate"
+        }
     },
     "walkability_index_geo20": {
         "aggregation_method": "population-weighted mean",
@@ -39773,6 +39612,9 @@
         "statement": "The Walkability Index in {region_name} is {value}.",
         "type": "index",
         "unit": "index score",
-        "variants": ""
+        "variants": "",
+        "geo_standardize": {
+            "measure_type": "external"
+        }
     }
 }
