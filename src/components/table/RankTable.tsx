@@ -2,14 +2,13 @@
 
 import { useMemo, useRef, useEffect } from 'react'
 import { useReactTable, getCoreRowModel, getSortedRowModel, flexRender, type ColumnDef } from '@tanstack/react-table'
+import { useVirtualizer } from '@tanstack/react-virtual'
 import { useDashboardStore } from '@/lib/store'
 import { useData } from '@/components/DataProvider'
 import { getValueAtTime } from '@/lib/data/aggregation'
+import { RankTableRow, type RankRowData } from './RankTableRow'
 
-interface RowData {
-  regionId: string
-  [year: string]: number | string | null
-}
+type RowData = RankRowData
 
 export function RankTable() {
   const selectedVariable = useDashboardStore((s) => s.selectedVariable)
@@ -114,14 +113,32 @@ export function RankTable() {
     },
   })
 
-  // Auto-scroll to selected region
+  const rows = table.getRowModel().rows
+
+  // Virtualize rows so only the visible window is in the DOM (regions can number in the thousands).
+  const rowVirtualizer = useVirtualizer({
+    count: rows.length,
+    getScrollElement: () => containerRef.current,
+    estimateSize: () => 33,
+    overscan: 12,
+  })
+  const virtualRows = rowVirtualizer.getVirtualItems()
+  const totalSize = rowVirtualizer.getTotalSize()
+  const paddingTop = virtualRows.length > 0 ? virtualRows[0].start : 0
+  const paddingBottom = virtualRows.length > 0 ? totalSize - virtualRows[virtualRows.length - 1].end : 0
+  const colCount = columns.length
+
+  // Auto-scroll to selected region (via the virtualizer, since the row may not be mounted)
   useEffect(() => {
-    if (!tableAutoscroll || !selectedRegionId || !containerRef.current) return
-    const row = containerRef.current.querySelector(`[data-region="${selectedRegionId}"]`)
-    if (row) {
-      row.scrollIntoView({ behavior: tableScrollBehavior, block: 'center' })
+    if (!tableAutoscroll || !selectedRegionId) return
+    const index = rows.findIndex((r) => r.original.regionId === selectedRegionId)
+    if (index >= 0) {
+      rowVirtualizer.scrollToIndex(index, {
+        align: 'center',
+        behavior: tableScrollBehavior === 'smooth' ? 'smooth' : 'auto',
+      })
     }
-  }, [selectedRegionId, tableAutoscroll, tableScrollBehavior])
+  }, [selectedRegionId, tableAutoscroll, tableScrollBehavior, rows, rowVirtualizer])
 
   return (
     <div data-testid="rank-table" ref={containerRef} className="mt-2 max-h-[300px] overflow-auto rounded border dark:border-gray-700">
@@ -136,11 +153,11 @@ export function RankTable() {
                 return (
                   <th
                     key={header.id}
-                    onClick={() => {
+                    onClick={(e) => {
                       if (isYearCol) {
                         setSelectedYear(yearNum)
                       } else {
-                        header.column.getToggleSortingHandler()?.(undefined as never)
+                        header.column.getToggleSortingHandler()?.(e)
                       }
                     }}
                     className={`cursor-pointer whitespace-nowrap px-3 py-2 text-xs font-medium ${
@@ -158,39 +175,33 @@ export function RankTable() {
           ))}
         </thead>
         <tbody>
-          {table.getRowModel().rows.map((row) => {
+          {paddingTop > 0 && (
+            <tr aria-hidden>
+              <td colSpan={colCount} style={{ height: paddingTop }} className="p-0" />
+            </tr>
+          )}
+          {virtualRows.map((virtualRow) => {
+            const row = rows[virtualRow.index]
             const regionId = row.original.regionId
-            const isHovered = regionId === hoveredRegionId
-            const isSelected = regionId === selectedRegionId
             return (
-              <tr
+              <RankTableRow
                 key={row.id}
-                data-region={regionId}
-                onMouseEnter={() => setHoveredRegionId(regionId)}
-                onMouseLeave={() => setHoveredRegionId(null)}
-                onClick={() => setSelectedRegionId(regionId)}
-                className={`cursor-pointer border-b text-sm transition-colors dark:border-gray-700 ${
-                  isSelected
-                    ? 'bg-blue-100 dark:bg-blue-900'
-                    : isHovered
-                      ? 'bg-gray-100 dark:bg-gray-800'
-                      : 'hover:bg-gray-50 dark:hover:bg-gray-800/50'
-                }`}
-              >
-                {row.getVisibleCells().map((cell) => {
-                  const isSelectedYear = cell.column.id === String(selectedYear)
-                  return (
-                    <td
-                      key={cell.id}
-                      className={`px-3 py-1.5 ${isSelectedYear ? 'bg-blue-50 dark:bg-blue-900/30' : ''}`}
-                    >
-                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                    </td>
-                  )
-                })}
-              </tr>
+                row={row}
+                dataIndex={virtualRow.index}
+                measureRef={rowVirtualizer.measureElement}
+                selectedYearStr={String(selectedYear)}
+                isHovered={regionId === hoveredRegionId}
+                isSelected={regionId === selectedRegionId}
+                onHover={setHoveredRegionId}
+                onSelect={setSelectedRegionId}
+              />
             )
           })}
+          {paddingBottom > 0 && (
+            <tr aria-hidden>
+              <td colSpan={colCount} style={{ height: paddingBottom }} className="p-0" />
+            </tr>
+          )}
         </tbody>
       </table>
     </div>
