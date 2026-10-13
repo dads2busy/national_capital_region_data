@@ -26,8 +26,8 @@ const featuredSections: FeaturedSection[] = [
   {
     heading: 'Health',
     buttons: [
-      { label: 'Frequent Mental Distress', variable: 'perc_freq_mental_distress' },
-      { label: 'Frequent Physical Distress', variable: 'perc_freq_physical_distress' },
+      { label: 'Frequent Mental Distress', variable: 'perc_freq_mental_distress_geo20' },
+      { label: 'Frequent Physical Distress', variable: 'perc_freq_physical_distress_geo20' },
       { label: 'APNCU: Inadequate', variable: 'inadequate_pc' },
       { label: 'APNCU: Adequate', variable: 'adequate_pc' },
       { label: 'Uninsured Population', variable: 'no_hlth_ins_pct_geo20' },
